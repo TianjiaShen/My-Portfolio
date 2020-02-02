@@ -41,8 +41,8 @@
 		$(".fluid-video-wrapper").fitVids();
 	};  		
 
-   
-	/*	Masonry
+
+	/* Masonry
 	------------------------------------------------------ */
 	var ssMasonryFolio = function() {
 
@@ -50,8 +50,8 @@
 
 		containerBricks.imagesLoaded( function() {
 			containerBricks.masonry( {	
-			  	itemSelector: '.brick',
-			  	resize: true
+				itemSelector: '.brick',
+				resize: true
 			});
 		});
 	};
@@ -172,15 +172,15 @@
 	};
 
 	
-  	/* OffCanvas Menu
+	/* OffCanvas Menu
 	 * ------------------------------------------------------ */
-   var ssOffCanvas = function() {
+	var ssOffCanvas = function() {
 
-	       var menuTrigger = $('#header-menu-trigger'),
-	       nav             = $('#menu-nav-wrap'),
-	       closeButton     = nav.find('.close-button'),
-	       siteBody        = $('body'),
-	       mainContents    = $('section, footer');
+		var menuTrigger = $('#header-menu-trigger'),
+		nav             = $('#menu-nav-wrap'),
+		closeButton     = nav.find('.close-button'),
+		siteBody        = $('body'),
+		mainContents    = $('section, footer');
 
 		// open-close menu by clicking on the menu icon
 		menuTrigger.on('click', function(e){
@@ -203,88 +203,88 @@
 			}
 		});
 
-   };
+	};
 
 
-  /* Smooth Scrolling
+	/* Smooth Scrolling
 	* ------------------------------------------------------ */
 	var ssSmoothScroll = function() {
 
 		$('.smoothscroll').on('click', function (e) {
 			var target = this.hash,
 			$target    = $(target);
-	 	
-		 	e.preventDefault();
-		 	e.stopPropagation();	   	
 
-	    	$('html, body').stop().animate({
-	       	'scrollTop': $target.offset().top
-	      }, cfg.scrollDuration, 'swing').promise().done(function () {
+			e.preventDefault();
+			e.stopPropagation();	   	
+
+			$('html, body').stop().animate({
+			'scrollTop': $target.offset().top
+			}, cfg.scrollDuration, 'swing').promise().done(function () {
 
 	      	// check if menu is open
-	      	if ($('body').hasClass('menu-is-open')) {
+			if ($('body').hasClass('menu-is-open')) {
 					$('#header-menu-trigger').trigger('click');
 				}
 
-	      	window.location.hash = target;
-	      });
-	  	});
+			window.location.hash = target;
+			});
+		});
 
 	};
 
 
-  /* Placeholder Plugin Settings
+	/* Placeholder Plugin Settings
 	* ------------------------------------------------------ */
 	var ssPlaceholder = function() {
 		$('input, textarea, select').placeholder();  
 	};
 
 
-  /* Stat Counter
+	/* Stat Counter
   	*------------------------------------------------------- */
-  	var ssStatCounter = function() {
+	var ssStatCounter = function() {
 
-	   var statSection = $("#stats"),
-	   stats           = $(".stat-count");
+		var statSection = $("#stats"),
+		stats           = $(".stat-count");
 
-	   statSection.waypoint({
-	   	handler: function(direction) {
+		statSection.waypoint({
+		handler: function(direction) {
 
-	      	if (direction === "down") { 
-				   stats.each(function () {
-					   var $this = $(this);
+			if (direction === "down") { 
+					stats.each(function () {
+						var $this = $(this);
 
-					   $({ Counter: 0 }).animate({ Counter: $this.text() }, {
-					   	duration: cfg.statsDuration,
-					   	easing: 'swing',
-					   	step: function (curValue) {
-					      	$this.text(Math.ceil(curValue));
-					    	}
-					  	});
+						$({ Counter: 0 }).animate({ Counter: $this.text() }, {
+						duration: cfg.statsDuration,
+						easing: 'swing',
+						step: function (curValue) {
+							$this.text(Math.ceil(curValue));
+							}
+						});
 					});
-	       	} 
+			} 
 
 	       	// trigger once only
-	       	this.destroy(); 
+			this.destroy(); 
 			},	
 			offset: "90%"	
 		});
 
-  	};
+	};
 
 
-  	/* Alert Boxes
+	/* Alert Boxes
   	------------------------------------------------------- */
-  	var ssAlertBoxes = function() {
+	var ssAlertBoxes = function() {
 
-  		$('.alert-box').on('click', '.close', function() {
-		  $(this).parent().fadeOut(500);
+		$('.alert-box').on('click', '.close', function() {
+			$(this).parent().fadeOut(500);
 		}); 
 
-  	};	  	
+	};	  	
 	
 
-  /* Animations
+	/* Animations
 	* ------------------------------------------------------- */
 	var ssAnimations = function() {
 
@@ -302,11 +302,11 @@
 								var el       = $(this),
 								animationEfx = el.data('animate') || null;	
 
-	                  	if (!animationEfx) {
-			                 	animationEfx = defAnimationEfx;	                 	
-			               }
+						if (!animationEfx) {
+								animationEfx = defAnimationEfx;	                 	
+							}
 
-			              	setTimeout( function () {
+								setTimeout( function () {
 									el.addClass(animationEfx + ' animated');
 									el.removeClass('item-animate');
 								}, ctr * 50);
@@ -316,7 +316,7 @@
 					}
 
 					// trigger once only
-	       		this.destroy(); 
+				this.destroy(); 
 				}, 
 				offset: '95%'
 			}); 
@@ -325,36 +325,36 @@
 	};
 	
 
-  /* Intro Animation
+	/* Intro Animation
 	* ------------------------------------------------------- */
 	var ssIntroAnimation = function() {
 
 		$WIN.on('load', function() {
 		
-	     	if (!$("html").hasClass('no-cssanimations')) {
-	     		setTimeout(function(){
-	    			$('.animate-intro').each(function(ctr) {
+			if (!$("html").hasClass('no-cssanimations')) {
+				setTimeout(function(){
+					$('.animate-intro').each(function(ctr) {
 						var el = $(this),
-	                   animationEfx = el.data('animate') || null;		                                      
+						animationEfx = el.data('animate') || null;		                                      
 
-	               if (!animationEfx) {
-	                 	animationEfx = cfg.defAnimation;	                 	
-	               }
+					if (!animationEfx) {
+						animationEfx = cfg.defAnimation;	                 	
+					}
 
-	              	setTimeout( function () {
+					setTimeout( function () {
 							el.addClass(animationEfx + ' animated');
 						}, ctr * 300);
 					});						
 				}, 100);
-	     	} 
+			}
 		}); 
 
 	};
 
 
-  /* Contact Form
-   * ------------------------------------------------------ */
-   var ssContactForm = function() {   	
+	/* Contact Form
+   	* ------------------------------------------------------ */
+	var ssContactForm = function() {   	
 
    	/* local validation */   	
 		$('#contactForm').validate({
@@ -364,41 +364,41 @@
 				var sLoader = $('#submit-loader');			
 
 				$.ajax({   	
-			      type: "POST",
-			      url: "inc/sendEmail.php",
-			      data: $(form).serialize(),
+					type: "POST",
+					url: "inc/sendEmail.php",
+					data: $(form).serialize(),
 
-			      beforeSend: function() { 
-			      	sLoader.fadeIn(); 
-			      },
-			      success: function(msg) {
+					beforeSend: function() { 
+					sLoader.fadeIn(); 
+					},
+					success: function(msg) {
 		            // Message was sent
-		            if (msg == 'OK') {
-		            	sLoader.fadeOut(); 
-		               $('#message-warning').hide();
-		               $('#contactForm').fadeOut();
-		               $('#message-success').fadeIn();   
-		            }
+					if (msg == 'OK') {
+						sLoader.fadeOut(); 
+						$('#message-warning').hide();
+						$('#contactForm').fadeOut();
+						$('#message-success').fadeIn();   
+					}
 		            // There was an error
-		            else {
-		            	sLoader.fadeOut(); 
-		               $('#message-warning').html(msg);
-			            $('#message-warning').fadeIn();
-		            }
-			      },
-			      error: function() {
-			      	sLoader.fadeOut(); 
-			      	$('#message-warning').html("Something went wrong. Please try again.");
-			         $('#message-warning').fadeIn();
-			      }
-		      });    		
-	  		}
+					else {
+						sLoader.fadeOut(); 
+						$('#message-warning').html(msg);
+						$('#message-warning').fadeIn();
+					}
+					},
+					error: function() {
+					sLoader.fadeOut(); 
+					$('#message-warning').html("Something went wrong. Please try again.");
+						$('#message-warning').fadeIn();
+					}
+				});    		
+			}
 
 		});
-   };	
+	};	
 
- 
-  /* Back to Top
+	
+	/* Back to Top
 	* ------------------------------------------------------ */
 	var ssBackToTop = function() {
 
@@ -420,7 +420,7 @@
 
 
 
-  /* Initialize
+	/* Initialize
 	* ------------------------------------------------------ */
 	(function ssInit() {
 
@@ -440,6 +440,6 @@
 		ssBackToTop();
 
 	})();
- 
+
 
 })(jQuery);
