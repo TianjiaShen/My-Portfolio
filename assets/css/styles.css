@@ -440,7 +440,7 @@ a.btn:hover {
   font-size: 16px;
 }
 .chart-easy-pie {
-  positon: relative;
+  position: relative;
 }
 .chart {
   width: 110px;
@@ -578,6 +578,7 @@ a.btn:hover {
 .portfolio-section .item-inner .content {
   padding: 30px;
   padding-bottom: 75px;
+  height: 120px;
   position: relative;
 }
 .portfolio-section .item-inner .content a {
@@ -605,6 +606,9 @@ a.btn:hover {
   left: 0;
   top: 0;
 }
+.contact-section {
+  overflow: hidden;
+}
 .contact-section .intro {
   position: relative;
   padding: 30px;
@@ -615,12 +619,17 @@ a.btn:hover {
 .contact-section .intro .profile-image {
   width: 120px;
   height: 120px;
-  position: absolute;
   left: 30px;
+  position: absolute;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: center;
 }
 .contact-section .intro p {
   margin-bottom: 15px;
 }
+
+
 .contact-section .service-list {
   margin-left: 30px;
   margin-bottom: 15px;
@@ -742,12 +751,6 @@ a.btn:hover {
   }
   .contact-section .intro {
     padding: 0;
-    text-align: center;
-  }
-  .contact-section .intro .profile-image {
-    position: static;
-    margin: 0 auto;
-    margin-bottom: 30px;
     text-align: center;
   }
   .contact-section .service-list {
@@ -918,3 +921,43 @@ a.btn:hover {
 #paper{
   font-size: small;
 }
+
+.contact-left {
+  float: left;
+  width: 125px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.contact-left a:nth-child(2){
+  display: block;
+  position: absolute;
+  left: 30px;
+  top: 160px;
+  margin: 0 auto;
+}
+
+.contact-left a:nth-child(3){
+  display: block;
+  position: absolute;
+  left: 30px;
+  top: 210px;
+  margin: 0 auto;
+}
+
+.contact-left a{
+  width: 120px;
+}
+
+.image-container {
+  display: block;
+}
+
+.contact-section .intro .dialog{
+  float: left;
+  width: 70%;
+  margin-left: 20px;
+  text-align: left;
+}
+
+

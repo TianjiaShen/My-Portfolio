@@ -23,6 +23,10 @@
 <!-- Include LightGallery -->
 <link type="text/css" rel="stylesheet" href="css/lightGallery.css" />    
 <link href="lightgallery/css/lg-transitions.css" rel="stylesheet">
+
+<!-- Waterfall layout -->
+<link rel="stylesheet" href="assets/css/modal.css">
+<script type="text/javascript" src="assets/js/waterfall.js"></script>
 <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
 <!-- <script src="js/lightGallery.js"></script> -->
 
@@ -36,8 +40,8 @@
 			<a class="btn hidden-xs" href="mailto:1049904168@qq.com"><i class="fa fa-paper-plane" aria-hidden="true"></i> Hire Me</a>
 <!--Addin1 
 ===============================================================================================================================
-         ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  -->
-			<a class="btn" href="https://pan.baidu.com/s/1zhOdLMRJupDvq1kqhLUxnA" target="_blank"> 
+↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  -->
+			<a class="btn" href="./assets/resume/ResumeEN_Tianjia_Shen.pdf" download> 
 
                 <i class="fa fa-download" aria-hidden="true"></i> Download My Resume</a>
 		</div><!--//actions-->	
@@ -65,17 +69,27 @@
 			<div class="container">
 				<ul id="page-nav" class="nav page-nav list-inline">
 					<li><a class="scrollto" href="#experiences-section">Experiences</a></li>
+					<li><a class="scrollto" href="#portfolio-section">Portfolio</a></li>
 					<li><a class="scrollto" href="#eudcation-section">Education</a></li>
 					<li><a class="scrollto" href="#skills-section">Skills</a></li>
 					<li><a class="scrollto" href="#testimonials-section">Awards and Honors</a></li>
-					<li><a class="scrollto" href="#portfolio-section">Portfolio</a></li>
 					<li><a class="scrollto" href="#contact-section">Contact</a></li>
+					<li><a class="scrollto" href="#contact-section">Download</a></li>
 				</ul><!--//page-nav-->
 			</div>
 		</div><!--//page-nav-wrapper-->
 	</div>
 	
 </header><!--//header-->
+
+<div class="modal" id="modal">
+	<div class="modal-header">
+		<div class="title">Example Modal</div>
+		<button data-close-button class="close-button">&times;</button>
+	</div>
+	<div class="modal-body" id="modal-body">
+	</div>
+</div>
 
 <div class="wrapper container">
 	<section id="experiences-section" class="experiences-section section">
@@ -200,7 +214,686 @@
 		
 	</section><!--//section-->
 	<div class="tlinks"><a href="http://www.cssmoban.com/" ></a></div>
-	<section id="eudcation-section" class="education-section section">
+
+	
+	<section id="portfolio-section" class="portfolio-section section">
+	
+		<div class="overlay"></div>
+		<div class="gradient-overlay"></div>
+		
+		<h2 class="section-title">Portfolio</h2>
+		<ul id="filters" class="filters clearfix">
+			<!--data-filter属性决定了哪些Projects会出现在Design Projects，哪些Projects会出现在Sketch & Modeling里-->
+			<li class="type active" data-filter=".first_divi">UX/UI Design</li>
+			<li class="type" data-filter=".second_divi">3D Design</li>
+			<li class="type" data-filter=".third_divi">Sketch & Modeling</li>
+			<li class="type" data-filter=".fourth_divi">Painting & Handwork</li>
+			<!-- <li class="type active" data-filter="*">All</li> -->
+		</ul><!--//filters-->
+		<div class="items-wrapper isotope row">
+				
+				<!-- Division #1 
+					用first_divi表示
+				==============================================================================================-->
+					<!-- Project #1 JAGUAR
+					==============================================================================================-->
+					<div class="item second_divi col-md-3 col-xs-6 ">
+						<div class="item-inner">
+							
+							<div id="folio-wrap" class="bricks-wrapper">
+								<div class="brick folio-item">
+									<!-- Pro#1 -- Detail 01 
+									==============================================================================================-->
+									<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-1.jpg"  data-sub-html="#01">
+										<a href="#" class="overlay">
+											<figure class="figure">
+												<!-- Pro#1 -- Raw Pic 
+												==============================================================================================-->
+												<img class="img-responsive" src="assets/images/portfolio/portfolio-1.jpg" alt="" />
+											</figure>                                       
+										</a>
+										<a href="https://www.behance.net/" class='details-link' title="details">
+											<i class="icon-UpRightArrow"></i>
+										</a>
+									</div> <!-- end item-wrap -->
+									
+	<!--
+									<div id="01" class='hide'>
+										Pro#1 -- Detail Description 01
+										==============================================================================================
+										<h4>Salad</h4>
+										<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="www.behance.net">Details</a></p>
+									</div>
+	-->
+								</div>
+								<div class="brick folio-item">
+									<!-- Pro#1 -- Detail 02
+									==============================================================================================-->
+									<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-2.jpg"  data-sub-html="#02">
+									</div> <!-- end item-wrap -->
+	
+								</div>
+								<div class="brick folio-item">
+									<!-- Pro#1 -- Detail 03
+									==============================================================================================-->
+									<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-3.jpg"  data-sub-html="#03">
+									</div> <!-- end item-wrap -->
+								</div>
+								<div class="brick folio-item">
+									<!-- Pro#1 -- Detail 04
+									==============================================================================================-->
+									<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-4.jpg"  data-sub-html="#04">
+									</div> <!-- end item-wrap -->
+								</div>
+								<div class="brick folio-item">
+									<!-- Pro#1 -- Detail 05
+									==============================================================================================-->
+									<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-5.jpg"  data-sub-html="#05">
+									</div> <!-- end item-wrap -->
+								</div>
+								<div class="brick folio-item">
+									<!-- Pro#1 -- Detail 06
+									==============================================================================================-->
+									<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-6.jpg"  data-sub-html="#06">
+									</div> <!-- end item-wrap -->
+								</div>
+								<div class="brick folio-item">
+									<!-- Pro#1 -- Detail 07
+									==============================================================================================-->
+									<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-7.jpg"  data-sub-html="#07">
+									</div> <!-- end item-wrap -->
+								</div>
+							</div> <!-- end folio-item -->   
+	
+							<div class="content text-left">
+								<h3 class="sub-title"><a href="#">JAGUAR</a></h3>
+								<div class="meta">Derived speaker for jaguar</div><br/>
+								
+							</div><!--//content--> 
+	
+						</div><!--//item-inner-->
+					</div><!--//item-->
+				
+					<!-- Project #2 Official Seal
+					==============================================================================================-->
+					<div class="item second_divi col-md-3 col-xs-6 ">
+						<div class="item-inner">
+							
+							<div id="folio-wrap2" class="bricks-wrapper">
+								<div class="brick folio-item">
+									<!-- Pro#2 -- Detail 01 
+									==============================================================================================-->
+									<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-1.jpg"  data-sub-html="#01">
+										<a href="#" class="overlay">
+											<figure class="figure">
+												<!-- Pro#2 -- Raw Pic 
+												==============================================================================================-->
+												<img class="img-responsive" src="assets/images/portfolio/portfolio-2.jpg" alt="" />
+											</figure>
+										</a>
+										<a href="https://www.behance.net/" class='details-link' title="details">
+											<i class="icon-UpRightArrow"></i>
+										</a>
+									</div> <!-- end item-wrap -->
+									
+								</div>
+								<div class="brick folio-item">
+									<!-- Pro#2 -- Detail 02
+									==============================================================================================-->
+									<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-2.jpg"  data-sub-html="#02">
+									</div> <!-- end item-wrap -->
+									
+								</div>
+								<div class="brick folio-item">
+									<!-- Pro#2 -- Detail 03
+									==============================================================================================-->
+									<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-3.jpg"  data-sub-html="#03">
+									</div> <!-- end item-wrap -->
+								</div>
+								<div class="brick folio-item">
+									<!-- Pro#2 -- Detail 04
+									==============================================================================================-->
+									<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-4.jpg"  data-sub-html="#04">
+									</div> <!-- end item-wrap -->
+								</div>
+								<div class="brick folio-item">
+									<!-- Pro#2 -- Detail 05
+									==============================================================================================-->
+									<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-5.jpg"  data-sub-html="#05">
+									</div> <!-- end item-wrap -->
+								</div>
+								<div class="brick folio-item">
+									<!-- Pro#2 -- Detail 06
+									==============================================================================================-->
+									<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-6.jpg"  data-sub-html="#06">
+									</div> <!-- end item-wrap -->
+								</div>
+								<div class="brick folio-item">
+									<!-- Pro#2 -- Detail 07
+									==============================================================================================-->
+									<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-7.jpg"  data-sub-html="#07">
+									</div> <!-- end item-wrap -->
+								</div>
+							
+							</div> <!-- end folio-item -->   
+	
+							<div class="content text-left">
+								<h3 class="sub-title"><a href="#">Official Seals </a></h3>
+								<div class="meta">Series design for an Official Seal company </div>
+								
+							</div><!--//content--> 
+	
+						</div><!--//item-inner-->
+					</div><!--//item-->
+				
+				<!-- Project #3 Coffee Table
+				==============================================================================================-->
+				<div class="item second_divi col-md-3 col-xs-6 ">
+					<div class="item-inner">
+						
+						<div id="folio-wrap3" class="bricks-wrapper">
+							<div class="brick folio-item">				
+								<div class="item-wrap3" data-src="assets/images/portfolio/gallery/pro3-1.jpg"  data-sub-html="#03">
+	
+								<a href="#" class="overlay">
+	
+								<figure class="figure">
+									<img class="img-responsive" src="assets/images/portfolio/portfolio-3.jpg" alt="" />
+								</figure>                                       
+								</a>
+								<a href="https://www.behance.net/" class='details-link' title="details">
+									<i class="icon-UpRightArrow"></i>
+								</a>
+								</div> <!-- end item-wrap -->
+																				
+							</div>
+							<div class="brick folio-item">
+									<!-- Pro#3 -- Detail 02
+									==============================================================================================-->
+									<div class="item-wrap3" data-src="assets/images/portfolio/gallery/pro3-2.jpg"  data-sub-html="#02">
+									</div> <!-- end item-wrap -->
+								</div>
+	
+						</div> <!-- end folio-item -->   
+						
+						<div class="content text-left">
+							<h3 class="sub-title"><a href="#">Coffee Tables</a></h3>
+							<div class="meta">Series design for ADWIN furniture company</div>
+							
+						</div><!--//content-->    
+						
+					</div><!--//item-inner-->
+				</div><!--//item-->
+				
+				<!-- Project #4 Water Boiler
+				==============================================================================================-->
+				<div class="item second_divi col-md-3 col-xs-6 ">
+					<div class="item-inner">
+	
+						<div id="folio-wrap4" class="bricks-wrapper">
+						
+							<div class="brick folio-item">
+							
+								<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-1.jpg"  data-sub-html="#01">
+	
+								<a href="#" class="overlay">
+								
+								<figure class="figure">
+									<img class="img-responsive" src="assets/images/portfolio/portfolio-4.jpg" alt="" />
+								</figure>                                      
+								</a>
+								<a href="https://www.behance.net/" class='details-link' title="details">
+								<i class="icon-UpRightArrow"></i>
+								</a>
+								</div> <!-- end item-wrap -->
+													
+							</div>
+							<div class="brick folio-item">
+									<!-- Pro#4 -- Detail 04
+									==============================================================================================-->
+									<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-2.jpg"  data-sub-html="#02">
+									</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+									<!-- Pro#4 -- Detail 03
+									==============================================================================================-->
+									<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-3.jpg"  data-sub-html="#03">
+									</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+									<!-- Pro#4 -- Detail 04
+									==============================================================================================-->
+									<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-4.jpg"  data-sub-html="#04">
+									</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+									<!-- Pro#4 -- Detail 05
+									==============================================================================================-->
+									<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-5.jpg"  data-sub-html="#05">
+									</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+									<!-- Pro#4 -- Detail 06
+									==============================================================================================-->
+									<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-6.jpg"  data-sub-html="#06">
+									</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+									<!-- Pro#4 -- Detail 07
+									==============================================================================================-->
+									<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-7.jpg"  data-sub-html="#07">
+									</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+									<!-- Pro#4 -- Detail 08
+									==============================================================================================-->
+									<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-8.jpg"  data-sub-html="#08">
+									</div> <!-- end item-wrap -->
+							</div>
+	
+	
+						</div> <!-- end folio-item -->   
+						
+						<div class="content text-left">
+							<h3 class="sub-title"><a href="#">Water Boiler</a></h3>
+							<div class="meta">Water boiler design</div><br/>
+							
+						</div><!--//content-->    
+	
+					</div><!--//item-inner-->
+				</div><!--//item-->
+				
+				<!-- Project #5 Shaun
+				==============================================================================================-->
+				<div class="item second_divi col-md-3 col-xs-6 ">
+					<div class="item-inner">
+						<div id="folio-wrap5" class="bricks-wrapper">
+						
+							<div class="brick folio-item">
+							
+								<div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-1.jpg"  data-sub-html="#01">
+	
+								<a href="#" class="overlay">
+								
+								<figure class="figure">
+									<img class="img-responsive" src="assets/images/portfolio/portfolio-5.jpg" alt="" />
+								</figure>                                       
+								</a>
+								<a href="https://www.behance.net/" class='details-link' title="details">
+								<i class="icon-UpRightArrow"></i>
+								</a>
+								</div> <!-- end item-wrap --> 
+													
+							</div>
+							<div class="brick folio-item">
+									<!-- Pro#5 -- Detail 02
+									==============================================================================================-->
+									<div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-2.jpg"  data-sub-html="#02">
+									</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+									<!-- Pro#5 -- Detail 03
+									==============================================================================================-->
+									<div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-3.jpg"  data-sub-html="#03">
+									</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+									<!-- Pro#5 -- Detail 04
+									==============================================================================================-->
+									<div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-4.jpg"  data-sub-html="#04">
+									</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+									<!-- Pro#5 -- Detail 05
+									==============================================================================================-->
+									<div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-5.jpg"  data-sub-html="#05">
+									</div> <!-- end item-wrap -->
+							</div>
+	
+						</div> <!-- end folio-item -->   
+						
+						<div class="content text-left">
+							<h3 class="sub-title"><a href="#">SHAUN</a></h3>
+							<div class="meta">Robot For Kids</div>
+							
+						</div><!--//content-->    
+	
+					</div><!--//item-inner-->
+				</div><!--//item-->
+				
+				<!-- Project #6 Sketch
+				==============================================================================================-->
+				<div class="item third_divi col-md-3 col-xs-6 ">
+					<div class="item-inner">
+						<div id="folio-wrap6" class="bricks-wrapper">
+						
+							<div class="brick folio-item">
+							
+								<div class="item-wrap6" data-src="assets/images/portfolio/gallery/pro6-1.jpg"  data-sub-html="#01">
+	
+								<a href="#" class="overlay">
+									
+								<figure class="figure">
+									<img class="img-responsive" src="assets/images/portfolio/portfolio-6.jpg" alt="" />
+								</figure>                                     
+								</a>
+								<a href="https://www.behance.net/" class='details-link' title="details">
+								<i class="icon-UpRightArrow"></i>
+								</a>
+								</div> <!-- end item-wrap -->	 
+													
+							</div>
+							<div class="brick folio-item">
+									<!-- Pro#6 -- Detail 02
+									==============================================================================================-->
+									<div class="item-wrap6" data-src="assets/images/portfolio/gallery/pro6-2.jpg"  data-sub-html="#02">
+									</div> <!-- end item-wrap -->
+							</div>
+	
+						</div> <!-- end folio-item -->   
+						
+						<div class="content text-left">
+							<h3 class="sub-title"><a href="#">Sketchs</a></h3>
+							<div class="meta">  Prouducts Sketchs    </div>
+							
+						</div><!--//content-->    
+	
+					</div><!--//item-inner-->
+				</div><!--//item-->
+				
+				<!-- Project #7 Product Sketchs 2
+				==============================================================================================-->
+				<div class="item third_divi col-md-3 col-xs-6 ">
+					<div class="item-inner">
+						<div id="folio-wrap7" class="bricks-wrapper">
+						
+							<div class="brick folio-item">
+							
+								<div class="item-wrap7" data-src="assets/images/portfolio/gallery/pro7-1.jpg"  data-sub-html="#01">
+	
+								<a href="#" class="overlay">
+									
+								<figure class="figure">
+									<img class="img-responsive" src="assets/images/portfolio/portfolio-7.jpg" alt="" />
+								</figure>                                     
+								</a>
+								<a href="https://www.behance.net/" class='details-link' title="details">
+								<i class="icon-UpRightArrow"></i>
+								</a>
+								</div> <!-- end item-wrap -->	 
+													
+							</div>
+						<div class="brick folio-item">
+									<!-- Pro#7 -- Detail 02
+									==============================================================================================-->
+									<div class="item-wrap7" data-src="assets/images/portfolio/gallery/pro7-2.jpg"  data-sub-html="#02">
+									</div> <!-- end item-wrap -->
+								</div>
+								<div class="brick folio-item">
+									<!-- Pro#7 -- Detail 03
+									==============================================================================================-->
+									<div class="item-wrap7" data-src="assets/images/portfolio/gallery/pro7-3.jpg"  data-sub-html="#03">
+									</div> <!-- end item-wrap -->
+								</div>
+						</div> <!-- end folio-item -->   
+						
+						<div class="content text-left">
+							<h3 class="sub-title"><a href="#">War Chariot</a></h3>
+							<div class="meta">  Rhino Modeling  </div>
+							
+						</div><!--//content-->    
+	
+					</div><!--//item-inner-->
+				</div><!--//item-->
+				
+				<!-- Project #8 Lamborghini
+				==============================================================================================-->
+				<div class="item third_divi col-md-3 col-xs-6 ">
+					<div class="item-inner">
+						<div id="folio-wrap8" class="bricks-wrapper">
+						
+							<div class="brick folio-item">
+							
+								<div class="item-wrap8" data-src="assets/images/portfolio/gallery/pro8-1.jpg"  data-sub-html="#01">
+	
+								<a href="#" class="overlay">
+									
+								<figure class="figure">
+									<img class="img-responsive" src="assets/images/portfolio/portfolio-8.jpg" alt="" />
+								</figure>                                     
+								</a>
+								<a href="https://www.behance.net/" class='details-link' title="details">
+								<i class="icon-UpRightArrow"></i>
+								</a>
+								</div> <!-- end item-wrap -->	 
+													
+							</div>
+						
+						</div> <!-- end folio-item -->   
+						
+						<div class="content text-left">
+							<h3 class="sub-title"><a href="#">Lamborghini</a></h3>
+							<div class="meta">3D MAX Modeling</div>
+							
+						</div><!--//content-->    
+	
+					</div><!--//item-inner-->
+				</div><!--//item-->
+				
+				<!-- Project #9 Painting
+				==============================================================================================-->
+				<div class="item fourth_divi col-md-3 col-xs-6 ">
+					<div class="item-inner">
+						<div id="folio-wrap9" class="bricks-wrapper">
+						
+							<div class="brick folio-item">
+							
+								<div class="item-wrap9" data-src="assets/images/portfolio/gallery/pro9-1.jpg"  data-sub-html="#01">
+	
+								<a href="#" class="overlay">
+									
+								<figure class="figure">
+									<img class="img-responsive" src="assets/images/portfolio/portfolio-9.jpg" alt="" />
+								</figure>                                     
+								</a>
+								<a href="https://www.behance.net/" class='details-link' title="details">
+								<i class="icon-UpRightArrow"></i>
+								</a>
+								</div> <!-- end item-wrap -->	 
+													
+							</div>
+						<div class="brick folio-item">
+									<!-- Pro#9 -- Detail 02
+									==============================================================================================-->
+									<div class="item-wrap9" data-src="assets/images/portfolio/gallery/pro9-2.jpg"  data-sub-html="#02">
+									</div> <!-- end item-wrap -->
+								</div>
+	
+						</div> <!-- end folio-item -->   
+						
+						<div class="content text-left">
+							<h3 class="sub-title"><a href="#"> Painting </a></h3>
+							<div class="meta">Gouache/ Size: A0</div><br/>
+							
+						</div><!--//content-->    
+	
+					</div><!--//item-inner-->
+				</div><!--//item-->
+				
+				<!-- Project #10 Handwork
+				==============================================================================================-->
+				<div class="item fourth_divi col-md-3 col-xs-6 ">
+					<div class="item-inner">
+						<div id="folio-wrap10" class="bricks-wrapper">
+						
+							<div class="brick folio-item">
+							
+								<div class="item-wrap10" data-src="assets/images/portfolio/gallery/pro10-1.jpg"  data-sub-html="#01">
+	
+								<a href="#" class="overlay">
+									
+								<figure class="figure">
+									<img class="img-responsive" src="assets/images/portfolio/portfolio-10.jpg" alt="" />
+								</figure>                                     
+								</a>
+								<a href="https://www.behance.net/" class='details-link' title="details">
+								<i class="icon-UpRightArrow"></i>
+								</a>
+								</div> <!-- end item-wrap -->	 
+													
+							</div>
+							<div class="brick folio-item">
+									<!-- Pro#10 -- Detail 02
+									==============================================================================================-->
+									<div class="item-wrap10" data-src="assets/images/portfolio/gallery/pro10-2.jpg"  data-sub-html="#02">
+									</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+									<!-- Pro#10 -- Detail 03
+									==============================================================================================-->
+									<div class="item-wrap10" data-src="assets/images/portfolio/gallery/pro10-3.jpg"  data-sub-html="#03">
+									</div> <!-- end item-wrap -->
+							</div>
+						</div> <!-- end folio-item -->   
+						
+						<div class="content text-left">
+							<h3 class="sub-title"><a href="#"> Handwork </a></h3>
+							<div class="meta">Carpentry: Wine rack / Mortise-Tenon Connection</div>
+							
+						</div><!--//content-->    
+	
+					</div><!--//item-inner-->
+				</div><!--//item-->
+				
+				<!-- Project #11 Youya
+				==============================================================================================-->
+				<div class="item first_divi col-md-3 col-xs-6 ">
+					<div class="item-inner">
+						<div id="folio-wrap11" class="bricks-wrapper">
+						
+							<div class="brick folio-item">
+							
+								<div class="item-wrap11" data-src="assets/images/portfolio/gallery/pro11-1.jpg"  data-sub-html="#01">
+	
+								<a href="#" class="overlay">
+									
+								<figure class="figure">
+									<img class="img-responsive" src="assets/images/portfolio/portfolio-11.jpg" alt="" />
+								</figure>
+								</a>
+								<a href="https://www.behance.net/" class='details-link' title="details">
+								<i class="icon-UpRightArrow"></i>
+								</a>
+								</div> <!-- end item-wrap -->	 
+								
+							</div>
+	
+						</div> <!-- end folio-item -->   
+						
+						<div class="content text-left">
+							<h3 class="sub-title"><a href="#" data-modal-target="#modal" id="11"> Youya </a></h3>
+							<div class="meta">Dental Healthcare Application</div>
+							
+						</div><!--//content-->    
+	
+					</div><!--//item-inner-->
+				</div><!--//item-->
+				
+				<!-- Project #12 Dr.Pony
+				==============================================================================================-->
+				<div class="item first_divi col-md-3 col-xs-6 ">
+					<div class="item-inner">
+						<div id="folio-wrap12" class="bricks-wrapper">
+						
+							<div class="brick folio-item">
+							
+								<div class="item-wrap12" data-src="assets/images/portfolio/gallery/pro12-1.jpg"  data-sub-html="#01">
+	
+								<a href="#" class="overlay">
+									
+								<figure class="figure">
+									<img class="img-responsive" src="assets/images/portfolio/portfolio-12.jpg" alt="" />
+								</figure>
+								</a>
+								<a href="https://www.behance.net/" class='details-link' title="details">
+								<i class="icon-UpRightArrow"></i>
+								</a>
+								</div> <!-- end item-wrap -->	 
+								
+							</div>
+							<div class="brick folio-item">
+									<!-- Pro#12 -- Detail 02
+									==============================================================================================-->
+									<div class="item-wrap12" data-src="assets/images/portfolio/gallery/pro12-2.jpg"  data-sub-html="#02">
+									</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+									<!-- Pro#12 -- Detail 03
+									==============================================================================================-->
+									<div class="item-wrap12" data-src="assets/images/portfolio/gallery/pro12-3.jpg"  data-sub-html="#03">
+									</div> <!-- end item-wrap -->
+							</div>
+						</div> <!-- end folio-item -->   
+						
+						<div class="content text-left">
+							<h3 class="sub-title"><a href="#"> Dr.Pony </a></h3>
+							<div class="meta">Ubiquitous Smart Solution for children healthcare</div>
+							
+						</div><!--//content-->    
+	
+					</div><!--//item-inner-->
+				</div><!--//item-->
+	
+				<!-- Project #13 Booker
+				==============================================================================================-->
+				<div class="item first_divi col-md-3 col-xs-6 ">
+					<div class="item-inner">
+						<div id="folio-wrap13" class="bricks-wrapper">
+						
+							<div class="brick folio-item">
+							
+								<div class="item-wrap13" data-src="assets/images/portfolio/gallery/pro13-1.jpg"  data-sub-html="#01">
+	
+								<a href="#" class="overlay">
+								
+								<figure class="figure">
+									<img class="img-responsive" src="assets/images/portfolio/portfolio-13.jpg" alt="" />
+								</figure>
+								</a>
+								<a href="https://www.behance.net/" class='details-link' title="details">
+								<i class="icon-UpRightArrow"></i>
+								</a>
+								</div> <!-- end item-wrap -->
+								
+							</div>
+							<div class="brick folio-item">
+									<!-- Pro#13 -- Detail 02
+									==============================================================================================-->
+									<div class="item-wrap13" data-src="assets/images/portfolio/gallery/pro13-2.jpg"  data-sub-html="#02">
+									</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+									<!-- Pro#13 -- Detail 03
+									==============================================================================================-->
+									<div class="item-wrap13" data-src="assets/images/portfolio/gallery/pro13-3.jpg"  data-sub-html="#03">
+									</div> <!-- end item-wrap -->
+							</div>
+						</div> <!-- end folio-item -->   
+						
+						<div class="content text-left">
+							<h3 class="sub-title"><a href="#"> My Seat </a></h3>
+							<div class="meta">Library Position Booking App</div>
+							
+						</div><!--//content-->    
+	
+					</div><!--//item-inner-->
+				</div><!--//item-->
+	
+			</div><!--//item-wrapper-->
+			
+	</section><!--//section-->
+
+	<section id="education-section" class="education-section section">
 		<h2 class="section-title" id="education_holder"></h2>
 		<div class="row">
 			<div class="item col-xs-12 col-sm-4">
@@ -392,698 +1085,16 @@
 		
 	</section><!--//section-->
 	
-	
-	<section id="portfolio-section" class="portfolio-section section">
-	
-	<div class="overlay"></div>
-	<div class="gradient-overlay"></div>
-	
-		<h2 class="section-title">Portfolio</h2>
-		<ul id="filters" class="filters clearfix">
-            <!--data-filter属性决定了哪些Projects会出现在Design Projects，哪些Projects会出现在Sketch & Modeling里-->
-			<li class="type" data-filter=".first_divi">UX/UI Design</li>
-			<li class="type" data-filter=".second_divi">3D Design</li>
-			<li class="type" data-filter=".third_divi">Painting & Handwork</li>
-			<li class="type active" data-filter="*">All</li>
-		</ul><!--//filters-->
-		<div class="items-wrapper isotope row">
-            
-            <!-- Division #1 
-                用first_divi表示
-            ==============================================================================================-->
-                <!-- Project #1 JAGUAR
-                ==============================================================================================-->
-                <div class="item first_divi col-md-3 col-xs-6 ">
-                    <div class="item-inner">
-                        
-                        <div id="folio-wrap" class="bricks-wrapper">
-                            <div class="brick folio-item">
-                                <!-- Pro#1 -- Detail 01 
-                                ==============================================================================================-->
-                                <div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-1.jpg"  data-sub-html="#01">
-                                    <a href="#" class="overlay">
-                                        <figure class="figure">
-                                            <!-- Pro#1 -- Raw Pic 
-                                            ==============================================================================================-->
-                                            <img class="img-responsive" src="assets/images/portfolio/portfolio-1.jpg" alt="" />
-                                        </figure>                                       
-                                    </a>
-                                    <a href="https://www.behance.net/" class='details-link' title="details">
-                                        <i class="icon-UpRightArrow"></i>
-                                    </a>
-                                </div> <!-- end item-wrap -->
-                                
-<!--
-                                <div id="01" class='hide'>
-									Pro#1 -- Detail Description 01
-                                    ==============================================================================================
-                                    <h4>Salad</h4>
-                                    <p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="www.behance.net">Details</a></p>
-                                </div>
--->
-                            </div>
-                            <div class="brick folio-item">
-                                <!-- Pro#1 -- Detail 02
-                                ==============================================================================================-->
-                                <div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-2.jpg"  data-sub-html="#02">
-                                </div> <!-- end item-wrap -->
-
-                            </div>
-                            <div class="brick folio-item">
-                                <!-- Pro#1 -- Detail 03
-                                ==============================================================================================-->
-                                <div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-3.jpg"  data-sub-html="#03">
-                                </div> <!-- end item-wrap -->
-                            </div>
-                            <div class="brick folio-item">
-                                <!-- Pro#1 -- Detail 04
-                                ==============================================================================================-->
-                                <div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-4.jpg"  data-sub-html="#04">
-                                </div> <!-- end item-wrap -->
-                            </div>
-                            <div class="brick folio-item">
-                                <!-- Pro#1 -- Detail 05
-                                ==============================================================================================-->
-                                <div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-5.jpg"  data-sub-html="#05">
-                                </div> <!-- end item-wrap -->
-                            </div>
-                            <div class="brick folio-item">
-                                <!-- Pro#1 -- Detail 06
-                                ==============================================================================================-->
-                                <div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-6.jpg"  data-sub-html="#06">
-                                </div> <!-- end item-wrap -->
-                            </div>
-                            <div class="brick folio-item">
-                                <!-- Pro#1 -- Detail 07
-                                ==============================================================================================-->
-                                <div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-7.jpg"  data-sub-html="#07">
-                                </div> <!-- end item-wrap -->
-                            </div>
-                        </div> <!-- end folio-item -->   
-
-                        <div class="content text-left">
-                            <h3 class="sub-title"><a href="#">JAGUAR</a></h3>
-                            <div class="meta">Derived speaker for jaguar</div><br/>
-                            
-                        </div><!--//content--> 
-
-                    </div><!--//item-inner-->
-                </div><!--//item-->
-            
-                <!-- Project #2 
-                ==============================================================================================-->
-                <div class="item first_divi col-md-3 col-xs-6 ">
-                    <div class="item-inner">
-                        
-                        <div id="folio-wrap2" class="bricks-wrapper">
-                            <div class="brick folio-item">
-                                <!-- Pro#2 -- Detail 01 
-                                ==============================================================================================-->
-                                <div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-1.jpg"  data-sub-html="#01">
-                                    <a href="#" class="overlay">
-                                        <figure class="figure">
-                                            <!-- Pro#2 -- Raw Pic 
-                                            ==============================================================================================-->
-                                            <img class="img-responsive" src="assets/images/portfolio/portfolio-2.jpg" alt="" />
-                                        </figure>
-                                    </a>
-                                    <a href="https://www.behance.net/" class='details-link' title="details">
-                                        <i class="icon-UpRightArrow"></i>
-                                    </a>
-                                </div> <!-- end item-wrap -->
-                                
-                            </div>
-                            <div class="brick folio-item">
-                                <!-- Pro#2 -- Detail 02
-                                ==============================================================================================-->
-                                <div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-2.jpg"  data-sub-html="#02">
-                                </div> <!-- end item-wrap -->
-                                
-                            </div>
-                            <div class="brick folio-item">
-                                <!-- Pro#2 -- Detail 03
-                                ==============================================================================================-->
-                                <div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-3.jpg"  data-sub-html="#03">
-                                </div> <!-- end item-wrap -->
-                            </div>
-                            <div class="brick folio-item">
-                                <!-- Pro#2 -- Detail 04
-                                ==============================================================================================-->
-                                <div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-4.jpg"  data-sub-html="#04">
-                                </div> <!-- end item-wrap -->
-                            </div>
-                            <div class="brick folio-item">
-                                <!-- Pro#2 -- Detail 05
-                                ==============================================================================================-->
-                                <div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-5.jpg"  data-sub-html="#05">
-                                </div> <!-- end item-wrap -->
-                            </div>
-                            <div class="brick folio-item">
-                                <!-- Pro#2 -- Detail 06
-                                ==============================================================================================-->
-                                <div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-6.jpg"  data-sub-html="#06">
-                                </div> <!-- end item-wrap -->
-                            </div>
-                            <div class="brick folio-item">
-                                <!-- Pro#2 -- Detail 07
-                                ==============================================================================================-->
-                                <div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-7.jpg"  data-sub-html="#07">
-                                </div> <!-- end item-wrap -->
-                            </div>
-                        
-                        </div> <!-- end folio-item -->   
-
-                        <div class="content text-left">
-                            <h3 class="sub-title"><a href="#">Official Seals </a></h3>
-                            <div class="meta">Series design for an Official Seal company </div>
-                            
-						</div><!--//content--> 
-
-                    </div><!--//item-inner-->
-                </div><!--//item-->
-            
-            <!-- Project #3
-            ==============================================================================================-->
-			<div class="item first_divi col-md-3 col-xs-6 ">
-				<div class="item-inner">
-                    
-                    <div id="folio-wrap3" class="bricks-wrapper">
-						<div class="brick folio-item">				
-							<div class="item-wrap3" data-src="assets/images/portfolio/gallery/pro3-1.jpg"  data-sub-html="#03">
-
-							<a href="#" class="overlay">
-
-							<figure class="figure">
-                                <img class="img-responsive" src="assets/images/portfolio/portfolio-3.jpg" alt="" />
-                            </figure>                                       
-							</a>
-							<a href="https://www.behance.net/" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-							</a>
-							</div> <!-- end item-wrap -->
-																			
-						</div>
-						<div class="brick folio-item">
-                                <!-- Pro#3 -- Detail 02
-                                ==============================================================================================-->
-                                <div class="item-wrap3" data-src="assets/images/portfolio/gallery/pro3-2.jpg"  data-sub-html="#02">
-                                </div> <!-- end item-wrap -->
-                            </div>
-
-					</div> <!-- end folio-item -->   
-                    
-					<div class="content text-left">
-						<h3 class="sub-title"><a href="#">Coffee Tables</a></h3>
-						<div class="meta">Series design for ADWIN furniture company</div>
-						
-					</div><!--//content-->    
-                    
-				</div><!--//item-inner-->
-			</div><!--//item-->
-            
-            <!-- Project #4
-            ==============================================================================================-->
-			<div class="item first_divi col-md-3 col-xs-6 ">
-				<div class="item-inner">
-
-                    <div id="folio-wrap4" class="bricks-wrapper">
-					
-						<div class="brick folio-item">
-						
-							<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-1.jpg"  data-sub-html="#01">
-
-							<a href="#" class="overlay">
-							
-							<figure class="figure">
-                                <img class="img-responsive" src="assets/images/portfolio/portfolio-4.jpg" alt="" />
-                            </figure>                                      
-							</a>
-							<a href="https://www.behance.net/" class='details-link' title="details">
-							<i class="icon-UpRightArrow"></i>
-							</a>
-							</div> <!-- end item-wrap -->
-												
-						</div>
-						<div class="brick folio-item">
-                                <!-- Pro#4 -- Detail 04
-                                ==============================================================================================-->
-                                <div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-2.jpg"  data-sub-html="#02">
-                                </div> <!-- end item-wrap -->
-                        </div>
-						<div class="brick folio-item">
-                                <!-- Pro#4 -- Detail 03
-                                ==============================================================================================-->
-                                <div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-3.jpg"  data-sub-html="#03">
-                                </div> <!-- end item-wrap -->
-                        </div>
-						<div class="brick folio-item">
-                                <!-- Pro#4 -- Detail 04
-                                ==============================================================================================-->
-                                <div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-4.jpg"  data-sub-html="#04">
-                                </div> <!-- end item-wrap -->
-                        </div>
-                        <div class="brick folio-item">
-                                <!-- Pro#4 -- Detail 05
-                                ==============================================================================================-->
-                                <div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-5.jpg"  data-sub-html="#05">
-                                </div> <!-- end item-wrap -->
-                        </div>
-                        <div class="brick folio-item">
-                                <!-- Pro#4 -- Detail 06
-                                ==============================================================================================-->
-                                <div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-6.jpg"  data-sub-html="#06">
-                                </div> <!-- end item-wrap -->
-                        </div>
-                        <div class="brick folio-item">
-                                <!-- Pro#4 -- Detail 07
-                                ==============================================================================================-->
-                                <div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-7.jpg"  data-sub-html="#07">
-                                </div> <!-- end item-wrap -->
-                        </div>
-                        <div class="brick folio-item">
-                                <!-- Pro#4 -- Detail 08
-                                ==============================================================================================-->
-                                <div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-8.jpg"  data-sub-html="#08">
-                                </div> <!-- end item-wrap -->
-                        </div>
-
-
-					</div> <!-- end folio-item -->   
-                    
-					<div class="content text-left">
-						<h3 class="sub-title"><a href="#">Water Boiler</a></h3>
-						<div class="meta">Water boiler design</div><br/>
-						
-					</div><!--//content-->    
-
-				</div><!--//item-inner-->
-			</div><!--//item-->
-            
-            <!-- Project #5
-            ==============================================================================================-->
-			<div class="item first_divi col-md-3 col-xs-6 ">
-				<div class="item-inner">
-                    <div id="folio-wrap5" class="bricks-wrapper">
-					
-						<div class="brick folio-item">
-						
-							<div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-1.jpg"  data-sub-html="#01">
-
-							<a href="#" class="overlay">
-							
-							<figure class="figure">
-                                <img class="img-responsive" src="assets/images/portfolio/portfolio-5.jpg" alt="" />
-                            </figure>                                       
-							</a>
-							<a href="https://www.behance.net/" class='details-link' title="details">
-							<i class="icon-UpRightArrow"></i>
-							</a>
-							</div> <!-- end item-wrap --> 
-												
-						</div>
-						<div class="brick folio-item">
-                                <!-- Pro#5 -- Detail 02
-                                ==============================================================================================-->
-                                <div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-2.jpg"  data-sub-html="#02">
-                                </div> <!-- end item-wrap -->
-                        </div>
-                        <div class="brick folio-item">
-                                <!-- Pro#5 -- Detail 03
-                                ==============================================================================================-->
-                                <div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-3.jpg"  data-sub-html="#03">
-                                </div> <!-- end item-wrap -->
-                        </div>
-                        <div class="brick folio-item">
-                                <!-- Pro#5 -- Detail 04
-                                ==============================================================================================-->
-                                <div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-4.jpg"  data-sub-html="#04">
-                                </div> <!-- end item-wrap -->
-                        </div>
-                        <div class="brick folio-item">
-                                <!-- Pro#5 -- Detail 05
-                                ==============================================================================================-->
-                                <div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-5.jpg"  data-sub-html="#05">
-                                </div> <!-- end item-wrap -->
-                        </div>
-
-					</div> <!-- end folio-item -->   
-                    
-					<div class="content text-left">
-						<h3 class="sub-title"><a href="#">SHAUN</a></h3>
-						<div class="meta">Robot For Kids</div>
-						
-					</div><!--//content-->    
-
-				</div><!--//item-inner-->
-			</div><!--//item-->
-            
-            <!-- Project #6
-            ==============================================================================================-->
-			<div class="item second_divi col-md-3 col-xs-6 ">
-				<div class="item-inner">
-                    <div id="folio-wrap6" class="bricks-wrapper">
-					
-						<div class="brick folio-item">
-						
-							<div class="item-wrap6" data-src="assets/images/portfolio/gallery/pro6-1.jpg"  data-sub-html="#01">
-
-							<a href="#" class="overlay">
-                                
-							<figure class="figure">
-                                <img class="img-responsive" src="assets/images/portfolio/portfolio-6.jpg" alt="" />
-                            </figure>                                     
-							</a>
-							<a href="https://www.behance.net/" class='details-link' title="details">
-							<i class="icon-UpRightArrow"></i>
-							</a>
-							</div> <!-- end item-wrap -->	 
-												
-						</div>
-						<div class="brick folio-item">
-                                <!-- Pro#6 -- Detail 02
-                                ==============================================================================================-->
-                                <div class="item-wrap6" data-src="assets/images/portfolio/gallery/pro6-2.jpg"  data-sub-html="#02">
-                                </div> <!-- end item-wrap -->
-                        </div>
-
-					</div> <!-- end folio-item -->   
-                    
-					<div class="content text-left">
-						<h3 class="sub-title"><a href="#">Sketchs</a></h3>
-						<div class="meta">  Prouducts Sketchs    </div>
-						
-					</div><!--//content-->    
-
-				</div><!--//item-inner-->
-			</div><!--//item-->
-			
-            <!-- Project #7
-            ==============================================================================================-->
-			<div class="item second_divi col-md-3 col-xs-6 ">
-				<div class="item-inner">
-                    <div id="folio-wrap7" class="bricks-wrapper">
-					
-						<div class="brick folio-item">
-						
-							<div class="item-wrap7" data-src="assets/images/portfolio/gallery/pro7-1.jpg"  data-sub-html="#01">
-
-							<a href="#" class="overlay">
-                                
-							<figure class="figure">
-                                <img class="img-responsive" src="assets/images/portfolio/portfolio-7.jpg" alt="" />
-                            </figure>                                     
-							</a>
-							<a href="https://www.behance.net/" class='details-link' title="details">
-							<i class="icon-UpRightArrow"></i>
-							</a>
-							</div> <!-- end item-wrap -->	 
-												
-						</div>
-					<div class="brick folio-item">
-                                <!-- Pro#7 -- Detail 02
-                                ==============================================================================================-->
-                                <div class="item-wrap7" data-src="assets/images/portfolio/gallery/pro7-2.jpg"  data-sub-html="#02">
-                                </div> <!-- end item-wrap -->
-                            </div>
-                            <div class="brick folio-item">
-                                <!-- Pro#7 -- Detail 03
-                                ==============================================================================================-->
-                                <div class="item-wrap7" data-src="assets/images/portfolio/gallery/pro7-3.jpg"  data-sub-html="#03">
-                                </div> <!-- end item-wrap -->
-                            </div>
-					</div> <!-- end folio-item -->   
-                    
-					<div class="content text-left">
-						<h3 class="sub-title"><a href="#">Sketchs</a></h3>
-						<div class="meta">  Prouducts Sketchs    </div>
-						
-					</div><!--//content-->    
-
-				</div><!--//item-inner-->
-			</div><!--//item-->
-			
-            <!-- Project #8
-            ==============================================================================================-->
-			<div class="item second_divi col-md-3 col-xs-6 ">
-				<div class="item-inner">
-                    <div id="folio-wrap8" class="bricks-wrapper">
-					
-						<div class="brick folio-item">
-						
-							<div class="item-wrap8" data-src="assets/images/portfolio/gallery/pro8-1.jpg"  data-sub-html="#01">
-
-							<a href="#" class="overlay">
-                                
-							<figure class="figure">
-                                <img class="img-responsive" src="assets/images/portfolio/portfolio-8.jpg" alt="" />
-                            </figure>                                     
-							</a>
-							<a href="https://www.behance.net/" class='details-link' title="details">
-							<i class="icon-UpRightArrow"></i>
-							</a>
-							</div> <!-- end item-wrap -->	 
-												
-						</div>
-					
-					</div> <!-- end folio-item -->   
-                    
-					<div class="content text-left">
-						<h3 class="sub-title"><a href="#">Lamborghini</a></h3>
-						<div class="meta">3D MAX Modeling</div>
-						
-					</div><!--//content-->    
-
-				</div><!--//item-inner-->
-			</div><!--//item-->
-			
-            <!-- Project #9
-            ==============================================================================================-->
-			<div class="item third_divi col-md-3 col-xs-6 ">
-				<div class="item-inner">
-                    <div id="folio-wrap9" class="bricks-wrapper">
-					
-						<div class="brick folio-item">
-						
-							<div class="item-wrap9" data-src="assets/images/portfolio/gallery/pro9-1.jpg"  data-sub-html="#01">
-
-							<a href="#" class="overlay">
-                                
-							<figure class="figure">
-                                <img class="img-responsive" src="assets/images/portfolio/portfolio-9.jpg" alt="" />
-                            </figure>                                     
-							</a>
-							<a href="https://www.behance.net/" class='details-link' title="details">
-							<i class="icon-UpRightArrow"></i>
-							</a>
-							</div> <!-- end item-wrap -->	 
-												
-						</div>
-					<div class="brick folio-item">
-                                <!-- Pro#9 -- Detail 02
-                                ==============================================================================================-->
-                                <div class="item-wrap9" data-src="assets/images/portfolio/gallery/pro9-2.jpg"  data-sub-html="#02">
-                                </div> <!-- end item-wrap -->
-                            </div>
-
-					</div> <!-- end folio-item -->   
-                    
-					<div class="content text-left">
-						<h3 class="sub-title"><a href="#"> Painting </a></h3>
-						<div class="meta">Gouache/ Size: A0</div><br/>
-						
-					</div><!--//content-->    
-
-				</div><!--//item-inner-->
-			</div><!--//item-->
-			
-            <!-- Project #10
-            ==============================================================================================-->
-            <div class="item third_divi col-md-3 col-xs-6 ">
-				<div class="item-inner">
-                    <div id="folio-wrap10" class="bricks-wrapper">
-					
-						<div class="brick folio-item">
-						
-							<div class="item-wrap10" data-src="assets/images/portfolio/gallery/pro10-1.jpg"  data-sub-html="#01">
-
-							<a href="#" class="overlay">
-                                
-							<figure class="figure">
-                                <img class="img-responsive" src="assets/images/portfolio/portfolio-10.jpg" alt="" />
-                            </figure>                                     
-							</a>
-							<a href="https://www.behance.net/" class='details-link' title="details">
-							<i class="icon-UpRightArrow"></i>
-							</a>
-							</div> <!-- end item-wrap -->	 
-												
-						</div>
-						<div class="brick folio-item">
-                                <!-- Pro#10 -- Detail 02
-                                ==============================================================================================-->
-                                <div class="item-wrap10" data-src="assets/images/portfolio/gallery/pro10-2.jpg"  data-sub-html="#02">
-                                </div> <!-- end item-wrap -->
-                        </div>
-                        <div class="brick folio-item">
-                                <!-- Pro#10 -- Detail 03
-                                ==============================================================================================-->
-                                <div class="item-wrap10" data-src="assets/images/portfolio/gallery/pro10-3.jpg"  data-sub-html="#03">
-                                </div> <!-- end item-wrap -->
-                        </div>
-					</div> <!-- end folio-item -->   
-                    
-					<div class="content text-left">
-						<h3 class="sub-title"><a href="#"> Handwork </a></h3>
-						<div class="meta">Carpentry: Wine rack / Mortise-Tenon Connection</div>
-						
-					</div><!--//content-->    
-
-				</div><!--//item-inner-->
-			</div><!--//item-->
-			
-			<!-- Project #11 Youya
-            ==============================================================================================-->
-            <div class="item first_divi col-md-3 col-xs-6 ">
-				<div class="item-inner">
-                    <div id="folio-wrap11" class="bricks-wrapper">
-					
-						<div class="brick folio-item">
-						
-							<div class="item-wrap11" data-src="assets/images/portfolio/gallery/pro11-1.jpg"  data-sub-html="#01">
-
-							<a href="#" class="overlay">
-                                
-							<figure class="figure">
-                                <img class="img-responsive" src="assets/images/portfolio/portfolio-11.jpg" alt="" />
-                            </figure>
-							</a>
-							<a href="https://www.behance.net/" class='details-link' title="details">
-							<i class="icon-UpRightArrow"></i>
-							</a>
-							</div> <!-- end item-wrap -->	 
-							
-						</div>
-						<div class="brick folio-item">
-                                <!-- Pro#11 -- Detail 02
-                                ==============================================================================================-->
-                                <div class="item-wrap11" data-src="assets/images/portfolio/gallery/pro11-2.jpg"  data-sub-html="#02">
-                                </div> <!-- end item-wrap -->
-                        </div>
-                        <div class="brick folio-item">
-                                <!-- Pro#11 -- Detail 03
-                                ==============================================================================================-->
-                                <div class="item-wrap11" data-src="assets/images/portfolio/gallery/pro11-3.jpg"  data-sub-html="#03">
-                                </div> <!-- end item-wrap -->
-                        </div>
-					</div> <!-- end folio-item -->   
-                    
-					<div class="content text-left">
-						<h3 class="sub-title"><a href="#"> Youya </a></h3>
-						<div class="meta">Dental Healthcare Application</div>
-						
-					</div><!--//content-->    
-
-				</div><!--//item-inner-->
-			</div><!--//item-->
-			
-			<!-- Project #12 Dr.Pony
-            ==============================================================================================-->
-            <div class="item first_divi col-md-3 col-xs-6 ">
-				<div class="item-inner">
-                    <div id="folio-wrap12" class="bricks-wrapper">
-					
-						<div class="brick folio-item">
-						
-							<div class="item-wrap12" data-src="assets/images/portfolio/gallery/pro12-1.jpg"  data-sub-html="#01">
-
-							<a href="#" class="overlay">
-                                
-							<figure class="figure">
-                                <img class="img-responsive" src="assets/images/portfolio/portfolio-12.jpg" alt="" />
-                            </figure>
-							</a>
-							<a href="https://www.behance.net/" class='details-link' title="details">
-							<i class="icon-UpRightArrow"></i>
-							</a>
-							</div> <!-- end item-wrap -->	 
-							
-						</div>
-						<div class="brick folio-item">
-                                <!-- Pro#12 -- Detail 02
-                                ==============================================================================================-->
-                                <div class="item-wrap12" data-src="assets/images/portfolio/gallery/pro12-2.jpg"  data-sub-html="#02">
-                                </div> <!-- end item-wrap -->
-                        </div>
-                        <div class="brick folio-item">
-                                <!-- Pro#12 -- Detail 03
-                                ==============================================================================================-->
-                                <div class="item-wrap12" data-src="assets/images/portfolio/gallery/pro12-3.jpg"  data-sub-html="#03">
-                                </div> <!-- end item-wrap -->
-                        </div>
-					</div> <!-- end folio-item -->   
-                    
-					<div class="content text-left">
-						<h3 class="sub-title"><a href="#"> Dr.Pony </a></h3>
-						<div class="meta">Ubiquitous Smart Solution for children healthcare</div>
-						
-					</div><!--//content-->    
-
-				</div><!--//item-inner-->
-			</div><!--//item-->
-
-			<!-- Project #13 Booker
-            ==============================================================================================-->
-            <div class="item first_divi col-md-3 col-xs-6 ">
-				<div class="item-inner">
-                    <div id="folio-wrap13" class="bricks-wrapper">
-					
-						<div class="brick folio-item">
-						
-							<div class="item-wrap13" data-src="assets/images/portfolio/gallery/pro13-1.jpg"  data-sub-html="#01">
-
-							<a href="#" class="overlay">
-                            
-							<figure class="figure">
-                                <img class="img-responsive" src="assets/images/portfolio/portfolio-13.jpg" alt="" />
-                            </figure>
-							</a>
-							<a href="https://www.behance.net/" class='details-link' title="details">
-							<i class="icon-UpRightArrow"></i>
-							</a>
-							</div> <!-- end item-wrap -->
-							
-						</div>
-						<div class="brick folio-item">
-                                <!-- Pro#13 -- Detail 02
-                                ==============================================================================================-->
-                                <div class="item-wrap13" data-src="assets/images/portfolio/gallery/pro13-2.jpg"  data-sub-html="#02">
-                                </div> <!-- end item-wrap -->
-                        </div>
-                        <div class="brick folio-item">
-                                <!-- Pro#13 -- Detail 03
-                                ==============================================================================================-->
-                                <div class="item-wrap13" data-src="assets/images/portfolio/gallery/pro13-3.jpg"  data-sub-html="#03">
-                                </div> <!-- end item-wrap -->
-                        </div>
-					</div> <!-- end folio-item -->   
-                    
-					<div class="content text-left">
-						<h3 class="sub-title"><a href="#"> Booker </a></h3>
-						<div class="meta">Library Position Booking App</div>
-						
-					</div><!--//content-->    
-
-				</div><!--//item-inner-->
-			</div><!--//item-->
-
-		</div><!--//item-wrapper-->
-		
-	</section><!--//section-->
-	
 	<section id="contact-section" class="contact-section section">
 		<h2 class="section-title">Get in Touch</h2>
 		<div class="intro">
-			<img class="profile-image" src="assets/images/profile-image.png" alt="">
+			<div class="contact-left">
+				<div class="image-container"><img class="profile-image" src="assets/images/profile-image.png" alt=""></div>
+				<a class="btn" id="" href="./assets/resume/ResumeEN_Tianjia_Shen.pdf" download> 
+					<i class="fa fa-download" aria-hidden="true"></i> Resume</a>
+				<a class="btn" href="./assets/portfolio/portfolio - Tianjia Shen.zip" download> 
+					<i class="fa fa-download" aria-hidden="true"></i> Portfolio</a>
+			</div>
 			<div class="dialog">
 				<p>I live in Shanghai. I'm looking for a job, one where I get a bit more job satisfaction.</p>
                 <p>Let's build something amazing together!</p>
