@@ -960,4 +960,15 @@ a.btn:hover {
   text-align: left;
 }
 
+.image-responsive{
+  height: 144px;
+}
 
+.testimonials-section {
+  height: 373px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  top: 200px;
+}
