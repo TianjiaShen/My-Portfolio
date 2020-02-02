@@ -362,10 +362,12 @@ a.btn:hover {
   margin-right: 5px;
 }
 .timeline .place {
+  color: #00BCD4;
+  font-weight: bold;
   margin-top: 0;
   margin-bottom: 15px;
   font-size: 20px;
-  font-weight: 300;
+  /* font-weight: 300; */
 }
 .timeline .job-meta {
   position: absolute;
@@ -951,6 +953,7 @@ a.btn:hover {
 
 .image-container {
   display: block;
+  overflow: hidden;
 }
 
 .contact-section .intro .dialog{
@@ -971,4 +974,8 @@ a.btn:hover {
 .carousel-indicators {
   position: absolute;
   top: 200px;
+}
+
+.overlay {
+  z-index: 100;
 }

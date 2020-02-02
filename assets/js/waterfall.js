@@ -1,29 +1,53 @@
-const openModalButtons = document.querySelectorAll('[data-modal-target]');
-const closeModalButtons = document.querySelectorAll('[data-close-button]');
-const overlay = document.getElementById('overlay');
+let openModalButtons;
+let closeModalButtons;
+let overlay;
+let modal;
 
-openModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modal = document.querySelector(button.dataset.modalTarget);
-        openModal(modal, button.id);
+// must register these elements after DOM is ready
+document.addEventListener('DOMContentLoaded', function(event) {
+    //the event occurred
+    openModalButtons = document.querySelectorAll('[data-modal-target]');
+    closeModalButtons = document.querySelectorAll('[data-close-button]');
+    overlay = document.getElementById('overlay');
+    modal = document.getElementById('modal');
+
+    for (var i = 0; i < openModalButtons.length; i++) {
+        obj = openModalButtons[i];
+        obj.addEventListener('click', () => {
+            // const modal = document.querySelector(obj.dataset.modalTarget);
+            console.log(obj);
+            console.log(obj.id + "clicked");
+            openModal(modal, obj.id);
+        })
+    }
+
+    console.log(openModalButtons);
+
+    overlay.addEventListener('click', () => {
+        const modals = document.querySelectorAll('.modal.active');
+        modals.forEach(modal => {
+            closeModal(modal);
+        })
+    })
+
+    closeModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = button.closest('.modal');
+            closeModal(modal);
+        })
     })
 })
 
-overlay.addEventListener('click', () => {
-    const modals = document.querySelectorAll('.modal.active');
-    modals.forEach(modal => {
-        closeModal(modal);
-    })
-})
-
-closeModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modal = button.closest('.modal');
-        closeModal(modal);
-    })
-})
+function openbala(idNum) {
+    if (modal == null) return;
+    modal.classList.add('active');
+    overlay.classList.add('active');
+    displayProject(idNum);
+    alert(idNum);
+}
 
 function openModal(modal, projectNum) {
+    console.log("opening modal:", modal, projectNum);
     if (modal == null) return;
     modal.classList.add('active');
     overlay.classList.add('active');
@@ -61,7 +85,7 @@ function displayProject(projectNum, flag=false) {
             img.innerText = "fail";
             window.iterEnd = true;
         };
-        img.src = ".assets/images/porfolio/gallery/pro" + projectNum + "-" + i + ".jpg";
+        img.src = "assets/images/portfolio/gallery/pro" + projectNum + "-" + i + ".jpg";
         if (iterEnd || img.innerText === "fail") break;
         console.log(1, iterEnd, img.innerText, img.src);
         img.id = "picture" + i;

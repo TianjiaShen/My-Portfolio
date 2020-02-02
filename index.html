@@ -30,6 +30,9 @@
 <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
 <!-- <script src="js/lightGallery.js"></script> -->
 
+<!-- External Social Media -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
 </head> 
 
 <body>
@@ -58,7 +61,12 @@
 	<div class="contact-info">
 		<div class="container text-center">
 			<ul class="list-inline">
-				<li class="email"><i class="fa fa-envelope"></i><a href="mailto:1049904168@qq.com">1049904168@qq.com</a></li>
+				<li class="email"><a href="mailto:1049904168@qq.com"><i class="fas fa-envelope"></i></a></li>
+				<li class="linkedin"><a href="https://www.linkedin.com/in/tianjia-shen/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+				<li class="facebook"><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+				<li class="instagram"><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+				<li class="lofter"><a href="https://jessicashenart.lofter.com/" target="_blank"><i class="fab"></i></a></li>
+				
 				<!-- <li><i class="fa fa-phone"></i> <a href="tel: 13901795664">13901795664</a></li> -->
 			</ul>
 		</div><!--//container-->
@@ -82,6 +90,8 @@
 	
 </header><!--//header-->
 
+<button data-modal-target="#modal" onclick="openbala(this.id)" id="1">Open Modal</button>
+<a href="#" data-modal-target="#modal" id="6766">tsttest</a>
 <div class="modal" id="modal">
 	<div class="modal-header">
 		<div class="title">Example Modal</div>
@@ -90,6 +100,7 @@
 	<div class="modal-body" id="modal-body">
 	</div>
 </div>
+<div id="overlay"></div>
 
 <div class="wrapper container">
 	<section id="experiences-section" class="experiences-section section">
