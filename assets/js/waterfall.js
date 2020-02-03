@@ -109,7 +109,7 @@ function displayProject(projectNum, flag=false) {
         img.id = "picture" + i;
         scrollWindowWidth = document.getElementById("modal-body").clientWidth * 0.9;
         img.width = scrollWindowWidth;
-        img.height = scrollWindowWidth / 1.414;
+        // img.height = scrollWindowWidth / 1.414;
         console.log(2, iterEnd, img.innerText, img.src);
         if (window.iterEnd || img.innerText === "fail") break;
         scrollWindow.appendChild(img);
