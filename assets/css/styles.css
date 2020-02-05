@@ -982,3 +982,8 @@ a.btn:hover {
 .overlay {
   z-index: 100;
 }
+
+.external-icon {
+  width: 20px;
+  height: 20px;
+}

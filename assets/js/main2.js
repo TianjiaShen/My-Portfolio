@@ -427,7 +427,8 @@
 		ssPreloader();
 		ssFitVids();
 		ssMasonryFolio();
-		ssLightGallery();
+		// uncomment the line below to recover light gallery mode
+		// ssLightGallery(); 
 		ssMenuOnScrolldown();
 		ssOffCanvas();
 		ssSmoothScroll();

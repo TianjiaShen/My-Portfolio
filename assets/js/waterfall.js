@@ -1,3 +1,5 @@
+// let scrollWindow;
+
 // must register these elements after DOM is ready
 document.addEventListener('DOMContentLoaded', function(event) {
     //the event occurred
@@ -17,33 +19,39 @@ document.addEventListener('DOMContentLoaded', function(event) {
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
 
+    // global assignment
+    // scrollWindow = document.getElementById("modal-body");
+
     // When the user clicks on the button, open the modal
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
+    // btn.onclick = function() {
+    //     modal.style.display = "block";
+    // }
+
+    
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
-        modal.style.display = "none";
+        closeModal();
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
     if (event.target == modal) {
-        modal.style.display = "none";
+        closeModal();
     }
     }
 
 
     for (var i = 0; i < brickList.length; i++) {
         obj = brickList[i];
-        obj.addEventListener('click', () => {
-            // const modal = document.querySelector(obj.dataset.modalTarget);
-            console.log(obj);
-            console.log(obj.id + "clicked");
-            modal.style.display = "block";
-            displayProject(obj.id);
-        })
+        console.log("init", i, obj);
+        // obj.addEventListener('click', (idNum) => {
+        //     // const modal = document.querySelector(obj.dataset.modalTarget);
+        //     console.log(idNum);
+        //     console.log(idNum + "clicked");
+        //     modal.style.display = "block";
+        //     displayProject(idNum);
+        // })
     }
 
     // console.log(openModalButtons);
@@ -64,27 +72,32 @@ document.addEventListener('DOMContentLoaded', function(event) {
 })
 
 
-// function openModal(modal, projectNum) {
-//     console.log("opening modal:", modal, projectNum);
-//     if (modal == null) return;
-//     modal.classList.add('active');
-//     overlay.classList.add('active');
-//     displayProject(projectNum);
-// }
+function openModal() {
+    var modal = document.getElementById("myModal");
+    if (modal == null) return;
+    modal.style.display = "block";
+    modal.classList.add('active');
+}
 
-// function closeModal(modal) {
-//     if (modal == null) return;
-//     // remove all children in modal-body
-//     var scrollWindow = document.getElementById("modal-body");
-//     while (scrollWindow.hasChildNodes()) {  
-//         scrollWindow.removeChild(scrollWindow.firstChild);
-//     }
-//     modal.classList.remove('active');
-//     overlay.classList.remove('active');
-// }
+function closeModal() {
+    var modal = document.getElementById("myModal");
+    if (modal == null) return;
+    // remove all children in modal-body
+    var scrollWindow = document.getElementById("modal-body");
+    while (scrollWindow.hasChildNodes()) {  
+        scrollWindow.removeChild(scrollWindow.firstChild);
+    }
+    modal.style.display = "none";
+    modal.classList.remove('active');
+}
 
-let iterEnd = false;
-function displayProject(projectNum, flag=false) {
+function displayProject(entity) {
+    // acquire project num from entity
+    var projectNum = entity.getAttribute('project-num');
+    console.log(entity);
+    // show modal 
+    openModal();
+
     // dynamically add images to modal-body
 
     // get object modal-body
@@ -95,7 +108,6 @@ function displayProject(projectNum, flag=false) {
         // iterate through all images that belong to this project
         var img = document.createElement("img");
         img.innerText = "test";
-        iterEnd = false;
         img.onerror = function() {
             console.log(i);
             console.log((i - 1).toString() + " images found for this project!");
@@ -104,15 +116,14 @@ function displayProject(projectNum, flag=false) {
             window.iterEnd = true;
         };
         img.src = "assets/images/portfolio/gallery/pro" + projectNum + "-" + i + ".jpg";
-        if (iterEnd || img.innerText === "fail") break;
-        console.log(1, iterEnd, img.innerText, img.src);
+
         img.id = "picture" + i;
-        scrollWindowWidth = document.getElementById("modal-body").clientWidth * 0.9;
+        scrollWindowWidth = scrollWindow.clientWidth * 0.9;
         img.width = scrollWindowWidth;
+        img.style.textAlign = 'center';
+        console.log(scrollWindowWidth);
         // img.height = scrollWindowWidth / 1.414;
-        console.log(2, iterEnd, img.innerText, img.src);
-        if (window.iterEnd || img.innerText === "fail") break;
+
         scrollWindow.appendChild(img);
-        console.log(3, iterEnd, img.innerText, img.src);
     }
 }

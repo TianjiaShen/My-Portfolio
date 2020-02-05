@@ -63,9 +63,8 @@
 			<ul class="list-inline">
 				<li class="email"><a href="mailto:1049904168@qq.com"><i class="fas fa-envelope"></i></a></li>
 				<li class="linkedin"><a href="https://www.linkedin.com/in/tianjia-shen/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-				<li class="facebook"><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-				<li class="instagram"><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-				<li class="lofter"><a href="https://jessicashenart.lofter.com/" target="_blank"><i class="fab"></i></a></li>
+				<li class="bilibili"><a href="https://space.bilibili.com/23121831/" target="_blank"><img class="external-icon" src="assets/icon/bilibili.png" alt="lofter icon"/></a></li>
+				<li class="lofter"><a href="https://jessicashenart.lofter.com/" target="_blank"><img class="external-icon" src="assets/icon/lofter.svg" alt="lofter icon"/></a></li>
 				
 				<!-- <li><i class="fa fa-phone"></i> <a href="tel: 13901795664">13901795664</a></li> -->
 			</ul>
@@ -91,8 +90,6 @@
 </header><!--//header-->
 
 <!-- Waterfall Style Project Modal Setup -->
-<button id="myBtn">Open Modal</button>
-<a href="#" data-waterfall="" id="1">testasdasdads</a>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -112,6 +109,7 @@
 		</div>
 	</div>
 </div>
+
 <!-- ====================================== -->
 
 <div class="wrapper container">
@@ -265,11 +263,11 @@
 					<div class="item second_divi col-md-3 col-xs-6 ">
 						<div class="item-inner">
 							
-							<div id="folio-wrap" class="bricks-wrapper" data-waterfall="" id="1">
+							<div id="folio-wrap" class="bricks-wrapper" data-waterfall="">
 								<div class="brick folio-item">
 									<!-- Pro#1 -- Detail 01 
 									==============================================================================================-->
-									<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-1.jpg"  data-sub-html="#01">
+									<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-1.jpg" data-sub-html="#01" project-num="1" onclick="displayProject(this)">
 										<a href="#" class="overlay">
 											<figure class="figure">
 												<!-- Pro#1 -- Raw Pic 
@@ -331,7 +329,7 @@
 							</div> <!-- end folio-item -->   
 	
 							<div class="content text-left">
-								<h3 class="sub-title"><a href="#" data-waterfall="" id="1">JAGUAR</a></h3>
+								<h3 class="sub-title"><a href="#" data-waterfall="" project-num="1" onclick="displayProject(this)">JAGUAR</a></h3>
 								<div class="meta">Derived speaker for jaguar</div><br/>
 								
 							</div><!--//content--> 
@@ -348,7 +346,7 @@
 								<div class="brick folio-item">
 									<!-- Pro#2 -- Detail 01 
 									==============================================================================================-->
-									<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-1.jpg"  data-sub-html="#01">
+									<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-1.jpg"  data-sub-html="#01" project-num="2" onclick="displayProject(this)">
 										<a href="#" class="overlay">
 											<figure class="figure">
 												<!-- Pro#2 -- Raw Pic 
@@ -403,7 +401,7 @@
 							</div> <!-- end folio-item -->   
 	
 							<div class="content text-left">
-								<h3 class="sub-title"><a href="#" data-waterfall="" id="2">Official Seals</a></h3>
+								<h3 class="sub-title"><a href="#" data-waterfall="" project-num="2" onclick="displayProject(this)">Official Seals</a></h3>
 								<div class="meta">Series design for an Official Seal company </div>
 								
 							</div><!--//content--> 
@@ -418,7 +416,7 @@
 						
 						<div id="folio-wrap3" class="bricks-wrapper">
 							<div class="brick folio-item">				
-								<div class="item-wrap3" data-src="assets/images/portfolio/gallery/pro3-1.jpg"  data-sub-html="#03">
+								<div class="item-wrap3" data-src="assets/images/portfolio/gallery/pro3-1.jpg"  data-sub-html="#03" project-num="3" onclick="displayProject(this)">
 	
 								<a href="#" class="overlay">
 	
@@ -442,7 +440,7 @@
 						</div> <!-- end folio-item -->   
 						
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="#" data-waterfall="" id="3">Coffee Tables</a></h3>
+							<h3 class="sub-title"><a href="#" data-waterfall="" project-num="3" onclick="displayProject(this)">Coffee Tables</a></h3>
 							<div class="meta">Series design for ADWIN furniture company</div>
 							
 						</div><!--//content-->    
@@ -459,7 +457,7 @@
 						
 							<div class="brick folio-item">
 							
-								<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-1.jpg"  data-sub-html="#01">
+								<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-1.jpg"  data-sub-html="#01" project-num="4" onclick="displayProject(this)">
 	
 								<a href="#" class="overlay">
 								
@@ -520,7 +518,7 @@
 						</div> <!-- end folio-item -->   
 						
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="#" data-waterfall="" id="4">Water Boiler</a></h3>
+							<h3 class="sub-title"><a href="#" data-waterfall="" project-num="4" onclick="displayProject(this)">Water Boiler</a></h3>
 							<div class="meta">Water boiler design</div><br/>
 							
 						</div><!--//content-->    
@@ -536,7 +534,7 @@
 						
 							<div class="brick folio-item">
 							
-								<div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-1.jpg"  data-sub-html="#01">
+								<div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-1.jpg"  data-sub-html="#01" project-num="5" onclick="displayProject(this)">
 	
 								<a href="#" class="overlay">
 								
@@ -578,7 +576,7 @@
 						</div> <!-- end folio-item -->   
 						
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="#" data-waterfall="" id="5">SHAUN</a></h3>
+							<h3 class="sub-title"><a href="#" data-waterfall="" project-num="5" onclick="displayProject(this)">SHAUN</a></h3>
 							<div class="meta">Robot For Kids</div>
 							
 						</div><!--//content-->    
@@ -594,7 +592,7 @@
 						
 							<div class="brick folio-item">
 							
-								<div class="item-wrap6" data-src="assets/images/portfolio/gallery/pro6-1.jpg"  data-sub-html="#01">
+								<div class="item-wrap6" data-src="assets/images/portfolio/gallery/pro6-1.jpg"  data-sub-html="#01" project-num="6" onclick="displayProject(this)">
 	
 								<a href="#" class="overlay">
 									
@@ -618,7 +616,7 @@
 						</div> <!-- end folio-item -->   
 						
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="#" data-waterfall="" id="6">Sketchs</a></h3>
+							<h3 class="sub-title"><a href="#" data-waterfall="" project-num="6" onclick="displayProject(this)">Sketchs</a></h3>
 							<div class="meta">  Prouducts Sketchs    </div>
 							
 						</div><!--//content-->    
@@ -634,7 +632,7 @@
 						
 							<div class="brick folio-item">
 							
-								<div class="item-wrap7" data-src="assets/images/portfolio/gallery/pro7-1.jpg"  data-sub-html="#01">
+								<div class="item-wrap7" data-src="assets/images/portfolio/gallery/pro7-1.jpg"  data-sub-html="#01" project-num="7" onclick="displayProject(this)">
 	
 								<a href="#" class="overlay">
 									
@@ -663,7 +661,7 @@
 						</div> <!-- end folio-item -->   
 						
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="#" data-waterfall="" id="7">War Chariot</a></h3>
+							<h3 class="sub-title"><a href="#" data-waterfall="" project-num="7" onclick="displayProject(this)">War Chariot</a></h3>
 							<div class="meta">  Rhino Modeling  </div>
 							
 						</div><!--//content-->    
@@ -679,7 +677,7 @@
 						
 							<div class="brick folio-item">
 							
-								<div class="item-wrap8" data-src="assets/images/portfolio/gallery/pro8-1.jpg"  data-sub-html="#01">
+								<div class="item-wrap8" data-src="assets/images/portfolio/gallery/pro8-1.jpg"  data-sub-html="#01" project-num="8" onclick="displayProject(this)">
 	
 								<a href="#" class="overlay">
 									
@@ -697,7 +695,7 @@
 						</div> <!-- end folio-item -->   
 						
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="#" data-waterfall="" id="8">Lamborghini</a></h3>
+							<h3 class="sub-title"><a href="#" data-waterfall="" project-num="8" onclick="displayProject(this)">Lamborghini</a></h3>
 							<div class="meta">3D MAX Modeling</div>
 							
 						</div><!--//content-->    
@@ -713,7 +711,7 @@
 						
 							<div class="brick folio-item">
 							
-								<div class="item-wrap9" data-src="assets/images/portfolio/gallery/pro9-1.jpg"  data-sub-html="#01">
+								<div class="item-wrap9" data-src="assets/images/portfolio/gallery/pro9-1.jpg"  data-sub-html="#01" project-num="9" onclick="displayProject(this)">
 	
 								<a href="#" class="overlay">
 									
@@ -737,7 +735,7 @@
 						</div> <!-- end folio-item -->   
 						
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="#" data-waterfall="" id="9"> Painting </a></h3>
+							<h3 class="sub-title"><a href="#" data-waterfall="" project-num="9" onclick="displayProject(this)"> Painting </a></h3>
 							<div class="meta">Gouache/ Size: A0</div><br/>
 							
 						</div><!--//content-->    
@@ -753,7 +751,7 @@
 						
 							<div class="brick folio-item">
 							
-								<div class="item-wrap10" data-src="assets/images/portfolio/gallery/pro10-1.jpg"  data-sub-html="#01">
+								<div class="item-wrap10" data-src="assets/images/portfolio/gallery/pro10-1.jpg"  data-sub-html="#01" project-num="10" onclick="displayProject(this)">
 	
 								<a href="#" class="overlay">
 									
@@ -782,7 +780,7 @@
 						</div> <!-- end folio-item -->   
 						
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="#" data-waterfall="" id="10"> Handwork </a></h3>
+							<h3 class="sub-title"><a href="#" data-waterfall="" project-num="10" onclick="displayProject(this)"> Handwork </a></h3>
 							<div class="meta">Carpentry: Wine rack / Mortise-Tenon Connection</div>
 							
 						</div><!--//content-->    
@@ -798,7 +796,7 @@
 						
 							<div class="brick folio-item">
 							
-								<div class="item-wrap11" data-src="assets/images/portfolio/gallery/pro11-1.jpg"  data-sub-html="#01">
+								<div class="item-wrap11" data-src="assets/images/portfolio/gallery/pro11-1.jpg"  data-sub-html="#01" project-num="11" onclick="displayProject(this)">
 	
 								<a href="#" class="overlay">
 									
@@ -816,7 +814,7 @@
 						</div> <!-- end folio-item -->   
 						
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="#" data-waterfall="" id="11"> Youya </a></h3>
+							<h3 class="sub-title"><a href="#" data-waterfall="" project-num="11" onclick="displayProject(this)"> Youya </a></h3>
 							<div class="meta">Dental Healthcare Application</div>
 							
 						</div><!--//content-->    
@@ -832,7 +830,7 @@
 						
 							<div class="brick folio-item">
 							
-								<div class="item-wrap12" data-src="assets/images/portfolio/gallery/pro12-1.jpg"  data-sub-html="#01">
+								<div class="item-wrap12" data-src="assets/images/portfolio/gallery/pro12-1.jpg"  data-sub-html="#01" project-num="12" onclick="displayProject(this)">
 	
 								<a href="#" class="overlay">
 									
@@ -861,7 +859,7 @@
 						</div> <!-- end folio-item -->   
 						
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="#" data-waterfall="" id="12"> Dr.Pony </a></h3>
+							<h3 class="sub-title"><a href="#" data-waterfall="" project-num="12" onclick="displayProject(this)"> Dr.Pony </a></h3>
 							<div class="meta">Ubiquitous Smart Solution for children healthcare</div>
 							
 						</div><!--//content-->    
@@ -877,7 +875,7 @@
 						
 							<div class="brick folio-item">
 							
-								<div class="item-wrap13" data-src="assets/images/portfolio/gallery/pro13-1.jpg"  data-sub-html="#01">
+								<div class="item-wrap13" data-src="assets/images/portfolio/gallery/pro13-1.jpg"  data-sub-html="#01" project-num="13s" onclick="displayProject(this)">
 	
 								<a href="#" class="overlay">
 								
@@ -906,7 +904,7 @@
 						</div> <!-- end folio-item -->   
 						
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="#" data-waterfall="" id="13"> My Seat </a></h3>
+							<h3 class="sub-title"><a href="#" data-waterfall="" project-num="13" onclick="displayProject(this)"> My Seat </a></h3>
 							<div class="meta">Library Position Booking App</div>
 							
 						</div><!--//content-->    
