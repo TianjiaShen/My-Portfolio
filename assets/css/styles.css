@@ -6,6 +6,9 @@
  * Twitter: @3rdwave_themes
 */
 /* ======= Base ======= */
+html, modal {
+  overflow: visible;
+}
 body {
   font-family: 'Roboto', sans-serif;
   color: #666;
