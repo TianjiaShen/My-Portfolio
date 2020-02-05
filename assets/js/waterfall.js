@@ -121,6 +121,9 @@ function displayProject(entity) {
         scrollWindowWidth = scrollWindow.clientWidth * 0.9;
         img.width = scrollWindowWidth;
         img.style.textAlign = 'center';
+        img.style.display = 'block';
+        img.style.marginLeft = 'auto';
+        img.style.marginRight = 'auto';
         console.log(scrollWindowWidth);
         // img.height = scrollWindowWidth / 1.414;
 

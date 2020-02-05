@@ -20,7 +20,7 @@
     /* Hidden by default */
     position: fixed;
     /* Stay in place */
-    z-index: 1;
+    z-index: 1000;
     /* Sit on top */
     left: 0;
     top: 0;
@@ -37,15 +37,17 @@
 }
 
 /* The Close Button */
-.close {
-    color: #aaa;
+.modal-header .close {
+    color: #444;
     float: right;
-    font-size: 28px;
+    margin-top: 8px;
+    margin-right: 0px;
+    font-size: 40px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+span .close:hover,
+span .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -55,23 +57,6 @@
     transform: translate(-50%, -50%) scale(1);
 } */
 
-/* Modal Header */
-.modal-header {
-    padding: 2px 16px;
-    color: white;
-}
-
-/* Modal Body */
-.modal-body {
-    padding: 2px 16px;
-}
-
-/* Modal Footer */
-.modal-footer {
-    padding: 2px 16px;
-    color: white;
-}
-
 /* Modal Content */
 .modal-content {
     position: relative;
@@ -79,10 +64,45 @@
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 80%;
+    width: 80rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     animation-name: animatetop;
     animation-duration: 0.4s
+}
+
+/* Modal Header */
+.modal-header {
+    position: relative;
+    width: 100%;
+    height: 55px;
+    margin: 0 auto;
+    padding: 2px 16px;
+    color: white;
+    overflow: hidden;
+    z-index: 1001;
+}
+
+.modal-header .modal-header-bar {
+    position: fixed;
+    width: 100%;
+    max-width: 78rem;
+    padding-right: 14px;
+    color: white;
+    background-color: white;
+    overflow: hidden;
+}
+
+/* Modal Body */
+.modal-body {
+    display: block;
+    margin-top: 5px;
+    padding: 2px 16px;
+}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 2px 16px;
+    color: white;
 }
 
 /* Add Animation */

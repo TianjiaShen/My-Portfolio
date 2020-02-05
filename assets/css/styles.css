@@ -88,17 +88,20 @@ a.btn:hover {
   -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 .tlinks{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
 #topcontrol:hover {
   background: #007888;
   color: #fff;
 }
-#topcontrol .fa {
+#topcontrol .fa,
+#topcontrol .fas {
   position: relative;
   top: 3px;
-  font-size: 25px;
-  font-weight: normal;
+  font-size: 28px;
+  /* font-weight: normal; */
 }
 .location .fas{
   margin: 5px;
