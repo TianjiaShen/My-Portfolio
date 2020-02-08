@@ -71,21 +71,16 @@ document.addEventListener('DOMContentLoaded', function (event) {
     // })
 })
 
-// let prevLocation;
 
 function openModal() {
     var modal = document.getElementById("myModal");
-    var mBody = document.getElementById("body");
     if (modal == null) return;
     modal.style.display = "block";
     modal.classList.add('active');
-    // console.log(window.scrollY);
-    mBody.style.overflow = "hidden";
 }
 
 function closeModal() {
     var modal = document.getElementById("myModal");
-    var mBody = document.getElementById("body");
     if (modal == null) return;
     // remove all children in modal-body
     var scrollWindow = document.getElementById("modal-body");
@@ -94,9 +89,6 @@ function closeModal() {
     }
     modal.style.display = "none";
     modal.classList.remove('active');
-
-    // window.scrollY = prevLocation;
-    mBody.style.overflow = "scroll";
 }
 //         idx = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10, 11, 12, 13];
 let projectMap = [0, 7, 7, 2, 8, 5, 2, 3, 1, 2, 3, 41, 23, 30];
@@ -104,7 +96,7 @@ let projectMap = [0, 7, 7, 2, 8, 5, 2, 3, 1, 2, 3, 41, 23, 30];
 function displayProject(entity) {
     // acquire project num from entity
     var projectNum = entity.getAttribute('project-num');
-
+    console.log(entity);
     // show modal 
     openModal();
     
@@ -112,8 +104,7 @@ function displayProject(entity) {
 
     // get object modal-body
     var scrollWindow = document.getElementById("modal-body");
-    // console.log(projectNum, projectNum[projectNum]);
-
+    console.log(projectNum, projectNum[projectNum]);
     // add image by projectNum
     for (var i = 1; i <= projectMap[projectNum]; i++) {
         // iterate through all images that belong to this project
@@ -131,6 +122,7 @@ function displayProject(entity) {
         
         // if (ImageNotExist(tempSrc)) break;
         img.src = tempSrc;
+        console.log(img.status, img.src, img.height);
 
         img.id = "picture" + i;
         scrollWindowWidth = scrollWindow.clientWidth * 0.9;
@@ -143,9 +135,9 @@ function displayProject(entity) {
     }
 }
 
-// function ImageNotExist(url) {
-//     var img = new Image();
-//     img.src = url;
-//     console.log(img, img.height);
-//     return (img.height === 0);
-// }
+function ImageNotExist(url) {
+    var img = new Image();
+    img.src = url;
+    console.log(img, img.height);
+    return (img.height === 0);
+}
