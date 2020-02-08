@@ -1,55 +1,57 @@
 /* ===================================================================
  * Howdy - Main JS
  *
- * ------------------------------------------------------------------- */ 
+ * ------------------------------------------------------------------- */
 
-(function($) {
+(function ($) {
 
 	"use strict";
 
-	var cfg = {		
-		defAnimation   : "fadeInUp",    // default css animation		
-		scrollDuration : 800,           // smoothscroll duration
-		statsDuration  : 4000           // stats animation duration
-	},	
-	$WIN = $(window);
+	var cfg = {
+			defAnimation: "fadeInUp", // default css animation		
+			scrollDuration: 800, // smoothscroll duration
+			statsDuration: 4000 // stats animation duration
+		},
+		$WIN = $(window);
 
-	
+
 	/* Preloader 
 	 * -------------------------------------------------- */
-	var ssPreloader = function() {
+	var ssPreloader = function () {
 
-		$WIN.on('load', function() {	
+		$WIN.on('load', function () {
 
 			// force page scroll position to top at page refresh
-			$('html, body').animate({ scrollTop: 0 }, 'normal');
+			$('html, body').animate({
+				scrollTop: 0
+			}, 'normal');
 
-	      // will first fade out the loading animation 
-	    	$("#loader").fadeOut("slow", function(){
+			// will first fade out the loading animation 
+			$("#loader").fadeOut("slow", function () {
 
-	        // will fade out the whole DIV that covers the website.
-	        $("#preloader").delay(300).fadeOut("slow");
+				// will fade out the whole DIV that covers the website.
+				$("#preloader").delay(300).fadeOut("slow");
 
-	      }); 
-	  	});
-	}; 
+			});
+		});
+	};
 
 
 	/* FitVids
-	------------------------------------------------------ */ 
-	var ssFitVids = function() {
+	------------------------------------------------------ */
+	var ssFitVids = function () {
 		$(".fluid-video-wrapper").fitVids();
-	};  		
+	};
 
 
 	/* Masonry
 	------------------------------------------------------ */
-	var ssMasonryFolio = function() {
+	var ssMasonryFolio = function () {
 
 		var containerBricks = $('.bricks-wrapper');
 
-		containerBricks.imagesLoaded( function() {
-			containerBricks.masonry( {	
+		containerBricks.imagesLoaded(function () {
+			containerBricks.masonry({
 				itemSelector: '.brick',
 				resize: true
 			});
@@ -59,95 +61,95 @@
 
 	/*	Light Gallery
 	------------------------------------------------------- */
-	var ssLightGallery = function() {
+	var ssLightGallery = function () {
 
-		$('#folio-wrap').lightGallery({  
+		$('#folio-wrap').lightGallery({
 			showThumbByDefault: false,
 			hash: true,
-			selector: ".item-wrap"		,
+			selector: ".item-wrap",
 			galleryId: 1
 		});
 
-		$('#folio-wrap2').lightGallery({  
+		$('#folio-wrap2').lightGallery({
 			showThumbByDefault: false,
 			hash: true,
-			selector: ".item-wrap2"		,
+			selector: ".item-wrap2",
 			galleryId: 2
 		});
-			$('#folio-wrap3').lightGallery({  
+		$('#folio-wrap3').lightGallery({
 			showThumbByDefault: false,
 			hash: true,
-			selector: ".item-wrap3"		,
+			selector: ".item-wrap3",
 			galleryId: 3
 		});
-		
-			$('#folio-wrap4').lightGallery({  
+
+		$('#folio-wrap4').lightGallery({
 			showThumbByDefault: false,
 			hash: true,
-			selector: ".item-wrap4"		,
+			selector: ".item-wrap4",
 			galleryId: 4
 		});
-		
-			$('#folio-wrap5').lightGallery({  
+
+		$('#folio-wrap5').lightGallery({
 			showThumbByDefault: false,
 			hash: true,
-			selector: ".item-wrap5"		,
+			selector: ".item-wrap5",
 			galleryId: 5
 		});
-		
-			$('#folio-wrap6').lightGallery({  
+
+		$('#folio-wrap6').lightGallery({
 			showThumbByDefault: false,
 			hash: true,
-			selector: ".item-wrap6"		,
+			selector: ".item-wrap6",
 			galleryId: 6
 		});
-		
-			$('#folio-wrap7').lightGallery({  
+
+		$('#folio-wrap7').lightGallery({
 			showThumbByDefault: false,
 			hash: true,
-			selector: ".item-wrap7"		,
+			selector: ".item-wrap7",
 			galleryId: 7
 		});
-		
-			$('#folio-wrap8').lightGallery({  
+
+		$('#folio-wrap8').lightGallery({
 			showThumbByDefault: false,
 			hash: true,
-			selector: ".item-wrap8"		,
+			selector: ".item-wrap8",
 			galleryId: 8
 		});
-		
-			$('#folio-wrap9').lightGallery({  
+
+		$('#folio-wrap9').lightGallery({
 			showThumbByDefault: false,
 			hash: true,
-			selector: ".item-wrap9"		,
+			selector: ".item-wrap9",
 			galleryId: 9
 		});
-		
-			$('#folio-wrap10').lightGallery({  
+
+		$('#folio-wrap10').lightGallery({
 			showThumbByDefault: false,
 			hash: true,
-			selector: ".item-wrap10"		,
+			selector: ".item-wrap10",
 			galleryId: 10
 		});
 
-			$('#folio-wrap11').lightGallery({  
+		$('#folio-wrap11').lightGallery({
 			showThumbByDefault: false,
 			hash: true,
-			selector: ".item-wrap11"		,
+			selector: ".item-wrap11",
 			galleryId: 11
 		});
 
-		$('#folio-wrap12').lightGallery({  
+		$('#folio-wrap12').lightGallery({
 			showThumbByDefault: false,
 			hash: true,
-			selector: ".item-wrap12"		,
+			selector: ".item-wrap12",
 			galleryId: 12
 		});
 
-		$('#folio-wrap13').lightGallery({  
+		$('#folio-wrap13').lightGallery({
 			showThumbByDefault: false,
 			hash: true,
-			selector: ".item-wrap13"		,
+			selector: ".item-wrap13",
 			galleryId: 13
 		});
 	};
@@ -155,49 +157,48 @@
 
 	/* Menu on Scrolldown
 	 * ------------------------------------------------------ */
-	var ssMenuOnScrolldown = function() {
+	var ssMenuOnScrolldown = function () {
 
 		var menuTrigger = $('#header-menu-trigger');
 
-		$WIN.on('scroll', function() {
+		$WIN.on('scroll', function () {
 
-			if ($WIN.scrollTop() > 150) {				
+			if ($WIN.scrollTop() > 150) {
 				menuTrigger.addClass('opaque');
-			}
-			else {				
+			} else {
 				menuTrigger.removeClass('opaque');
 			}
 
-		}); 
+		});
 	};
 
-	
+
 	/* OffCanvas Menu
 	 * ------------------------------------------------------ */
-	var ssOffCanvas = function() {
+	var ssOffCanvas = function () {
 
 		var menuTrigger = $('#header-menu-trigger'),
-		nav             = $('#menu-nav-wrap'),
-		closeButton     = nav.find('.close-button'),
-		siteBody        = $('body'),
-		mainContents    = $('section, footer');
+			nav = $('#menu-nav-wrap'),
+			closeButton = nav.find('.close-button'),
+			siteBody = $('body'),
+			mainContents = $('section, footer');
 
 		// open-close menu by clicking on the menu icon
-		menuTrigger.on('click', function(e){
+		menuTrigger.on('click', function (e) {
 			e.preventDefault();
 			menuTrigger.toggleClass('is-clicked');
 			siteBody.toggleClass('menu-is-open');
 		});
 
 		// close menu by clicking the close button
-		closeButton.on('click', function(e){
+		closeButton.on('click', function (e) {
 			e.preventDefault();
-			menuTrigger.trigger('click');	
+			menuTrigger.trigger('click');
 		});
 
 		// close menu clicking outside the menu itself
-		siteBody.on('click', function(e){		
-			if( !$(e.target).is('#menu-nav-wrap, #header-menu-trigger, #header-menu-trigger span') ) {
+		siteBody.on('click', function (e) {
+			if (!$(e.target).is('#menu-nav-wrap, #header-menu-trigger, #header-menu-trigger span')) {
 				menuTrigger.removeClass('is-clicked');
 				siteBody.removeClass('menu-is-open');
 			}
@@ -207,26 +208,26 @@
 
 
 	/* Smooth Scrolling
-	* ------------------------------------------------------ */
-	var ssSmoothScroll = function() {
+	 * ------------------------------------------------------ */
+	var ssSmoothScroll = function () {
 
 		$('.smoothscroll').on('click', function (e) {
 			var target = this.hash,
-			$target    = $(target);
+				$target = $(target);
 
 			e.preventDefault();
-			e.stopPropagation();	   	
+			e.stopPropagation();
 
 			$('html, body').stop().animate({
-			'scrollTop': $target.offset().top
+				'scrollTop': $target.offset().top
 			}, cfg.scrollDuration, 'swing').promise().done(function () {
 
-	      	// check if menu is open
-			if ($('body').hasClass('menu-is-open')) {
+				// check if menu is open
+				if ($('body').hasClass('menu-is-open')) {
 					$('#header-menu-trigger').trigger('click');
 				}
 
-			window.location.hash = target;
+				window.location.hash = target;
 			});
 		});
 
@@ -234,40 +235,44 @@
 
 
 	/* Placeholder Plugin Settings
-	* ------------------------------------------------------ */
-	var ssPlaceholder = function() {
-		$('input, textarea, select').placeholder();  
+	 * ------------------------------------------------------ */
+	var ssPlaceholder = function () {
+		$('input, textarea, select').placeholder();
 	};
 
 
 	/* Stat Counter
-  	*------------------------------------------------------- */
-	var ssStatCounter = function() {
+	 *------------------------------------------------------- */
+	var ssStatCounter = function () {
 
 		var statSection = $("#stats"),
-		stats           = $(".stat-count");
+			stats = $(".stat-count");
 
 		statSection.waypoint({
-		handler: function(direction) {
+			handler: function (direction) {
 
-			if (direction === "down") { 
+				if (direction === "down") {
 					stats.each(function () {
 						var $this = $(this);
 
-						$({ Counter: 0 }).animate({ Counter: $this.text() }, {
-						duration: cfg.statsDuration,
-						easing: 'swing',
-						step: function (curValue) {
-							$this.text(Math.ceil(curValue));
+						$({
+							Counter: 0
+						}).animate({
+							Counter: $this.text()
+						}, {
+							duration: cfg.statsDuration,
+							easing: 'swing',
+							step: function (curValue) {
+								$this.text(Math.ceil(curValue));
 							}
 						});
 					});
-			} 
+				}
 
-	       	// trigger once only
-			this.destroy(); 
-			},	
-			offset: "90%"	
+				// trigger once only
+				this.destroy();
+			},
+			offset: "90%"
 		});
 
 	};
@@ -275,153 +280,153 @@
 
 	/* Alert Boxes
   	------------------------------------------------------- */
-	var ssAlertBoxes = function() {
+	var ssAlertBoxes = function () {
 
-		$('.alert-box').on('click', '.close', function() {
+		$('.alert-box').on('click', '.close', function () {
 			$(this).parent().fadeOut(500);
-		}); 
+		});
 
-	};	  	
-	
+	};
+
 
 	/* Animations
-	* ------------------------------------------------------- */
-	var ssAnimations = function() {
+	 * ------------------------------------------------------- */
+	var ssAnimations = function () {
 
 		if (!$("html").hasClass('no-cssanimations')) {
 			$('.animate-this').waypoint({
-				handler: function(direction) {
+				handler: function (direction) {
 
 					var defAnimationEfx = cfg.defAnimation;
 
-					if ( direction === 'down' && !$(this.element).hasClass('animated')) {
+					if (direction === 'down' && !$(this.element).hasClass('animated')) {
 						$(this.element).addClass('item-animate');
 
-						setTimeout(function() {
-							$('body .animate-this.item-animate').each(function(ctr) {
-								var el       = $(this),
-								animationEfx = el.data('animate') || null;	
+						setTimeout(function () {
+							$('body .animate-this.item-animate').each(function (ctr) {
+								var el = $(this),
+									animationEfx = el.data('animate') || null;
 
-						if (!animationEfx) {
-								animationEfx = defAnimationEfx;	                 	
-							}
+								if (!animationEfx) {
+									animationEfx = defAnimationEfx;
+								}
 
-								setTimeout( function () {
+								setTimeout(function () {
 									el.addClass(animationEfx + ' animated');
 									el.removeClass('item-animate');
 								}, ctr * 50);
 
-							});								
+							});
 						}, 100);
 					}
 
 					// trigger once only
-				this.destroy(); 
-				}, 
+					this.destroy();
+				},
 				offset: '95%'
-			}); 
+			});
 		}
 
 	};
-	
+
 
 	/* Intro Animation
-	* ------------------------------------------------------- */
-	var ssIntroAnimation = function() {
+	 * ------------------------------------------------------- */
+	var ssIntroAnimation = function () {
 
-		$WIN.on('load', function() {
-		
+		$WIN.on('load', function () {
+
 			if (!$("html").hasClass('no-cssanimations')) {
-				setTimeout(function(){
-					$('.animate-intro').each(function(ctr) {
+				setTimeout(function () {
+					$('.animate-intro').each(function (ctr) {
 						var el = $(this),
-						animationEfx = el.data('animate') || null;		                                      
+							animationEfx = el.data('animate') || null;
 
-					if (!animationEfx) {
-						animationEfx = cfg.defAnimation;	                 	
-					}
+						if (!animationEfx) {
+							animationEfx = cfg.defAnimation;
+						}
 
-					setTimeout( function () {
+						setTimeout(function () {
 							el.addClass(animationEfx + ' animated');
 						}, ctr * 300);
-					});						
+					});
 				}, 100);
 			}
-		}); 
+		});
 
 	};
 
 
 	/* Contact Form
-   	* ------------------------------------------------------ */
-	var ssContactForm = function() {   	
+	 * ------------------------------------------------------ */
+	var ssContactForm = function () {
 
-   	/* local validation */   	
+		/* local validation */
 		$('#contactForm').validate({
 
 			/* submit via ajax */
-			submitHandler: function(form) {				
-				var sLoader = $('#submit-loader');			
+			submitHandler: function (form) {
+				var sLoader = $('#submit-loader');
 
-				$.ajax({   	
+				$.ajax({
 					type: "POST",
 					url: "inc/sendEmail.php",
 					data: $(form).serialize(),
 
-					beforeSend: function() { 
-					sLoader.fadeIn(); 
+					beforeSend: function () {
+						sLoader.fadeIn();
 					},
-					success: function(msg) {
-		            // Message was sent
-					if (msg == 'OK') {
-						sLoader.fadeOut(); 
-						$('#message-warning').hide();
-						$('#contactForm').fadeOut();
-						$('#message-success').fadeIn();   
-					}
-		            // There was an error
-					else {
-						sLoader.fadeOut(); 
-						$('#message-warning').html(msg);
+					success: function (msg) {
+						// Message was sent
+						if (msg == 'OK') {
+							sLoader.fadeOut();
+							$('#message-warning').hide();
+							$('#contactForm').fadeOut();
+							$('#message-success').fadeIn();
+						}
+						// There was an error
+						else {
+							sLoader.fadeOut();
+							$('#message-warning').html(msg);
+							$('#message-warning').fadeIn();
+						}
+					},
+					error: function () {
+						sLoader.fadeOut();
+						$('#message-warning').html("Something went wrong. Please try again.");
 						$('#message-warning').fadeIn();
 					}
-					},
-					error: function() {
-					sLoader.fadeOut(); 
-					$('#message-warning').html("Something went wrong. Please try again.");
-						$('#message-warning').fadeIn();
-					}
-				});    		
+				});
 			}
 
 		});
-	};	
+	};
 
-	
+
 	/* Back to Top
-	* ------------------------------------------------------ */
-	var ssBackToTop = function() {
+	 * ------------------------------------------------------ */
+	var ssBackToTop = function () {
 
-		var pxShow  = 500,         // height on which the button will show
-		fadeInTime  = 400,         // how slow/fast you want the button to show
-		fadeOutTime = 400,         // how slow/fast you want the button to hide
-		scrollSpeed = 300,         // how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
-		goTopButton = $("#go-top")
+		var pxShow = 500, // height on which the button will show
+			fadeInTime = 400, // how slow/fast you want the button to show
+			fadeOutTime = 400, // how slow/fast you want the button to hide
+			scrollSpeed = 300, // how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
+			goTopButton = $("#go-top")
 
 		// Show or hide the sticky footer button
-		$(window).on('scroll', function() {
+		$(window).on('scroll', function () {
 			if ($(window).scrollTop() >= pxShow) {
 				goTopButton.fadeIn(fadeInTime);
 			} else {
 				goTopButton.fadeOut(fadeOutTime);
 			}
 		});
-	};	
+	};
 
 
 
 	/* Initialize
-	* ------------------------------------------------------ */
+	 * ------------------------------------------------------ */
 	(function ssInit() {
 
 		ssPreloader();
@@ -436,7 +441,7 @@
 		ssStatCounter();
 		ssAlertBoxes();
 		ssAnimations();
-		ssIntroAnimation();		
+		ssIntroAnimation();
 		ssContactForm();
 		ssBackToTop();
 

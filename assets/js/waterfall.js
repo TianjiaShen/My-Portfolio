@@ -1,7 +1,7 @@
 // let scrollWindow;
 
 // must register these elements after DOM is ready
-document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener('DOMContentLoaded', function (event) {
     //the event occurred
     // openModalButtons = document.querySelectorAll('[data-modal-target]');
     // closeModalButtons = document.querySelectorAll('[data-close-button]');
@@ -27,32 +27,32 @@ document.addEventListener('DOMContentLoaded', function(event) {
     //     modal.style.display = "block";
     // }
 
-    
+
 
     // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
+    span.onclick = function () {
         closeModal();
     }
 
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-    if (event.target == modal) {
-        // closeModal();
-    }
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            // closeModal();
+        }
     }
 
 
-    for (var i = 0; i < brickList.length; i++) {
-        obj = brickList[i];
-        console.log("init", i, obj);
-        // obj.addEventListener('click', (idNum) => {
-        //     // const modal = document.querySelector(obj.dataset.modalTarget);
-        //     console.log(idNum);
-        //     console.log(idNum + "clicked");
-        //     modal.style.display = "block";
-        //     displayProject(idNum);
-        // })
-    }
+    // for (var i = 0; i < brickList.length; i++) {
+    //     obj = brickList[i];
+    //     console.log("init", i, obj);
+    //     obj.addEventListener('click', (idNum) => {
+    //         // const modal = document.querySelector(obj.dataset.modalTarget);
+    //         console.log(idNum);
+    //         console.log(idNum + "clicked");
+    //         modal.style.display = "block";
+    //         displayProject(idNum);
+    //     })
+    // }
 
     // console.log(openModalButtons);
 
@@ -84,12 +84,14 @@ function closeModal() {
     if (modal == null) return;
     // remove all children in modal-body
     var scrollWindow = document.getElementById("modal-body");
-    while (scrollWindow.hasChildNodes()) {  
+    while (scrollWindow.hasChildNodes()) {
         scrollWindow.removeChild(scrollWindow.firstChild);
     }
     modal.style.display = "none";
     modal.classList.remove('active');
 }
+//         idx = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10, 11, 12, 13];
+let projectMap = [0, 7, 7, 2, 8, 5, 2, 3, 1, 2, 3, 41, 23, 30];
 
 function displayProject(entity) {
     // acquire project num from entity
@@ -97,25 +99,30 @@ function displayProject(entity) {
     console.log(entity);
     // show modal 
     openModal();
-
+    
     // dynamically add images to modal-body
 
     // get object modal-body
     var scrollWindow = document.getElementById("modal-body");
-
+    console.log(projectNum, projectNum[projectNum]);
     // add image by projectNum
-    for (var i = 1; i < 8; i++){
+    for (var i = 1; i <= projectMap[projectNum]; i++) {
         // iterate through all images that belong to this project
         var img = document.createElement("img");
-        img.innerText = "test";
-        img.onerror = function() {
-            console.log(i);
-            console.log((i - 1).toString() + " images found for this project!");
-            img.src = "https://cdn140.picsart.com/283186984048211.png?type=webp&to=min&r=1024";
-            img.innerText = "fail";
-            window.iterEnd = true;
-        };
-        img.src = "assets/images/portfolio/gallery/pro" + projectNum + "-" + i + ".jpg";
+        // img.onerror = function (tempSrc) {
+        //     // alert("fuck !" + tempSrc);
+        //     console.log(tempSrc);
+        //     console.log(i);
+        //     console.log((i - 1).toString() + " images found for this project!");
+        //     img.src = "https://images-na.ssl-images-amazon.com/images/I/51UW1849rJL._AC_SX466_.jpg";
+        //     img.innerText = "fail";
+        //     window.iterEnd = true;
+        // };
+        tempSrc = "assets/images/portfolio/gallery/pro" + projectNum + "-" + i + ".jpg";
+        
+        // if (ImageNotExist(tempSrc)) break;
+        img.src = tempSrc;
+        console.log(img.status, img.src, img.height);
 
         img.id = "picture" + i;
         scrollWindowWidth = scrollWindow.clientWidth * 0.9;
@@ -124,9 +131,13 @@ function displayProject(entity) {
         img.style.display = 'block';
         img.style.marginLeft = 'auto';
         img.style.marginRight = 'auto';
-        console.log(scrollWindowWidth);
-        // img.height = scrollWindowWidth / 1.414;
-
         scrollWindow.appendChild(img);
     }
+}
+
+function ImageNotExist(url) {
+    var img = new Image();
+    img.src = url;
+    console.log(img, img.height);
+    return (img.height === 0);
 }

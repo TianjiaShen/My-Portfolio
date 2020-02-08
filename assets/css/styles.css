@@ -201,13 +201,22 @@ a.btn:hover {
 }
 .header .contact-info li {
   margin-right: 30px;
-  color: rgba(255, 255, 255, 0.8);
 }
 .header .contact-info li a {
   color: rgba(255, 255, 255, 0.8);
+  line-height: 20px;
+  /* position: relative; */
+  opacity: 0.8;
+}
+.external-icon {
+  width: 20px;
+  height: 16px;
+  vertical-align: top;
+  display: inline-block;
 }
 .header .contact-info li a:hover {
   color: #fff;
+  opacity: 1;
 }
 .header .contact-info li:last-child {
   margin-right: 0;
@@ -363,20 +372,23 @@ a.btn:hover {
 }
 .timeline .location {
   position: absolute;
+  margin-left: 10px;
   right: 0;
   top: 2px;
   color: #8a8a8a;
 }
-.timeline .location .fa {
-  margin-right: 5px;
-}
 .timeline .place {
   color: #00BCD4;
   font-weight: bold;
+  display: inline-block;
   margin-top: 0;
   margin-bottom: 15px;
+  margin-right: 20px;
+  padding-right: 5px;
   font-size: 20px;
-  /* font-weight: 300; */
+}
+.timeline .location .fa {
+  margin-right: 5px;
 }
 .timeline .job-meta {
   position: absolute;
@@ -724,9 +736,6 @@ a.btn:hover {
     margin-left: 0;
     padding-right: 0;
   }
-  .timeline .place {
-    margin-bottom: 5px;
-  }
   .timeline .job-meta {
     position: static;
     margin-bottom: 15px;
@@ -989,7 +998,3 @@ a.btn:hover {
   z-index: 100;
 }
 
-.external-icon {
-  width: 20px;
-  height: 20px;
-}
