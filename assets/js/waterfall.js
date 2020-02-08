@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     // Get the modal
     var modal = document.getElementById("myModal");
-
     // Get the button that opens the modal
     var btn = document.getElementById("myBtn");
 
@@ -19,6 +18,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
 
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        closeModal();
+    }
     // global assignment
     // scrollWindow = document.getElementById("modal-body");
 
@@ -26,13 +29,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
     // btn.onclick = function() {
     //     modal.style.display = "block";
     // }
-
-
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        closeModal();
-    }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
@@ -75,10 +71,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 function openModal() {
     var modal = document.getElementById("myModal");
+    
     var mBody = document.getElementById("body");
     if (modal == null) return;
     modal.style.display = "block";
     modal.classList.add('active');
+    
     // console.log(window.scrollY);
     mBody.style.overflow = "hidden";
 }

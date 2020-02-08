@@ -63,6 +63,7 @@ span .close:focus {
     background-color: #fefefe;
     margin: auto;
     padding: 0;
+    top: 10%;
     border: 1px solid #888;
     width: 80rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -95,6 +96,8 @@ span .close:focus {
 /* Modal Body */
 .modal-body {
     display: block;
+    overflow: auto;
+    height: 1200px;
     margin-top: 5px;
     padding: 2px 16px;
 }
@@ -118,7 +121,7 @@ span .close:focus {
     }
 }
 
-#overlay {
+/* #overlay {
     position: fixed;
     opacity: 0;
     transition: 200ms ease-in-out;
@@ -133,4 +136,4 @@ span .close:focus {
 #overlay.active {
     opacity: 1;
     pointer-events: all;
-}
+} */
