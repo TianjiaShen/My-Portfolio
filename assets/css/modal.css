@@ -51,9 +51,9 @@ span .close:focus {
     background-color: #fefefe;
     margin: auto;
     padding: 0;
-    top: 10%;
+    top: 5%;
     border: 1px solid #888;
-    width: 95rem;
+    width: 95vw;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     animation-name: animatetop;
     animation-duration: 0.4s;
@@ -74,7 +74,7 @@ span .close:focus {
 .modal-header .modal-header-bar {
     position: fixed;
     width: 100%;
-    max-width: 93rem;
+    max-width: 93vw;
     padding-right: 14px;
     color: white;
     background-color: white;

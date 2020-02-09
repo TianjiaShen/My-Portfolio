@@ -65,10 +65,7 @@ $(document).ready(function () {
         });
     });
 
-    // $container.isotope({
-    //     filter: '.first_divi'
-    // });
-    // $container.isotope();
+    $container.isotope();
 
     // filter items on click
     $('#filters').on('click', '.type', function () {
