@@ -60,9 +60,15 @@ $(document).ready(function () {
 
     $container.imagesLoaded(function () {
         $('.isotope').isotope({
+            filter: '.first_divi',
             itemSelector: '.item'
         });
     });
+
+    // $container.isotope({
+    //     filter: '.first_divi'
+    // });
+    // $container.isotope();
 
     // filter items on click
     $('#filters').on('click', '.type', function () {
