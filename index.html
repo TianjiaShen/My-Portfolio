@@ -20,7 +20,7 @@
 	<!-- Global CSS -->
 	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
 	<!-- Plugins CSS -->
-	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+	<!-- <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css"> -->
 
 	<!-- Theme CSS -->
 	<link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
@@ -28,6 +28,7 @@
 	<!-- language dropdown button -->
 	<link id="theme-style" rel="stylesheet" href="assets/css/dropdownBtn.css">
 	<script type="text/javascript" src="assets/js/dropdownBtn.js"></script>
+	<script type="text/javascript" src="assets/js/language.js"></script>
 
 	<!-- Waterfall layout -->
 	<link rel="stylesheet" href="assets/css/modal.css">
@@ -41,25 +42,21 @@
 </head>
 
 <body id="body">
-
 	<header class="header">
 		<div class="dropdown">
-			<a onclick="dropdownFnt()" class="dropbtn btn">Language</button>
+			<a id="language" data-font="language" onclick="dropdownFnt()" class="dropbtn btn"></button>
 			<div id="myDropdown" class="dropdown-content">
-				<a href="#">English</a>
-				<a href="#">Chinese</a>
+				<a href="#" id="alt_lang1" data-lang="en" onclick="setLanguage(this.getAttribute('data-lang'))">English</a>
+				<a href="#" id="alt_lang2" data-lang="zh" onclick="setLanguage(this.getAttribute('data-lang'))">Chinese</a>
 			</div>
 		</div>
 		<div class="top-bar container-fluid">
 			<div class="actions">
-				<a class="btn hidden-xs" href="mailto:1049904168@qq.com"><i class="fa fa-paper-plane"
-						aria-hidden="true"></i> Hire Me</a>
+				<a id="hire_me" data-font="email" class="btn hidden-xs" href="mailto:1049904168@qq.com"></a>
 				<!--Addin1 
 ===============================================================================================================================
 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  -->
-				<a class="btn" href="./assets/resume/resume - Tianjia Shen - en.pdf" download>
-
-					<i class="fa fa-download" aria-hidden="true"></i> Download My Resume</a>
+				<a id="download_resume" data-font="download" class="btn" href="./assets/resume/resume - Tianjia Shen - en.pdf" download></a>
 			</div>
 			<!--//actions-->
 		</div>
@@ -68,8 +65,8 @@
 		<div class="intro">
 			<div class="container text-center">
 				<img class="profile-image" src="assets/images/profile-image.png" alt="">
-				<h1 class="name" id="portfolio_name_holder"></h1>
-				<div class="title" id="title_holder"></div>
+				<h1 class="name" id="portfolio_owner_name"></h1>
+				<div class="title" id="portfolio_owner_title"></div>
 			</div>
 			<!--//container-->
 		</div>
@@ -97,13 +94,13 @@
 			<div id="page-nav-wrapper" class="page-nav-wrapper text-center">
 				<div class="container">
 					<ul id="page-nav" class="nav page-nav list-inline">
-						<li><a class="scrollto" href="#experiences-section">Experiences</a></li>
-						<li><a class="scrollto" href="#portfolio-section">Portfolio</a></li>
-						<li><a class="scrollto" href="#education-section">Education</a></li>
-						<li><a class="scrollto" href="#skills-section">Skills</a></li>
-						<li><a class="scrollto" href="#testimonials-section">Awards and Honors</a></li>
-						<li><a class="scrollto" href="#contact-section">Contact</a></li>
-						<li><a class="scrollto" href="#contact-section">Download</a></li>
+						<li><a id="nav_exp" class="scrollto" href="#experiences-section"></a></li>
+						<li><a id="nav_portfolio" class="scrollto" href="#portfolio-section"></a></li>
+						<li><a id="nav_edu" class="scrollto" href="#education-section"></a></li>
+						<li><a id="nav_skill" class="scrollto" href="#skills-section"></a></li>
+						<li><a id="nav_award" class="scrollto" href="#testimonials-section"></a></li>
+						<li><a id="nav_contact" class="scrollto" href="#contact-section"></a></li>
+						<li><a id="nav_download" class="scrollto" href="#contact-section"></a></li>
 					</ul>
 					<!--//page-nav-->
 				</div>
@@ -141,26 +138,26 @@
 
 	<div class="wrapper container">
 		<section id="experiences-section" class="experiences-section section">
-			<h2 class="section-title" id="prof_exp_holder"></h2>
+			<h2 class="section-title" id="sec_prof_exp"></h2>
 			<div class="timeline">
 
 				<!-- ====== Microsoft ====== -->
 				<div class="item">
 					<div class="work-place">
-						<p class="place">Microsoft</p>
-						<div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Shanghai</div>
+						<p id="company1" class="place"></p>
+						<div id="location1" data-font="location" class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
 					</div>
 					<div class="job-meta">
-						<div class="title">UX Designer</div>
-						<div class="time">2019.12 - Present</div>
+						<div id="title1" class="title"></div>
+						<div id="time1" class="time"></div>
 					</div>
 					<!--//job-meta-->
 					<div class="job-desc">
 						<p></p>
 						<ul>
-							<li>Doing 3D modeling and UX works for HoloLens MR development.</li>
-							<li>Designing internal Letters based on Outlook.</li>
-							<li>Technical demo videos making cooperating with colleagues.</li>
+							<li id="task1-1"></li>
+							<li id="task1-2"></li>
+							<li id="task1-3"></li>
 						</ul>
 					</div>
 					<!--//job-desc-->
@@ -171,21 +168,20 @@
 				<div class="item">
 					<div class="work-place">
 						<div class="place">
-							<p>Signify (Former Philips Lighting)</p>
+							<p id="company2"></p>
 						</div>
-						<div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Shanghai</div>
+						<div id="location2" data-font="location" class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
 					</div>
 					<div class="job-meta">
-						<div class="title">UX Designer</div>
-						<div class="time">2018.11 - 2019.11</div>
+						<div id="title2" class="title"></div>
+						<div id="time2" class="time"></div>
 					</div>
 					<!--//job-meta-->
 					<div class="job-desc">
 						<p></p>
 						<ul>
-							<li>Designed user experience, interaction and user interface for &lt;HUE&gt; app in
-								&lt;HUE&gt; smart lighting group</li>
-							<li>Designed storyboard for &lt;HUE&gt; lights and &lt;HUE&gt; bridge</li>
+							<li id="task2-1"></li>
+							<li id="task2-2"></li>
 						</ul>
 					</div>
 					<!--//job-desc-->
@@ -196,23 +192,22 @@
 				<div class="item">
 					<div class="work-place">
 						<div class="place">
-							<p>Philips Lighting</p>
+							<p id="company3"></p>
 						</div>
-						<div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Shanghai</div>
+						<div id="location3" data-font="location" class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
 					</div>
 					<div class="job-meta">
-						<div class="title">UX Designer</div>
-						<div class="time">2017.08 - 2018.08</div>
+						<div id="title3" class="title"></div>
+						<div id="time3" class="time"></div>
 					</div>
 					<!--//job-meta-->
 					<div class="job-desc">
 						<p></p>
 						<ul>
-							<li>Accomplished the UX/UI design, user interview and storyboard of the &lt;Smart Hotel&gt;
-								project</li>
-							<li>Designed Web and Mobile App interface for online interview process</li>
-							<li>Promoted market research and analysis of the &lt;New Retail&gt; project</li>
-							<li>Designed storyboard for the &lt;New Retail&gt; project</li>
+							<li id="task3-1"></li>
+							<li id="task3-2"></li>
+							<li id="task3-3"></li>
+							<li id="task3-4"></li>
 						</ul>
 					</div>
 					<!--//job-desc-->
@@ -222,20 +217,19 @@
 				<!-- ====== MoMA Design ====== -->
 				<div class="item">
 					<div class="work-place">
-						<p class="place">MoMA Industrial Design</p>
-						<div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Shanghai</div>
+						<p id="company4" class="place"></p>
+						<div id="location4" data-font="location" class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
 					</div>
 					<div class="job-meta">
-						<div class="title">Industrial Designer</div>
-						<div class="time">2016/2 - 2017/8</div>
+						<div id="title4" class="title">Industrial Designer</div>
+						<div id="time4" class="time"></div>
 					</div>
 					<!--//job-meta-->
 					<div class="job-desc">
 						<ul>
-							<li>Co-designed &lt;MOSUN-Shared Umbrella&gt; &lt;Ping An Good Doctor&gt; &lt;TOMILO
-								Environment Test Equipment&gt; products</li>
-							<li>Facilitated the management of supply chain</li>
-							<li>Established CMF library including ...</li>
+							<li id="task4-1"></li>
+							<li id="task4-2"></li>
+							<li id="task4-3"></li>
 						</ul>
 					</div>
 					<!--//job-desc-->
@@ -245,19 +239,19 @@
 				<!-- ====== HIT Robot Group ====== -->
 				<div class="item">
 					<div class="work-place">
-						<p class="place">HIT ROBOT GROUP</p>
-						<div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Shanghai</div>
+						<p id="company5" class="place"></p>
+						<div id="location5" data-font="location" class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
 					</div>
 					<div class="job-meta">
-						<div class="title">Industrial Designer</div>
-						<div class="time">2018/7 - 2018/8</div>
+						<div id="title5" class="title"></div>
+						<div id="time5" class="time"></div>
 					</div>
 					<!--//job-meta-->
 					<div class="job-desc">
 						<p></p>
 						<ul>
-							<li>Accomplished modeling and rendering of hotel service robot</li>
-							<li>Applied for patent for service robot product</li>
+							<li id="task5-1"></li>
+							<li id="task5-2"></li>
 						</ul>
 					</div>
 					<!--//job-desc-->
@@ -267,22 +261,19 @@
 				<!-- ====== Stanford ====== -->
 				<div class="item">
 					<div class="work-place">
-						<p class="place">Silicon Valley Entrepreneurship Camp</p>
-						<div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>San Francisco
-						</div>
+						<p id="company6" class="place"></p>
+						<div id="location6" data-font="location" class="location"></div>
 					</div>
 					<div class="job-meta">
-						<div class="title">Industrial Designer</div>
-						<div class="time">2018/7 - 2018/8</div>
+						<div id="title6" class="title"></div>
+						<div id="time6" class="time"></div>
 					</div>
 					<!--//job-meta-->
 					<div class="job-desc">
 						<p></p>
 						<ul>
-							<li>Learned entrepreneurial theories, communicated with entrepreneurs and venture
-								capitalists, and visited the venture enterprises in Silicon Valley</li>
-							<li>Obtained international perspectives of entrepreneurship theory and practice, as well as
-								improvement in the ability to identify entrepreneurial opportunities and skills</li>
+							<li id="task6-1"></li>
+							<li id="task6-2"></li>
 						</ul>
 					</div>
 					<!--//job-desc-->
@@ -301,13 +292,13 @@
 			<div class="overlay"></div>
 			<div class="gradient-overlay"></div>
 
-			<h2 class="section-title">Portfolio</h2>
+			<h2 id="sec_portfolio" class="section-title"></h2>
 			<ul id="filters" class="filters clearfix">
 				<!--data-filter属性决定了哪些Projects会出现在Design Projects，哪些Projects会出现在Sketch & Modeling里-->
-				<li class="type active" data-filter=".first_divi">UX/UI Design</li>
-				<li class="type" data-filter=".second_divi">3D Design</li>
-				<li class="type" data-filter=".third_divi">Sketch & Modeling</li>
-				<li class="type" data-filter=".fourth_divi">Painting & Handwork</li>
+				<li id="sec_portfolio_sub1" class="type active" data-filter=".first_divi"></li>
+				<li id="sec_portfolio_sub2" class="type" data-filter=".second_divi"></li>
+				<li id="sec_portfolio_sub3" class="type" data-filter=".third_divi"></li>
+				<li id="sec_portfolio_sub4" class="type" data-filter=".fourth_divi"></li>
 				<!-- <li class="type active" data-filter="*">All</li> -->
 			</ul>
 			<!--//filters-->
@@ -395,9 +386,9 @@
 						</div> <!-- end folio-item -->
 
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="1"
-									onclick="displayProject(this)">JAGUAR</a></h3>
-							<div class="meta">Derived speaker for jaguar</div><br />
+							<h3 class="sub-title"><a id="project_name1" href="javascript:void();" data-waterfall="" project-num="1"
+									onclick="displayProject(this)"></a></h3>
+							<div id="project_intro1" class="meta"></div><br />
 
 						</div>
 						<!--//content-->
@@ -479,9 +470,9 @@
 						</div> <!-- end folio-item -->
 
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="2"
-									onclick="displayProject(this)">Official Seals</a></h3>
-							<div class="meta">Series design for an Official Seal company </div>
+							<h3 class="sub-title"><a id="project_name2" href="javascript:void();" data-waterfall="" project-num="2"
+									onclick="displayProject(this)"></a></h3>
+							<div id="project_intro2" class="meta"></div>
 
 						</div>
 						<!--//content-->
@@ -525,9 +516,9 @@
 						</div> <!-- end folio-item -->
 
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="3"
-									onclick="displayProject(this)">Coffee Tables</a></h3>
-							<div class="meta">Series design for ADWIN furniture company</div>
+							<h3 class="sub-title"><a id="project_name3" href="javascript:void();" data-waterfall="" project-num="3"
+									onclick="displayProject(this)"></a></h3>
+							<div id="project_intro3" class="meta"></div>
 
 						</div>
 						<!--//content-->
@@ -616,9 +607,9 @@
 						</div> <!-- end folio-item -->
 
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="4"
-									onclick="displayProject(this)">Water Boiler</a></h3>
-							<div class="meta">Water boiler design</div><br />
+							<h3 class="sub-title"><a id="project_name4" href="javascript:void();" data-waterfall="" project-num="4"
+									onclick="displayProject(this)"></a></h3>
+							<div id="project_intro4" class="meta"></div><br />
 
 						</div>
 						<!--//content-->
@@ -684,9 +675,9 @@
 						</div> <!-- end folio-item -->
 
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="5"
-									onclick="displayProject(this)">SHAUN</a></h3>
-							<div class="meta">Robot For Kids</div>
+							<h3 class="sub-title"><a id="project_name5" href="javascript:void();" data-waterfall="" project-num="5"
+									onclick="displayProject(this)"></a></h3>
+							<div id="project_intro5" class="meta"></div>
 
 						</div>
 						<!--//content-->
@@ -731,9 +722,9 @@
 						</div> <!-- end folio-item -->
 
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="6"
-									onclick="displayProject(this)">Sketchs</a></h3>
-							<div class="meta"> Prouducts Sketchs </div>
+							<h3 class="sub-title"><a id="project_name6" href="javascript:void();" data-waterfall="" project-num="6"
+									onclick="displayProject(this)"></a></h3>
+							<div id="project_intro6" class="meta"></div>
 
 						</div>
 						<!--//content-->
@@ -743,7 +734,7 @@
 				</div>
 				<!--//item-->
 
-				<!-- Project #7 Product Sketchs 2
+				<!-- Project #7 Product Sketches 2
 				==============================================================================================-->
 				<div class="item third_divi col-md-3 col-xs-6 ">
 					<div class="item-inner">
@@ -784,9 +775,9 @@
 						</div> <!-- end folio-item -->
 
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="7"
-									onclick="displayProject(this)">War Chariot</a></h3>
-							<div class="meta"> Rhino Modeling </div>
+							<h3 class="sub-title"><a id="project_name7" href="javascript:void();" data-waterfall="" project-num="7"
+									onclick="displayProject(this)"></a></h3>
+							<div id="project_intro7" class="meta"></div>
 
 						</div>
 						<!--//content-->
@@ -824,9 +815,9 @@
 						</div> <!-- end folio-item -->
 
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="8"
-									onclick="displayProject(this)">Lamborghini</a></h3>
-							<div class="meta">3D MAX Modeling</div>
+							<h3 class="sub-title"><a id="project_name8" href="javascript:void();" data-waterfall="" project-num="8"
+									onclick="displayProject(this)"></a></h3>
+							<div id="project_intro8" class="meta"></div>
 
 						</div>
 						<!--//content-->
@@ -871,9 +862,9 @@
 						</div> <!-- end folio-item -->
 
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="9"
-									onclick="displayProject(this)"> Painting </a></h3>
-							<div class="meta">Gouache/ Size: A0</div><br />
+							<h3 class="sub-title"><a id="project_name9" href="javascript:void();" data-waterfall="" project-num="9"
+									onclick="displayProject(this)"></a></h3>
+							<div id="project_intro9" class="meta"></div><br />
 
 						</div>
 						<!--//content-->
@@ -924,9 +915,9 @@
 						</div> <!-- end folio-item -->
 
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="10"
-									onclick="displayProject(this)"> Handwork </a></h3>
-							<div class="meta">Carpentry: Wine rack / Mortise-Tenon Connection</div>
+							<h3 class="sub-title"><a id="project_name10" href="javascript:void();" data-waterfall="" project-num="10"
+									onclick="displayProject(this)"></a></h3>
+							<div id="project_intro10" class="meta"></div>
 
 						</div>
 						<!--//content-->
@@ -964,9 +955,9 @@
 						</div> <!-- end folio-item -->
 
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="11"
-									onclick="displayProject(this)"> Youya </a></h3>
-							<div class="meta">Dental Healthcare Application</div>
+							<h3 class="sub-title"><a id="project_name11" href="javascript:void();" data-waterfall="" project-num="11"
+									onclick="displayProject(this)"></a></h3>
+							<div id="project_intro11" class="meta"></div>
 
 						</div>
 						<!--//content-->
@@ -1017,9 +1008,9 @@
 						</div> <!-- end folio-item -->
 
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="12"
-									onclick="displayProject(this)"> Dr.Pony </a></h3>
-							<div class="meta">Ubiquitous Smart Solution for children healthcare</div>
+							<h3 class="sub-title"><a id="project_name12" href="javascript:void();" data-waterfall="" project-num="12"
+									onclick="displayProject(this)"></a></h3>
+							<div id="project_intro12" class="meta"></div>
 
 						</div>
 						<!--//content-->
@@ -1070,9 +1061,9 @@
 						</div> <!-- end folio-item -->
 
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="13"
-									onclick="displayProject(this)"> My Seat </a></h3>
-							<div class="meta">Library Position Booking App</div>
+							<h3 class="sub-title"><a id="project_name13" href="javascript:void();" data-waterfall="" project-num="13"
+									onclick="displayProject(this)"></a></h3>
+							<div id="project_intro13" class="meta"></div>
 
 						</div>
 						<!--//content-->
@@ -1089,18 +1080,27 @@
 		<!--//section-->
 
 		<section id="education-section" class="education-section section">
-			<h2 class="section-title" id="education_holder"></h2>
+			<h2 class="section-title" id="sec_edu"></h2>
 			<div class="row">
 				<div class="item col-xs-12 col-sm-4">
 					<div class="item-inner">
-						<h3 class="degree">Industrial Design Engineering</h3>
-						<div class="education-body">
-							Shanghai Jiao Tong University, School of Design
-						</div>
+						<h3 id="major1" class="degree"></h3>
+						<div id="school1" class="education-body"></div>
 						<!--//education-body-->
-						<div class="time">2018 - 2021</div>
-						<div class="desc">
-							Design management; User experience; Design trend research
+						<div id="school_time1" class="time"></div>
+						<div id="focus1" class="desc"></div>
+					</div>
+					<!--//item-inner-->
+				</div>
+				<!--//item-->
+				<div class="item col-xs-12 col-sm-4">
+					<div class="item-inner">
+						<h3 id="major2" class="degree"></h3>
+						<div id="school2" class="education-body"></div>
+						<!--//education-body-->
+						<div id="school_time2" class="time"></div>
+						<div id="focus2" class="desc">
+							
 						</div>
 					</div>
 					<!--//item-inner-->
@@ -1108,27 +1108,10 @@
 				<!--//item-->
 				<div class="item col-xs-12 col-sm-4">
 					<div class="item-inner">
-						<h3 class="degree">Product Design</h3>
-						<div class="education-body">
-							East China Normal University
-						</div>
+						<h3 id="major3" class="degree"></h3>
+						<div id="school3" class="education-body"></div>
 						<!--//education-body-->
-						<div class="time">2014 - 2018</div>
-						<div class="desc">
-							GPA: 3.7/4； RANK:1/140
-						</div>
-					</div>
-					<!--//item-inner-->
-				</div>
-				<!--//item-->
-				<div class="item col-xs-12 col-sm-4">
-					<div class="item-inner">
-						<h3 class="degree">Minor: Public Relations</h3>
-						<div class="education-body">
-							East China Normal University
-						</div>
-						<!--//education-body-->
-						<div class="time">2015 - 2018</div>
+						<div id="school_time3" class="time"></div>
 						<div class="desc">
 						</div>
 					</div>
@@ -1143,9 +1126,9 @@
 
 
 		<section id="skills-section" class="skills-section section text-center">
-			<h2 class="section-title" id="prof_skills_holder"></h2>
+			<h2 class="section-title" id="sec_prof_skill"></h2>
 			<div class="top-skills">
-				<h3 class="subtitle">Top Skills</h3>
+				<h3 id="sec_skill_sub1" class="subtitle"></h3>
 				<div class="row">
 
 					<!-- ====== UX/UI Design ====== -->
@@ -1154,10 +1137,10 @@
 							<div class="chart-easy-pie text-center">
 								<div class="chart-theme-1 chart" data-percent="95"><span>95</span>%</div>
 							</div>
-							<h4 class="skill-name">UX &amp; UI Design</h4>
-							<div class="level">Expert, 4 years</div>
-							<div class="desc">
-								Sketch / Principle / Adobe XD
+							<h4 id="top_skill1" class="skill-name"></h4>
+							<div id="top_level1" class="level"></div>
+							<div id="top_software1" class="desc">
+								
 							</div>
 						</div>
 						<!--//item-inner-->
@@ -1170,11 +1153,9 @@
 							<div class="chart-easy-pie text-center">
 								<div class="chart-theme-1 chart" data-percent="98"><span>98</span>%</div>
 							</div>
-							<h4 class="skill-name">3D Design</h4>
-							<div class="level">Expert, 6 years</div>
-							<div class="desc">
-								Rhinoceros / Keyshot / 3DS MAX
-							</div>
+							<h4 id="top_skill2" class="skill-name"></h4>
+							<div id="top_level2" class="level"></div>
+							<div id="top_software2" class="desc"></div>
 						</div>
 						<!--//item-inner-->
 					</div>
@@ -1186,11 +1167,9 @@
 							<div class="chart-easy-pie text-center">
 								<div class="chart-theme-1 chart" data-percent="90"><span>90</span>%</div>
 							</div>
-							<h4 class="skill-name">2D Design</h4>
-							<div class="level">Expert, 6 years</div>
-							<div class="desc">
-								Adobe Illustrator / Adobe Photoshop / CAD
-							</div>
+							<h4 id="top_skill3" class="skill-name"></h4>
+							<div id="top_level3" class="level"></div>
+							<div id="top_software3" class="desc"></div>
 						</div>
 						<!--//item-inner-->
 					</div>
@@ -1202,14 +1181,13 @@
 			<!--//top-skills-->
 
 			<div class="other-skills">
-				<h3 class="subtitle">Other Skills</h3>
+				<h3 id="sec_skill_sub2" class="subtitle"></h3>
 				<div class="misc-skills">
-					<span class="skill-tag">Adobe Premiere</span>
-					<span class="skill-tag">Adobe After Effects</span>
-					<span class="skill-tag">Final Cut Pro</span>
-					<span class="skill-tag">Adobe Indesign</span>
-					<!-- <span class="skill-tag">SolidWorks</span> -->
-					<span class="skill-tag">English CET6</span>
+					<span id="other_skill1" class="skill-tag"></span>
+					<span id="other_skill2" class="skill-tag"></span>
+					<span id="other_skill3" class="skill-tag"></span>
+					<span id="other_skill4" class="skill-tag"></span>
+					<span id="other_skill5" class="skill-tag"></span>
 				</div>
 			</div>
 			<!--//other-skills-->
@@ -1218,7 +1196,7 @@
 		<!--//skills-section-->
 
 		<section id="testimonials-section" class="testimonials-section section">
-			<h2 class="section-title">Awards and Honors</h2>
+			<h2 id="sec_award" class="section-title"></h2>
 
 			<div id="testimonials-carousel" class="testimonials-carousel carousel slide" data-interval="8000">
 
@@ -1236,27 +1214,26 @@
 					<div class="item active">
 						<blockquote class="quote">
 							<i class="fa fa-quote-left"></i>
-							<p>2019 HCI International Published Paper (EI)</p>
-							<p id="paper">SHAUN - A Companion Robot for children based on Artificial Intelligence</p>
-							<p>First-Class Scholarship</p>
+							<p id="award_name1_1"></p>
+							<p id="award_content1" class="paper"></p>
+							<p id="award_name1_2"></p>
 						</blockquote>
 						<div class="source">
-							<div class="name">Shanghai Jiao Tong University</div>
-							<div class="position">2019</div>
+							<div id="award_place1" class="name"></div>
+							<div id="award_time1" class="position"></div>
 						</div>
 						<!--//source-->
 					</div>
 					<!--//item-->
 					<div class="item">
 						<blockquote class="quote">
-							<p><i class="fa fa-quote-left"></i>
-								Outstanding Graduate of Shanghai
-							</p>
+							<i class="fa fa-quote-left"></i>
+							<p id="award_name2"></p>
 
 						</blockquote>
 						<div class="source">
-							<div class="name">Ministry of Education of the People's Republic of Shanghai</div>
-							<div class="position">2018</div>
+							<div id="award_place2" class="name"></div>
+							<div id="award_time2" class="position"></div>
 						</div>
 						<!--//source-->
 
@@ -1264,43 +1241,39 @@
 					<!--//item-->
 					<div class="item">
 						<blockquote class="quote">
-							<p><i class="fa fa-quote-left"></i>
-								East China Normal University Outstanding Student Leader</p>
-							<p><i class="fa fa-quote-left"></i>
-								Excellent Student First-class Scholarship
-							</p>
+							<i class="fa fa-quote-left"></i>
+							<p id="award_name3_1"></p>
+							<p id="award_name3_2"></p>
 						</blockquote>
 						<div class="source">
-							<div class="name">East China Normal University</div>
-							<div class="position">2017</div>
+							<div id="award_place3" class="name"></div>
+							<div id="award_time3" class="position"></div>
 						</div>
 						<!--//source-->
 					</div>
 					<!--//item-->
 					<div class="item">
 						<blockquote class="quote">
-							<p><i class="fa fa-quote-left"></i>
-								East China Normal University Excellent Student </p>
-							<p><i class="fa fa-quote-left"></i>
-								National Scholarship</p>
+							<i class="fa fa-quote-left"></i>
+							<p id="award_name4_1"></p>
+							<p id="award_name4_2"></p>
 						</blockquote>
 						<div class="source">
-							<div class="name">East China Normal University</div>
-							<div class="position">2016</div>
+							<div id="award_place4" class="name"></div>
+							<div id="award_time4" class="position"></div>
 						</div>
 						<!--//source-->
 					</div>
 					<!--//item-->
 					<div class="item">
 						<blockquote class="quote">
-							<p><i class="fa fa-quote-left"></i>
-								East China Normal University Excellent Student</p>
-							<p><i class="fa fa-quote-left"></i>
-								Excellent Student Special Grade Scholarship</p>
+							<i class="fa fa-quote-left"></i>
+							<p id="award_name5_1"></p>
+							<p id="award_name5_2"></p>
 						</blockquote>
 						<div class="source">
-							<div class="name">East China Normal University </div>
-							<div class="position">2015</div>
+							<div id="award_place5" class="name"></div>
+							<div id="award_time5" class="position"></div>
 						</div>
 						<!--//source-->
 					</div>
@@ -1315,30 +1288,28 @@
 		<!--//section-->
 
 		<section id="contact-section" class="contact-section section">
-			<h2 class="section-title">Get in Touch</h2>
+			<h2 id="sec_contact" class="section-title"></h2>
 			<div class="intro">
 				<div class="contact-left">
 					<div class="image-container"><img class="profile-image" src="assets/images/profile-image.png"
 							alt=""></div>
-					<a class="btn" id="" href="./assets/resume/resume - Tianjia Shen - en.pdf" download>
-						<i class="fa fa-download" aria-hidden="true"></i> Resume</a>
-					<a class="btn" href="./assets/portfolio/portfolio - Tianjia Shen.zip" download>
-						<i class="fa fa-download" aria-hidden="true"></i> Portfolio</a>
+					<a class="btn" id="download1" data-font="download" href="./assets/resume/resume - Tianjia Shen - en.pdf" download></a>
+					<a class="btn" id="download2" data-font="download" href="./assets/portfolio/portfolio - Tianjia Shen.zip" download></a>
 				</div>
 				<div class="dialog">
-					<p>I live in Shanghai. I'm looking for a job, one where I get a bit more job satisfaction.</p>
-					<p>Let's build something amazing together!</p>
-					<p><strong>I can help with the following:</strong></p>
+					<p id="intro"></p>
+					<p></p>
+					<p><strong id="help"></strong></p>
 					<ul class="list-unstyled service-list">
-						<li><i class="fa fa-check" aria-hidden="true"></i> UX/UI Design</li>
-						<li><i class="fa fa-check" aria-hidden="true"></i> Industrial Design</li>
-						<li><i class="fa fa-check" aria-hidden="true"></i> User Study</li>
-						<li><i class="fa fa-check" aria-hidden="true"></i> UX Prototyping</li>
-						<li><i class="fa fa-check" aria-hidden="true"></i> Project Management </li>
-						<li><i class="fa fa-check" aria-hidden="true"></i> Design Management </li>
-						<li><i class="fa fa-check" aria-hidden="true"></i> Design Trend Research</li>
+						<li id="help_field1" data-font="check"></li>
+						<li id="help_field2" data-font="check"></li>
+						<li id="help_field3" data-font="check"></li>
+						<li id="help_field4" data-font="check"></li>
+						<li id="help_field5" data-font="check"></li>
+						<li id="help_field6" data-font="check"></li>
+						<li id="help_field7" data-font="check"></li>
 					</ul>
-					<p>Drop me a line at <a href="mailto:1049904168@qq.com">1049904168@qq.com</a>
+					<p><p id="welcome_email"></p><a id="my_email" href="mailto:1049904168@qq.com"></a>
 						<!--  or call me at <a href="tel:13901795664">13901795664</a> -->
 					</p>
 					<ul class="social list-inline">
@@ -1371,7 +1342,6 @@
 
 	<!-- custom js -->
 	<script type="text/javascript" src="assets/js/main.js"></script>
-	<script type="text/javascript" src="assets/js/namespace.js"></script>
 
 	<!--Include LightGallery Related Stuff
 ==================================================================-->

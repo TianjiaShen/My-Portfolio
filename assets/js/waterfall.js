@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
     // }
 
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            // closeModal();
-        }
-    }
+    // window.onclick = function (event) {
+    //     if (event.target == modal) {
+    //         closeModal();
+    //     }
+    // }
 
 
     // for (var i = 0; i < brickList.length; i++) {

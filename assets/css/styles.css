@@ -6,11 +6,16 @@
  * Twitter: @3rdwave_themes
 */
 /* ======= Base ======= */
-body {
+:lang(en) {
   font-family: 'Roboto', sans-serif;
+}
+:lang(zh) {
+  font-family: helvetica, verdana, sans-serif;
+}
+body{
+  font-size: 14px;
   color: #666;
   background: #f5f5f5;
-  font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #444;
@@ -372,14 +377,14 @@ a.btn:hover {
   position: absolute;
   margin-left: 10px;
   right: 0;
-  top: 2px;
+  top: 1px;
   color: #8a8a8a;
 }
 .timeline .place {
   color: #00BCD4;
   font-weight: bold;
   display: inline-block;
-  margin-top: 0;
+  margin-top: -4px;
   margin-bottom: 15px;
   margin-right: 20px;
   padding-right: 5px;
@@ -936,7 +941,7 @@ a.btn:hover {
   color: #fff;
 }
 
-#paper{
+.paper{
   font-size: small;
 }
 
@@ -995,4 +1000,3 @@ a.btn:hover {
 .overlay {
   z-index: 100;
 }
-
