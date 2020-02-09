@@ -8,8 +8,8 @@ let font_awesome = {
 setLanguage('en');
 
 function setLanguage(lang) {
-    console.log(lang, "clicked");
     var url = '/assets/language/' + lang + '.json';
+    // swapDownloadFile(lang);
     getJsonData(url);
 }
 
@@ -17,19 +17,20 @@ function setLanguage(lang) {
 async function getJsonData(url) {
     const response = await fetch(url);
     const data = await response.json();
-    // console.log(JSON.parse(data));
-    // console.log(data);
     for (var key in data){
-        // console.log(key, data[key]);
         let elem = document.getElementById(key);
         if (elem === null) continue;
         
         elemFont = elem.getAttribute('data-font');
         if (elemFont !== null) {
-            console.log(elemFont, font_awesome[elemFont]);
             elem.innerHTML = font_awesome[elemFont] + data[key];
         } else {
             elem.innerHTML = data[key];
         }
     }
+}
+
+function swapDownloadFile(lang) {
+    let resume = document.getElementById("download-resume");
+    resume.setAttribute("href", "./assets/resume/resume - Tianjia Shen - " + lang + ".pdf");
 }

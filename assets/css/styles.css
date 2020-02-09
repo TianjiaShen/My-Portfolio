@@ -211,9 +211,15 @@ a.btn:hover {
   /* position: relative; */
   opacity: 0.8;
 }
+.linkedin,
+.email{
+  vertical-align: top;
+  margin-top: -1px;
+}
 .external-icon {
   width: 20px;
   height: 16px;
+  top: 10px;
   vertical-align: top;
   display: inline-block;
 }
