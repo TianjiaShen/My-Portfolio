@@ -1,284 +1,346 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
 <head>
-<title>Tianjia Shen's Portfolio</title>
-<!-- Meta -->
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">    
-<link rel="shortcut icon" href="">  
-<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-<!-- Global CSS -->
-<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
-<!-- Plugins CSS -->
-<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+	<title>Tianjia Shen's Portfolio</title>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="">
+	<link
+		href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic'
+		rel='stylesheet' type='text/css'>
+	<!-- Global CSS -->
+	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
 
-<!-- Theme CSS -->  
-<link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+	<!-- Theme CSS -->
+	<link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
 
-<!-- Waterfall layout -->
-<link rel="stylesheet" href="assets/css/modal.css">
-<script type="text/javascript" src="assets/js/waterfall.js"></script>
-<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
-<!-- <script src="js/lightGallery.js"></script> -->
+	<!-- language dropdown button -->
+	<link id="theme-style" rel="stylesheet" href="assets/css/dropdownBtn.css">
+	<script type="text/javascript" src="assets/js/dropdownBtn.js"></script>
 
-<!-- External Social Media -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+	<!-- Waterfall layout -->
+	<link rel="stylesheet" href="assets/css/modal.css">
+	<script type="text/javascript" src="assets/js/waterfall.js"></script>
+	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+	<!-- <script src="js/lightGallery.js"></script> -->
 
-</head> 
+	<!-- External Social Media -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+</head>
 
 <body id="body">
 
-<header class="header">
-	<div class="top-bar container-fluid">
-		<div class="actions">
-			<a class="btn hidden-xs" href="mailto:1049904168@qq.com"><i class="fa fa-paper-plane" aria-hidden="true"></i> Hire Me</a>
-<!--Addin1 
+	<header class="header">
+		<div class="dropdown">
+			<a onclick="dropdownFnt()" class="dropbtn btn">Language</button>
+			<div id="myDropdown" class="dropdown-content">
+				<a href="#">English</a>
+				<a href="#">Chinese</a>
+			</div>
+		</div>
+		<div class="top-bar container-fluid">
+			<div class="actions">
+				<a class="btn hidden-xs" href="mailto:1049904168@qq.com"><i class="fa fa-paper-plane"
+						aria-hidden="true"></i> Hire Me</a>
+				<!--Addin1 
 ===============================================================================================================================
 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  -->
-			<a class="btn" href="./assets/resume/resume - Tianjia Shen - en.pdf" download> 
+				<a class="btn" href="./assets/resume/resume - Tianjia Shen - en.pdf" download>
 
-                <i class="fa fa-download" aria-hidden="true"></i> Download My Resume</a>
-		</div><!--//actions-->	
-	</div><!--//top-bar-->
-	
-	<div class="intro">
-		<div class="container text-center">
-			<img class="profile-image" src="assets/images/profile-image.png" alt="">
-			<h1 class="name" id="portfolio_name_holder"></h1>
-			<div class="title" id="title_holder"></div>
-		</div><!--//container-->
-	</div><!--//intro-->
-	
-	<div class="contact-info">
-		<div class="container text-center">
-			<ul class="list-inline">
-				<li class="email"><a href="mailto:1049904168@qq.com"><i class="fas fa-envelope"></i></a></li>
-				<li class="linkedin"><a href="https://www.linkedin.com/in/tianjia-shen/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-				<li class="bilibili"><a href="https://space.bilibili.com/23121831/" target="_blank"><img class="external-icon" src="assets/icon/bilibili.svg" alt="lofter icon"/></a></li>
-				<li class="lofter"><a href="https://jessicashenart.lofter.com/" target="_blank"><img class="external-icon" src="assets/icon/lofter.svg" alt="lofter icon"/></a></li>
-				
-				<!-- <li><i class="fa fa-phone"></i> <a href="tel: 13901795664">13901795664</a></li> -->
-			</ul>
-		</div><!--//container-->
-	</div><!--//contact-info-->
-	
-	<div class="page-nav-space-holder hidden-xs">
-		<div id="page-nav-wrapper" class="page-nav-wrapper text-center">
-			<div class="container">
-				<ul id="page-nav" class="nav page-nav list-inline">
-					<li><a class="scrollto" href="#experiences-section">Experiences</a></li>
-					<li><a class="scrollto" href="#portfolio-section">Portfolio</a></li>
-					<li><a class="scrollto" href="#education-section">Education</a></li>
-					<li><a class="scrollto" href="#skills-section">Skills</a></li>
-					<li><a class="scrollto" href="#testimonials-section">Awards and Honors</a></li>
-					<li><a class="scrollto" href="#contact-section">Contact</a></li>
-					<li><a class="scrollto" href="#contact-section">Download</a></li>
-				</ul><!--//page-nav-->
+					<i class="fa fa-download" aria-hidden="true"></i> Download My Resume</a>
 			</div>
-		</div><!--//page-nav-wrapper-->
-	</div>
-	
-</header><!--//header-->
-
-<!-- Waterfall Style Project Modal Setup -->
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-	<!-- Modal content -->
-	<div class="modal-content" id="modal-content">
-		<div class="modal-header fixed" id="modal-header">
-			<div class="modal-header-bar">
-				<span class="close">&times;</span>
-			</div>
-			<!-- <h2>Modal Header</h2> -->
+			<!--//actions-->
 		</div>
-		<div class="modal-body" id="modal-body">
-			<!-- <p>Some text in the Modal Body</p>
+		<!--//top-bar-->
+
+		<div class="intro">
+			<div class="container text-center">
+				<img class="profile-image" src="assets/images/profile-image.png" alt="">
+				<h1 class="name" id="portfolio_name_holder"></h1>
+				<div class="title" id="title_holder"></div>
+			</div>
+			<!--//container-->
+		</div>
+		<!--//intro-->
+
+		<div class="contact-info">
+			<div class="container text-center">
+				<ul class="list-inline">
+					<li class="email"><a href="mailto:1049904168@qq.com"><i class="fas fa-envelope"></i></a></li>
+					<li class="linkedin"><a href="https://www.linkedin.com/in/tianjia-shen/" target="_blank"><i
+								class="fab fa-linkedin"></i></a></li>
+					<li class="bilibili"><a href="https://space.bilibili.com/23121831/" target="_blank"><img
+								class="external-icon" src="assets/icon/bilibili.svg" alt="lofter icon" /></a></li>
+					<li class="lofter"><a href="https://jessicashenart.lofter.com/" target="_blank"><img
+								class="external-icon" src="assets/icon/lofter.svg" alt="lofter icon" /></a></li>
+
+					<!-- <li><i class="fa fa-phone"></i> <a href="tel: 13901795664">13901795664</a></li> -->
+				</ul>
+			</div>
+			<!--//container-->
+		</div>
+		<!--//contact-info-->
+
+		<div class="page-nav-space-holder hidden-xs">
+			<div id="page-nav-wrapper" class="page-nav-wrapper text-center">
+				<div class="container">
+					<ul id="page-nav" class="nav page-nav list-inline">
+						<li><a class="scrollto" href="#experiences-section">Experiences</a></li>
+						<li><a class="scrollto" href="#portfolio-section">Portfolio</a></li>
+						<li><a class="scrollto" href="#education-section">Education</a></li>
+						<li><a class="scrollto" href="#skills-section">Skills</a></li>
+						<li><a class="scrollto" href="#testimonials-section">Awards and Honors</a></li>
+						<li><a class="scrollto" href="#contact-section">Contact</a></li>
+						<li><a class="scrollto" href="#contact-section">Download</a></li>
+					</ul>
+					<!--//page-nav-->
+				</div>
+			</div>
+			<!--//page-nav-wrapper-->
+		</div>
+
+	</header>
+	<!--//header-->
+
+	<!-- Waterfall Style Project Modal Setup -->
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content" id="modal-content">
+			<div class="modal-header fixed" id="modal-header">
+				<div class="modal-header-bar">
+					<span class="close">&times;</span>
+				</div>
+				<!-- <h2>Modal Header</h2> -->
+			</div>
+			<div class="modal-body" id="modal-body">
+				<!-- <p>Some text in the Modal Body</p>
 			<p>Some other text...</p> -->
-		</div>
-		<div class="modal-footer" id="modal-footer">
-			<!-- <h3>Modal Footer</h3> -->
+			</div>
+			<div class="modal-footer" id="modal-footer">
+				<!-- <h3>Modal Footer</h3> -->
+			</div>
 		</div>
 	</div>
-</div>
 
-<!-- ====================================== -->
+	<!-- ====================================== -->
 
-<div class="wrapper container">
-	<section id="experiences-section" class="experiences-section section">
-		<h2 class="section-title" id="prof_exp_holder"></h2>
-		<div class="timeline">
-			
-			<!-- ====== Microsoft ====== -->
-			<div class="item">
-				<div class="work-place">
-					<p class="place">Microsoft</p>
-					<div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Shanghai</div>
-				</div>
-				<div class="job-meta">
-					<div class="title">UX Designer</div>
-					<div class="time">2019.12 - Present</div>
-				</div><!--//job-meta-->
-				<div class="job-desc">
-					<p></p> 
-					<ul>
-						<li>Doing 3D modeling and UX works for HoloLens MR development.</li>
-						<li>Designing internal Letters based on Outlook.</li>
-						<li>Technical demo videos making cooperating with colleagues.</li>
-					</ul>
-				</div><!--//job-desc-->
-			</div><!--//item-->
+	<div class="wrapper container">
+		<section id="experiences-section" class="experiences-section section">
+			<h2 class="section-title" id="prof_exp_holder"></h2>
+			<div class="timeline">
 
-			<!-- ====== Signify ====== -->
-			<div class="item">
-				<div class="work-place">
-					<div class="place"><p>Signify (Former Philips Lighting)</p></div>
-					<div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Shanghai</div>
+				<!-- ====== Microsoft ====== -->
+				<div class="item">
+					<div class="work-place">
+						<p class="place">Microsoft</p>
+						<div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Shanghai</div>
+					</div>
+					<div class="job-meta">
+						<div class="title">UX Designer</div>
+						<div class="time">2019.12 - Present</div>
+					</div>
+					<!--//job-meta-->
+					<div class="job-desc">
+						<p></p>
+						<ul>
+							<li>Doing 3D modeling and UX works for HoloLens MR development.</li>
+							<li>Designing internal Letters based on Outlook.</li>
+							<li>Technical demo videos making cooperating with colleagues.</li>
+						</ul>
+					</div>
+					<!--//job-desc-->
 				</div>
-				<div class="job-meta">
-					<div class="title">UX Designer</div>
-					<div class="time">2018.11 - 2019.11</div>
-				</div><!--//job-meta-->
-				<div class="job-desc">
-					<p></p> 
-					<ul>
-						<li>Designed user experience, interaction and user interface for &lt;HUE&gt; app in &lt;HUE&gt; smart lighting group</li>
-						<li>Designed storyboard for &lt;HUE&gt; lights and &lt;HUE&gt; bridge</li>
-					</ul>
-				</div><!--//job-desc-->
-			</div><!--//item-->
+				<!--//item-->
 
-			<!-- ====== Philips Lighting ====== -->
-			<div class="item">
-				<div class="work-place">
-					<div class="place"><p>Philips Lighting</p></div>
-					<div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Shanghai</div>
+				<!-- ====== Signify ====== -->
+				<div class="item">
+					<div class="work-place">
+						<div class="place">
+							<p>Signify (Former Philips Lighting)</p>
+						</div>
+						<div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Shanghai</div>
+					</div>
+					<div class="job-meta">
+						<div class="title">UX Designer</div>
+						<div class="time">2018.11 - 2019.11</div>
+					</div>
+					<!--//job-meta-->
+					<div class="job-desc">
+						<p></p>
+						<ul>
+							<li>Designed user experience, interaction and user interface for &lt;HUE&gt; app in
+								&lt;HUE&gt; smart lighting group</li>
+							<li>Designed storyboard for &lt;HUE&gt; lights and &lt;HUE&gt; bridge</li>
+						</ul>
+					</div>
+					<!--//job-desc-->
 				</div>
-				<div class="job-meta">
-					<div class="title">UX Designer</div>
-					<div class="time">2017.08 - 2018.08</div>
-				</div><!--//job-meta-->
-				<div class="job-desc">
-					<p></p> 
-					<ul>
-						<li>Accomplished the UX/UI design, user interview and storyboard of the &lt;Smart Hotel&gt; project</li>
-						<li>Designed Web and Mobile App interface for online interview process</li>
-						<li>Promoted market research and analysis of the &lt;New Retail&gt; project</li>
-						<li>Designed storyboard for the &lt;New Retail&gt; project</li>
-					</ul>
-				</div><!--//job-desc-->
-			</div><!--//item-->
-			
-			<!-- ====== MoMA Design ====== -->
-			<div class="item">
-				<div class="work-place">
-					<p class="place">MoMA Industrial Design</p>
-					<div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Shanghai</div>
-				</div>
-				<div class="job-meta">
-					<div class="title">Industrial Designer</div>
-					<div class="time">2016/2 - 2017/8</div>
-				</div><!--//job-meta-->
-				<div class="job-desc">
-					<ul>
-						<li>Co-designed &lt;MOSUN-Shared Umbrella&gt; &lt;Ping An Good Doctor&gt; &lt;TOMILO Environment Test Equipment&gt; products</li>
-						<li>Facilitated the management of supply chain</li>
-						<li>Established CMF library including ...</li>
-					</ul>
-				</div><!--//job-desc-->
-			</div><!--//item-->
-			
-			<!-- ====== HIT Robot Group ====== -->
-			<div class="item">
-				<div class="work-place">
-					<p class="place">HIT ROBOT GROUP</p>
-					<div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Shanghai</div>
-				</div>
-				<div class="job-meta">
-					<div class="title">Industrial Designer</div>
-					<div class="time">2018/7 - 2018/8</div>
-				</div><!--//job-meta-->
-				<div class="job-desc">
-					<p></p>
-					<ul>
-						<li>Accomplished modeling and rendering of hotel service robot</li>
-						<li>Applied for patent for service robot product</li>
-					</ul>
-				</div><!--//job-desc-->
-			</div><!--//item-->
-			
-			<!-- ====== Stanford ====== -->
-			<div class="item">
-				<div class="work-place">
-					<p class="place">Silicon Valley Entrepreneurship Camp</p>
-					<div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>San Francisco</div>
-				</div>
-				<div class="job-meta">
-					<div class="title">Industrial Designer</div>
-					<div class="time">2018/7 - 2018/8</div>
-				</div><!--//job-meta-->
-				<div class="job-desc">
-					<p></p>
-					<ul>
-						<li>Learned entrepreneurial theories, communicated with entrepreneurs and venture capitalists, and visited the venture enterprises in Silicon Valley</li>
-						<li>Obtained international perspectives of entrepreneurship theory and practice, as well as improvement in the ability to identify entrepreneurial opportunities and skills</li>
-					</ul>
-				</div><!--//job-desc-->
-			</div><!--//item-->
-		</div><!--//timeline-->
-		
-	</section><!--//section-->
-	<div class="tlinks"><a href="http://www.cssmoban.com/" ></a></div>
+				<!--//item-->
 
-	
-	<section id="portfolio-section" class="portfolio-section section">
-	
-		<div class="overlay"></div>
-		<div class="gradient-overlay"></div>
-		
-		<h2 class="section-title">Portfolio</h2>
-		<ul id="filters" class="filters clearfix">
-			<!--data-filter属性决定了哪些Projects会出现在Design Projects，哪些Projects会出现在Sketch & Modeling里-->
-			<li class="type active" data-filter=".first_divi">UX/UI Design</li>
-			<li class="type" data-filter=".second_divi">3D Design</li>
-			<li class="type" data-filter=".third_divi">Sketch & Modeling</li>
-			<li class="type" data-filter=".fourth_divi">Painting & Handwork</li>
-			<!-- <li class="type active" data-filter="*">All</li> -->
-		</ul><!--//filters-->
-		<div class="items-wrapper isotope row">
-				
+				<!-- ====== Philips Lighting ====== -->
+				<div class="item">
+					<div class="work-place">
+						<div class="place">
+							<p>Philips Lighting</p>
+						</div>
+						<div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Shanghai</div>
+					</div>
+					<div class="job-meta">
+						<div class="title">UX Designer</div>
+						<div class="time">2017.08 - 2018.08</div>
+					</div>
+					<!--//job-meta-->
+					<div class="job-desc">
+						<p></p>
+						<ul>
+							<li>Accomplished the UX/UI design, user interview and storyboard of the &lt;Smart Hotel&gt;
+								project</li>
+							<li>Designed Web and Mobile App interface for online interview process</li>
+							<li>Promoted market research and analysis of the &lt;New Retail&gt; project</li>
+							<li>Designed storyboard for the &lt;New Retail&gt; project</li>
+						</ul>
+					</div>
+					<!--//job-desc-->
+				</div>
+				<!--//item-->
+
+				<!-- ====== MoMA Design ====== -->
+				<div class="item">
+					<div class="work-place">
+						<p class="place">MoMA Industrial Design</p>
+						<div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Shanghai</div>
+					</div>
+					<div class="job-meta">
+						<div class="title">Industrial Designer</div>
+						<div class="time">2016/2 - 2017/8</div>
+					</div>
+					<!--//job-meta-->
+					<div class="job-desc">
+						<ul>
+							<li>Co-designed &lt;MOSUN-Shared Umbrella&gt; &lt;Ping An Good Doctor&gt; &lt;TOMILO
+								Environment Test Equipment&gt; products</li>
+							<li>Facilitated the management of supply chain</li>
+							<li>Established CMF library including ...</li>
+						</ul>
+					</div>
+					<!--//job-desc-->
+				</div>
+				<!--//item-->
+
+				<!-- ====== HIT Robot Group ====== -->
+				<div class="item">
+					<div class="work-place">
+						<p class="place">HIT ROBOT GROUP</p>
+						<div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Shanghai</div>
+					</div>
+					<div class="job-meta">
+						<div class="title">Industrial Designer</div>
+						<div class="time">2018/7 - 2018/8</div>
+					</div>
+					<!--//job-meta-->
+					<div class="job-desc">
+						<p></p>
+						<ul>
+							<li>Accomplished modeling and rendering of hotel service robot</li>
+							<li>Applied for patent for service robot product</li>
+						</ul>
+					</div>
+					<!--//job-desc-->
+				</div>
+				<!--//item-->
+
+				<!-- ====== Stanford ====== -->
+				<div class="item">
+					<div class="work-place">
+						<p class="place">Silicon Valley Entrepreneurship Camp</p>
+						<div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>San Francisco
+						</div>
+					</div>
+					<div class="job-meta">
+						<div class="title">Industrial Designer</div>
+						<div class="time">2018/7 - 2018/8</div>
+					</div>
+					<!--//job-meta-->
+					<div class="job-desc">
+						<p></p>
+						<ul>
+							<li>Learned entrepreneurial theories, communicated with entrepreneurs and venture
+								capitalists, and visited the venture enterprises in Silicon Valley</li>
+							<li>Obtained international perspectives of entrepreneurship theory and practice, as well as
+								improvement in the ability to identify entrepreneurial opportunities and skills</li>
+						</ul>
+					</div>
+					<!--//job-desc-->
+				</div>
+				<!--//item-->
+			</div>
+			<!--//timeline-->
+
+		</section>
+		<!--//section-->
+		<div class="tlinks"><a href="http://www.cssmoban.com/"></a></div>
+
+
+		<section id="portfolio-section" class="portfolio-section section">
+
+			<div class="overlay"></div>
+			<div class="gradient-overlay"></div>
+
+			<h2 class="section-title">Portfolio</h2>
+			<ul id="filters" class="filters clearfix">
+				<!--data-filter属性决定了哪些Projects会出现在Design Projects，哪些Projects会出现在Sketch & Modeling里-->
+				<li class="type active" data-filter=".first_divi">UX/UI Design</li>
+				<li class="type" data-filter=".second_divi">3D Design</li>
+				<li class="type" data-filter=".third_divi">Sketch & Modeling</li>
+				<li class="type" data-filter=".fourth_divi">Painting & Handwork</li>
+				<!-- <li class="type active" data-filter="*">All</li> -->
+			</ul>
+			<!--//filters-->
+			<div class="items-wrapper isotope row">
+
 				<!-- Division #1 
 					用first_divi表示
 				==============================================================================================-->
-					<!-- Project #1 JAGUAR
+				<!-- Project #1 JAGUAR
 					==============================================================================================-->
-					<div class="item second_divi col-md-3 col-xs-6 ">
-						<div class="item-inner">
-							
-							<div id="folio-wrap" class="bricks-wrapper" data-waterfall="">
-								<div class="brick folio-item">
-									<!-- Pro#1 -- Detail 01 
+				<div class="item second_divi col-md-3 col-xs-6 ">
+					<div class="item-inner">
+
+						<div id="folio-wrap" class="bricks-wrapper" data-waterfall="">
+							<div class="brick folio-item">
+								<!-- Pro#1 -- Detail 01 
 									==============================================================================================-->
-									<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-1.jpg" data-sub-html="#01" project-num="1" onclick="displayProject(this); return false">
-										<a href="#" class="overlay">
-											<figure class="figure">
-												<!-- Pro#1 -- Raw Pic 
+								<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-1.jpg"
+									data-sub-html="#01" project-num="1" onclick="displayProject(this); return false">
+									<a href="#" class="overlay">
+										<figure class="figure">
+											<!-- Pro#1 -- Raw Pic 
 												==============================================================================================-->
-												<img class="img-responsive" src="assets/images/portfolio/portfolio-1.jpg" alt="" />
-											</figure>                                       
-										</a>
-										<a href="https://www.behance.net/" class='details-link' title="details">
-											<i class="icon-UpRightArrow"></i>
-										</a>
-									</div> <!-- end item-wrap -->
-									
-	<!--
+											<img class="img-responsive" src="assets/images/portfolio/portfolio-1.jpg"
+												alt="" />
+										</figure>
+									</a>
+									<a href="https://www.behance.net/" class='details-link' title="details">
+										<i class="icon-UpRightArrow"></i>
+									</a>
+								</div> <!-- end item-wrap -->
+
+								<!--
 									<div id="01" class='hide'>
 										Pro#1 -- Detail Description 01
 										==============================================================================================
@@ -286,921 +348,1076 @@
 										<p>Lorem ipsum Dolor deserunt labore sint officia. Magna et aute enim proident tempor sunt quis nulla voluptate fugiat velit. <a href="www.behance.net">Details</a></p>
 									</div>
 	-->
-								</div>
-								<div class="brick folio-item">
-									<!-- Pro#1 -- Detail 02
+							</div>
+							<div class="brick folio-item">
+								<!-- Pro#1 -- Detail 02
 									==============================================================================================-->
-									<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-2.jpg"  data-sub-html="#02">
-									</div> <!-- end item-wrap -->
-	
-								</div>
-								<div class="brick folio-item">
-									<!-- Pro#1 -- Detail 03
+								<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-2.jpg"
+									data-sub-html="#02">
+								</div> <!-- end item-wrap -->
+
+							</div>
+							<div class="brick folio-item">
+								<!-- Pro#1 -- Detail 03
 									==============================================================================================-->
-									<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-3.jpg"  data-sub-html="#03">
-									</div> <!-- end item-wrap -->
-								</div>
-								<div class="brick folio-item">
-									<!-- Pro#1 -- Detail 04
+								<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-3.jpg"
+									data-sub-html="#03">
+								</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+								<!-- Pro#1 -- Detail 04
 									==============================================================================================-->
-									<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-4.jpg"  data-sub-html="#04">
-									</div> <!-- end item-wrap -->
-								</div>
-								<div class="brick folio-item">
-									<!-- Pro#1 -- Detail 05
+								<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-4.jpg"
+									data-sub-html="#04">
+								</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+								<!-- Pro#1 -- Detail 05
 									==============================================================================================-->
-									<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-5.jpg"  data-sub-html="#05">
-									</div> <!-- end item-wrap -->
-								</div>
-								<div class="brick folio-item">
-									<!-- Pro#1 -- Detail 06
+								<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-5.jpg"
+									data-sub-html="#05">
+								</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+								<!-- Pro#1 -- Detail 06
 									==============================================================================================-->
-									<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-6.jpg"  data-sub-html="#06">
-									</div> <!-- end item-wrap -->
-								</div>
-								<div class="brick folio-item">
-									<!-- Pro#1 -- Detail 07
+								<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-6.jpg"
+									data-sub-html="#06">
+								</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+								<!-- Pro#1 -- Detail 07
 									==============================================================================================-->
-									<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-7.jpg"  data-sub-html="#07">
-									</div> <!-- end item-wrap -->
-								</div>
-							</div> <!-- end folio-item -->   
-	
-							<div class="content text-left">
-								<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="1" onclick="displayProject(this)">JAGUAR</a></h3>
-								<div class="meta">Derived speaker for jaguar</div><br/>
-								
-							</div><!--//content--> 
-	
-						</div><!--//item-inner-->
-					</div><!--//item-->
-				
-					<!-- Project #2 Official Seal
+								<div class="item-wrap" data-src="assets/images/portfolio/gallery/pro1-7.jpg"
+									data-sub-html="#07">
+								</div> <!-- end item-wrap -->
+							</div>
+						</div> <!-- end folio-item -->
+
+						<div class="content text-left">
+							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="1"
+									onclick="displayProject(this)">JAGUAR</a></h3>
+							<div class="meta">Derived speaker for jaguar</div><br />
+
+						</div>
+						<!--//content-->
+
+					</div>
+					<!--//item-inner-->
+				</div>
+				<!--//item-->
+
+				<!-- Project #2 Official Seal
 					==============================================================================================-->
-					<div class="item second_divi col-md-3 col-xs-6 ">
-						<div class="item-inner">
-							
-							<div id="folio-wrap2" class="bricks-wrapper">
-								<div class="brick folio-item">
-									<!-- Pro#2 -- Detail 01 
+				<div class="item second_divi col-md-3 col-xs-6 ">
+					<div class="item-inner">
+
+						<div id="folio-wrap2" class="bricks-wrapper">
+							<div class="brick folio-item">
+								<!-- Pro#2 -- Detail 01 
 									==============================================================================================-->
-									<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-1.jpg"  data-sub-html="#01" project-num="2" onclick="displayProject(this); return false">
-										<a href="#" class="overlay">
-											<figure class="figure">
-												<!-- Pro#2 -- Raw Pic 
+								<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-1.jpg"
+									data-sub-html="#01" project-num="2" onclick="displayProject(this); return false">
+									<a href="#" class="overlay">
+										<figure class="figure">
+											<!-- Pro#2 -- Raw Pic 
 												==============================================================================================-->
-												<img class="img-responsive" src="assets/images/portfolio/portfolio-2.jpg" alt="" />
-											</figure>
-										</a>
-										<a href="https://www.behance.net/" class='details-link' title="details">
-											<i class="icon-UpRightArrow"></i>
-										</a>
-									</div> <!-- end item-wrap -->
-									
-								</div>
-								<div class="brick folio-item">
-									<!-- Pro#2 -- Detail 02
+											<img class="img-responsive" src="assets/images/portfolio/portfolio-2.jpg"
+												alt="" />
+										</figure>
+									</a>
+									<a href="https://www.behance.net/" class='details-link' title="details">
+										<i class="icon-UpRightArrow"></i>
+									</a>
+								</div> <!-- end item-wrap -->
+
+							</div>
+							<div class="brick folio-item">
+								<!-- Pro#2 -- Detail 02
 									==============================================================================================-->
-									<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-2.jpg"  data-sub-html="#02">
-									</div> <!-- end item-wrap -->
-									
-								</div>
-								<div class="brick folio-item">
-									<!-- Pro#2 -- Detail 03
+								<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-2.jpg"
+									data-sub-html="#02">
+								</div> <!-- end item-wrap -->
+
+							</div>
+							<div class="brick folio-item">
+								<!-- Pro#2 -- Detail 03
 									==============================================================================================-->
-									<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-3.jpg"  data-sub-html="#03">
-									</div> <!-- end item-wrap -->
-								</div>
-								<div class="brick folio-item">
-									<!-- Pro#2 -- Detail 04
+								<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-3.jpg"
+									data-sub-html="#03">
+								</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+								<!-- Pro#2 -- Detail 04
 									==============================================================================================-->
-									<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-4.jpg"  data-sub-html="#04">
-									</div> <!-- end item-wrap -->
-								</div>
-								<div class="brick folio-item">
-									<!-- Pro#2 -- Detail 05
+								<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-4.jpg"
+									data-sub-html="#04">
+								</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+								<!-- Pro#2 -- Detail 05
 									==============================================================================================-->
-									<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-5.jpg"  data-sub-html="#05">
-									</div> <!-- end item-wrap -->
-								</div>
-								<div class="brick folio-item">
-									<!-- Pro#2 -- Detail 06
+								<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-5.jpg"
+									data-sub-html="#05">
+								</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+								<!-- Pro#2 -- Detail 06
 									==============================================================================================-->
-									<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-6.jpg"  data-sub-html="#06">
-									</div> <!-- end item-wrap -->
-								</div>
-								<div class="brick folio-item">
-									<!-- Pro#2 -- Detail 07
+								<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-6.jpg"
+									data-sub-html="#06">
+								</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+								<!-- Pro#2 -- Detail 07
 									==============================================================================================-->
-									<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-7.jpg"  data-sub-html="#07">
-									</div> <!-- end item-wrap -->
-								</div>
-							
-							</div> <!-- end folio-item -->   
-	
-							<div class="content text-left">
-								<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="2" onclick="displayProject(this)">Official Seals</a></h3>
-								<div class="meta">Series design for an Official Seal company </div>
-								
-							</div><!--//content--> 
-	
-						</div><!--//item-inner-->
-					</div><!--//item-->
-				
+								<div class="item-wrap2" data-src="assets/images/portfolio/gallery/pro2-7.jpg"
+									data-sub-html="#07">
+								</div> <!-- end item-wrap -->
+							</div>
+
+						</div> <!-- end folio-item -->
+
+						<div class="content text-left">
+							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="2"
+									onclick="displayProject(this)">Official Seals</a></h3>
+							<div class="meta">Series design for an Official Seal company </div>
+
+						</div>
+						<!--//content-->
+
+					</div>
+					<!--//item-inner-->
+				</div>
+				<!--//item-->
+
 				<!-- Project #3 Coffee Table
 				==============================================================================================-->
 				<div class="item second_divi col-md-3 col-xs-6 ">
 					<div class="item-inner">
-						
+
 						<div id="folio-wrap3" class="bricks-wrapper">
-							<div class="brick folio-item">				
-								<div class="item-wrap3" data-src="assets/images/portfolio/gallery/pro3-1.jpg"  data-sub-html="#03" project-num="3" onclick="displayProject(this); return false">
-	
-								<a href="#" class="overlay">
-	
-								<figure class="figure">
-									<img class="img-responsive" src="assets/images/portfolio/portfolio-3.jpg" alt="" />
-								</figure>                                       
-								</a>
-								<a href="https://www.behance.net/" class='details-link' title="details">
-									<i class="icon-UpRightArrow"></i>
-								</a>
+							<div class="brick folio-item">
+								<div class="item-wrap3" data-src="assets/images/portfolio/gallery/pro3-1.jpg"
+									data-sub-html="#03" project-num="3" onclick="displayProject(this); return false">
+
+									<a href="#" class="overlay">
+
+										<figure class="figure">
+											<img class="img-responsive" src="assets/images/portfolio/portfolio-3.jpg"
+												alt="" />
+										</figure>
+									</a>
+									<a href="https://www.behance.net/" class='details-link' title="details">
+										<i class="icon-UpRightArrow"></i>
+									</a>
 								</div> <!-- end item-wrap -->
-																				
+
 							</div>
 							<div class="brick folio-item">
-									<!-- Pro#3 -- Detail 02
+								<!-- Pro#3 -- Detail 02
 									==============================================================================================-->
-									<div class="item-wrap3" data-src="assets/images/portfolio/gallery/pro3-2.jpg"  data-sub-html="#02">
-									</div> <!-- end item-wrap -->
-								</div>
-	
-						</div> <!-- end folio-item -->   
-						
+								<div class="item-wrap3" data-src="assets/images/portfolio/gallery/pro3-2.jpg"
+									data-sub-html="#02">
+								</div> <!-- end item-wrap -->
+							</div>
+
+						</div> <!-- end folio-item -->
+
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="3" onclick="displayProject(this)">Coffee Tables</a></h3>
+							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="3"
+									onclick="displayProject(this)">Coffee Tables</a></h3>
 							<div class="meta">Series design for ADWIN furniture company</div>
-							
-						</div><!--//content-->    
-						
-					</div><!--//item-inner-->
-				</div><!--//item-->
-				
+
+						</div>
+						<!--//content-->
+
+					</div>
+					<!--//item-inner-->
+				</div>
+				<!--//item-->
+
 				<!-- Project #4 Water Boiler
 				==============================================================================================-->
 				<div class="item second_divi col-md-3 col-xs-6 ">
 					<div class="item-inner">
-	
+
 						<div id="folio-wrap4" class="bricks-wrapper">
-						
+
 							<div class="brick folio-item">
-							
-								<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-1.jpg"  data-sub-html="#01" project-num="4" onclick="displayProject(this); return false">
-	
-								<a href="#" class="overlay">
-								
-								<figure class="figure">
-									<img class="img-responsive" src="assets/images/portfolio/portfolio-4.jpg" alt="" />
-								</figure>                                      
-								</a>
-								<a href="https://www.behance.net/" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-								</a>
+
+								<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-1.jpg"
+									data-sub-html="#01" project-num="4" onclick="displayProject(this); return false">
+
+									<a href="#" class="overlay">
+
+										<figure class="figure">
+											<img class="img-responsive" src="assets/images/portfolio/portfolio-4.jpg"
+												alt="" />
+										</figure>
+									</a>
+									<a href="https://www.behance.net/" class='details-link' title="details">
+										<i class="icon-UpRightArrow"></i>
+									</a>
 								</div> <!-- end item-wrap -->
-													
+
 							</div>
 							<div class="brick folio-item">
-									<!-- Pro#4 -- Detail 04
+								<!-- Pro#4 -- Detail 04
 									==============================================================================================-->
-									<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-2.jpg"  data-sub-html="#02">
-									</div> <!-- end item-wrap -->
+								<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-2.jpg"
+									data-sub-html="#02">
+								</div> <!-- end item-wrap -->
 							</div>
 							<div class="brick folio-item">
-									<!-- Pro#4 -- Detail 03
+								<!-- Pro#4 -- Detail 03
 									==============================================================================================-->
-									<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-3.jpg"  data-sub-html="#03">
-									</div> <!-- end item-wrap -->
+								<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-3.jpg"
+									data-sub-html="#03">
+								</div> <!-- end item-wrap -->
 							</div>
 							<div class="brick folio-item">
-									<!-- Pro#4 -- Detail 04
+								<!-- Pro#4 -- Detail 04
 									==============================================================================================-->
-									<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-4.jpg"  data-sub-html="#04">
-									</div> <!-- end item-wrap -->
+								<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-4.jpg"
+									data-sub-html="#04">
+								</div> <!-- end item-wrap -->
 							</div>
 							<div class="brick folio-item">
-									<!-- Pro#4 -- Detail 05
+								<!-- Pro#4 -- Detail 05
 									==============================================================================================-->
-									<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-5.jpg"  data-sub-html="#05">
-									</div> <!-- end item-wrap -->
+								<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-5.jpg"
+									data-sub-html="#05">
+								</div> <!-- end item-wrap -->
 							</div>
 							<div class="brick folio-item">
-									<!-- Pro#4 -- Detail 06
+								<!-- Pro#4 -- Detail 06
 									==============================================================================================-->
-									<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-6.jpg"  data-sub-html="#06">
-									</div> <!-- end item-wrap -->
+								<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-6.jpg"
+									data-sub-html="#06">
+								</div> <!-- end item-wrap -->
 							</div>
 							<div class="brick folio-item">
-									<!-- Pro#4 -- Detail 07
+								<!-- Pro#4 -- Detail 07
 									==============================================================================================-->
-									<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-7.jpg"  data-sub-html="#07">
-									</div> <!-- end item-wrap -->
+								<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-7.jpg"
+									data-sub-html="#07">
+								</div> <!-- end item-wrap -->
 							</div>
 							<div class="brick folio-item">
-									<!-- Pro#4 -- Detail 08
+								<!-- Pro#4 -- Detail 08
 									==============================================================================================-->
-									<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-8.jpg"  data-sub-html="#08">
-									</div> <!-- end item-wrap -->
+								<div class="item-wrap4" data-src="assets/images/portfolio/gallery/pro4-8.jpg"
+									data-sub-html="#08">
+								</div> <!-- end item-wrap -->
 							</div>
-	
-	
-						</div> <!-- end folio-item -->   
-						
+
+
+						</div> <!-- end folio-item -->
+
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="4" onclick="displayProject(this)">Water Boiler</a></h3>
-							<div class="meta">Water boiler design</div><br/>
-							
-						</div><!--//content-->    
-	
-					</div><!--//item-inner-->
-				</div><!--//item-->
-				
+							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="4"
+									onclick="displayProject(this)">Water Boiler</a></h3>
+							<div class="meta">Water boiler design</div><br />
+
+						</div>
+						<!--//content-->
+
+					</div>
+					<!--//item-inner-->
+				</div>
+				<!--//item-->
+
 				<!-- Project #5 Shaun
 				==============================================================================================-->
 				<div class="item second_divi col-md-3 col-xs-6 ">
 					<div class="item-inner">
 						<div id="folio-wrap5" class="bricks-wrapper">
-						
+
 							<div class="brick folio-item">
-							
-								<div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-1.jpg"  data-sub-html="#01" project-num="5" onclick="displayProject(this); return false">
-	
-								<a href="#" class="overlay">
-								
-								<figure class="figure">
-									<img class="img-responsive" src="assets/images/portfolio/portfolio-5.jpg" alt="" />
-								</figure>                                       
-								</a>
-								<a href="https://www.behance.net/" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-								</a>
-								</div> <!-- end item-wrap --> 
-													
+
+								<div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-1.jpg"
+									data-sub-html="#01" project-num="5" onclick="displayProject(this); return false">
+
+									<a href="#" class="overlay">
+
+										<figure class="figure">
+											<img class="img-responsive" src="assets/images/portfolio/portfolio-5.jpg"
+												alt="" />
+										</figure>
+									</a>
+									<a href="https://www.behance.net/" class='details-link' title="details">
+										<i class="icon-UpRightArrow"></i>
+									</a>
+								</div> <!-- end item-wrap -->
+
 							</div>
 							<div class="brick folio-item">
-									<!-- Pro#5 -- Detail 02
+								<!-- Pro#5 -- Detail 02
 									==============================================================================================-->
-									<div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-2.jpg"  data-sub-html="#02">
-									</div> <!-- end item-wrap -->
+								<div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-2.jpg"
+									data-sub-html="#02">
+								</div> <!-- end item-wrap -->
 							</div>
 							<div class="brick folio-item">
-									<!-- Pro#5 -- Detail 03
+								<!-- Pro#5 -- Detail 03
 									==============================================================================================-->
-									<div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-3.jpg"  data-sub-html="#03">
-									</div> <!-- end item-wrap -->
+								<div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-3.jpg"
+									data-sub-html="#03">
+								</div> <!-- end item-wrap -->
 							</div>
 							<div class="brick folio-item">
-									<!-- Pro#5 -- Detail 04
+								<!-- Pro#5 -- Detail 04
 									==============================================================================================-->
-									<div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-4.jpg"  data-sub-html="#04">
-									</div> <!-- end item-wrap -->
+								<div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-4.jpg"
+									data-sub-html="#04">
+								</div> <!-- end item-wrap -->
 							</div>
 							<div class="brick folio-item">
-									<!-- Pro#5 -- Detail 05
+								<!-- Pro#5 -- Detail 05
 									==============================================================================================-->
-									<div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-5.jpg"  data-sub-html="#05">
-									</div> <!-- end item-wrap -->
+								<div class="item-wrap5" data-src="assets/images/portfolio/gallery/pro5-5.jpg"
+									data-sub-html="#05">
+								</div> <!-- end item-wrap -->
 							</div>
-	
-						</div> <!-- end folio-item -->   
-						
+
+						</div> <!-- end folio-item -->
+
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="5" onclick="displayProject(this)">SHAUN</a></h3>
+							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="5"
+									onclick="displayProject(this)">SHAUN</a></h3>
 							<div class="meta">Robot For Kids</div>
-							
-						</div><!--//content-->    
-	
-					</div><!--//item-inner-->
-				</div><!--//item-->
-				
+
+						</div>
+						<!--//content-->
+
+					</div>
+					<!--//item-inner-->
+				</div>
+				<!--//item-->
+
 				<!-- Project #6 Sketch
 				==============================================================================================-->
 				<div class="item third_divi col-md-3 col-xs-6 ">
 					<div class="item-inner">
 						<div id="folio-wrap6" class="bricks-wrapper">
-						
+
 							<div class="brick folio-item">
-							
-								<div class="item-wrap6" data-src="assets/images/portfolio/gallery/pro6-1.jpg"  data-sub-html="#01" project-num="6" onclick="displayProject(this); return false">
-	
-								<a href="#" class="overlay">
-									
-								<figure class="figure">
-									<img class="img-responsive" src="assets/images/portfolio/portfolio-6.jpg" alt="" />
-								</figure>                                     
-								</a>
-								<a href="https://www.behance.net/" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-								</a>
-								</div> <!-- end item-wrap -->	 
-													
+
+								<div class="item-wrap6" data-src="assets/images/portfolio/gallery/pro6-1.jpg"
+									data-sub-html="#01" project-num="6" onclick="displayProject(this); return false">
+
+									<a href="#" class="overlay">
+
+										<figure class="figure">
+											<img class="img-responsive" src="assets/images/portfolio/portfolio-6.jpg"
+												alt="" />
+										</figure>
+									</a>
+									<a href="https://www.behance.net/" class='details-link' title="details">
+										<i class="icon-UpRightArrow"></i>
+									</a>
+								</div> <!-- end item-wrap -->
+
 							</div>
 							<div class="brick folio-item">
-									<!-- Pro#6 -- Detail 02
+								<!-- Pro#6 -- Detail 02
 									==============================================================================================-->
-									<div class="item-wrap6" data-src="assets/images/portfolio/gallery/pro6-2.jpg"  data-sub-html="#02">
-									</div> <!-- end item-wrap -->
+								<div class="item-wrap6" data-src="assets/images/portfolio/gallery/pro6-2.jpg"
+									data-sub-html="#02">
+								</div> <!-- end item-wrap -->
 							</div>
-	
-						</div> <!-- end folio-item -->   
-						
+
+						</div> <!-- end folio-item -->
+
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="6" onclick="displayProject(this)">Sketchs</a></h3>
-							<div class="meta">  Prouducts Sketchs    </div>
-							
-						</div><!--//content-->    
-	
-					</div><!--//item-inner-->
-				</div><!--//item-->
-				
+							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="6"
+									onclick="displayProject(this)">Sketchs</a></h3>
+							<div class="meta"> Prouducts Sketchs </div>
+
+						</div>
+						<!--//content-->
+
+					</div>
+					<!--//item-inner-->
+				</div>
+				<!--//item-->
+
 				<!-- Project #7 Product Sketchs 2
 				==============================================================================================-->
 				<div class="item third_divi col-md-3 col-xs-6 ">
 					<div class="item-inner">
 						<div id="folio-wrap7" class="bricks-wrapper">
-						
+
 							<div class="brick folio-item">
-							
-								<div class="item-wrap7" data-src="assets/images/portfolio/gallery/pro7-1.jpg"  data-sub-html="#01" project-num="7" onclick="displayProject(this); return false">
-	
-								<a href="#" class="overlay">
-									
-								<figure class="figure">
-									<img class="img-responsive" src="assets/images/portfolio/portfolio-7.jpg" alt="" />
-								</figure>                                     
-								</a>
-								<a href="https://www.behance.net/" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-								</a>
-								</div> <!-- end item-wrap -->	 
-													
+
+								<div class="item-wrap7" data-src="assets/images/portfolio/gallery/pro7-1.jpg"
+									data-sub-html="#01" project-num="7" onclick="displayProject(this); return false">
+
+									<a href="#" class="overlay">
+
+										<figure class="figure">
+											<img class="img-responsive" src="assets/images/portfolio/portfolio-7.jpg"
+												alt="" />
+										</figure>
+									</a>
+									<a href="https://www.behance.net/" class='details-link' title="details">
+										<i class="icon-UpRightArrow"></i>
+									</a>
+								</div> <!-- end item-wrap -->
+
 							</div>
-						<div class="brick folio-item">
-									<!-- Pro#7 -- Detail 02
+							<div class="brick folio-item">
+								<!-- Pro#7 -- Detail 02
 									==============================================================================================-->
-									<div class="item-wrap7" data-src="assets/images/portfolio/gallery/pro7-2.jpg"  data-sub-html="#02">
-									</div> <!-- end item-wrap -->
-								</div>
-								<div class="brick folio-item">
-									<!-- Pro#7 -- Detail 03
+								<div class="item-wrap7" data-src="assets/images/portfolio/gallery/pro7-2.jpg"
+									data-sub-html="#02">
+								</div> <!-- end item-wrap -->
+							</div>
+							<div class="brick folio-item">
+								<!-- Pro#7 -- Detail 03
 									==============================================================================================-->
-									<div class="item-wrap7" data-src="assets/images/portfolio/gallery/pro7-3.jpg"  data-sub-html="#03">
-									</div> <!-- end item-wrap -->
-								</div>
-						</div> <!-- end folio-item -->   
-						
+								<div class="item-wrap7" data-src="assets/images/portfolio/gallery/pro7-3.jpg"
+									data-sub-html="#03">
+								</div> <!-- end item-wrap -->
+							</div>
+						</div> <!-- end folio-item -->
+
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="7" onclick="displayProject(this)">War Chariot</a></h3>
-							<div class="meta">  Rhino Modeling  </div>
-							
-						</div><!--//content-->    
-	
-					</div><!--//item-inner-->
-				</div><!--//item-->
-				
+							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="7"
+									onclick="displayProject(this)">War Chariot</a></h3>
+							<div class="meta"> Rhino Modeling </div>
+
+						</div>
+						<!--//content-->
+
+					</div>
+					<!--//item-inner-->
+				</div>
+				<!--//item-->
+
 				<!-- Project #8 Lamborghini
 				==============================================================================================-->
 				<div class="item third_divi col-md-3 col-xs-6 ">
 					<div class="item-inner">
 						<div id="folio-wrap8" class="bricks-wrapper">
-						
+
 							<div class="brick folio-item">
-							
-								<div class="item-wrap8" data-src="assets/images/portfolio/gallery/pro8-1.jpg"  data-sub-html="#01" project-num="8" onclick="displayProject(this); return false">
-	
-								<a href="#" class="overlay">
-									
-								<figure class="figure">
-									<img class="img-responsive" src="assets/images/portfolio/portfolio-8.jpg" alt="" />
-								</figure>                                     
-								</a>
-								<a href="https://www.behance.net/" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-								</a>
-								</div> <!-- end item-wrap -->	 
-													
+
+								<div class="item-wrap8" data-src="assets/images/portfolio/gallery/pro8-1.jpg"
+									data-sub-html="#01" project-num="8" onclick="displayProject(this); return false">
+
+									<a href="#" class="overlay">
+
+										<figure class="figure">
+											<img class="img-responsive" src="assets/images/portfolio/portfolio-8.jpg"
+												alt="" />
+										</figure>
+									</a>
+									<a href="https://www.behance.net/" class='details-link' title="details">
+										<i class="icon-UpRightArrow"></i>
+									</a>
+								</div> <!-- end item-wrap -->
+
 							</div>
-						
-						</div> <!-- end folio-item -->   
-						
+
+						</div> <!-- end folio-item -->
+
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="8" onclick="displayProject(this)">Lamborghini</a></h3>
+							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="8"
+									onclick="displayProject(this)">Lamborghini</a></h3>
 							<div class="meta">3D MAX Modeling</div>
-							
-						</div><!--//content-->    
-	
-					</div><!--//item-inner-->
-				</div><!--//item-->
-				
+
+						</div>
+						<!--//content-->
+
+					</div>
+					<!--//item-inner-->
+				</div>
+				<!--//item-->
+
 				<!-- Project #9 Painting
 				==============================================================================================-->
 				<div class="item fourth_divi col-md-3 col-xs-6 ">
 					<div class="item-inner">
 						<div id="folio-wrap9" class="bricks-wrapper">
-						
+
 							<div class="brick folio-item">
-							
-								<div class="item-wrap9" data-src="assets/images/portfolio/gallery/pro9-1.jpg"  data-sub-html="#01" project-num="9" onclick="displayProject(this); return false">
-	
-								<a href="#" class="overlay">
-									
-								<figure class="figure">
-									<img class="img-responsive" src="assets/images/portfolio/portfolio-9.jpg" alt="" />
-								</figure>                                     
-								</a>
-								<a href="https://www.behance.net/" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-								</a>
-								</div> <!-- end item-wrap -->	 
-													
+
+								<div class="item-wrap9" data-src="assets/images/portfolio/gallery/pro9-1.jpg"
+									data-sub-html="#01" project-num="9" onclick="displayProject(this); return false">
+
+									<a href="#" class="overlay">
+
+										<figure class="figure">
+											<img class="img-responsive" src="assets/images/portfolio/portfolio-9.jpg"
+												alt="" />
+										</figure>
+									</a>
+									<a href="https://www.behance.net/" class='details-link' title="details">
+										<i class="icon-UpRightArrow"></i>
+									</a>
+								</div> <!-- end item-wrap -->
+
 							</div>
-						<div class="brick folio-item">
-									<!-- Pro#9 -- Detail 02
+							<div class="brick folio-item">
+								<!-- Pro#9 -- Detail 02
 									==============================================================================================-->
-									<div class="item-wrap9" data-src="assets/images/portfolio/gallery/pro9-2.jpg"  data-sub-html="#02">
-									</div> <!-- end item-wrap -->
-								</div>
-	
-						</div> <!-- end folio-item -->   
-						
+								<div class="item-wrap9" data-src="assets/images/portfolio/gallery/pro9-2.jpg"
+									data-sub-html="#02">
+								</div> <!-- end item-wrap -->
+							</div>
+
+						</div> <!-- end folio-item -->
+
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="9" onclick="displayProject(this)"> Painting </a></h3>
-							<div class="meta">Gouache/ Size: A0</div><br/>
-							
-						</div><!--//content-->    
-	
-					</div><!--//item-inner-->
-				</div><!--//item-->
-				
+							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="9"
+									onclick="displayProject(this)"> Painting </a></h3>
+							<div class="meta">Gouache/ Size: A0</div><br />
+
+						</div>
+						<!--//content-->
+
+					</div>
+					<!--//item-inner-->
+				</div>
+				<!--//item-->
+
 				<!-- Project #10 Handwork
 				==============================================================================================-->
 				<div class="item fourth_divi col-md-3 col-xs-6 ">
 					<div class="item-inner">
 						<div id="folio-wrap10" class="bricks-wrapper">
-						
+
 							<div class="brick folio-item">
-							
-								<div class="item-wrap10" data-src="assets/images/portfolio/gallery/pro10-1.jpg"  data-sub-html="#01" project-num="10" onclick="displayProject(this); return false">
-	
-								<a href="#" class="overlay">
-									
-								<figure class="figure">
-									<img class="img-responsive" src="assets/images/portfolio/portfolio-10.jpg" alt="" />
-								</figure>                                     
-								</a>
-								<a href="https://www.behance.net/" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-								</a>
-								</div> <!-- end item-wrap -->	 
-													
+
+								<div class="item-wrap10" data-src="assets/images/portfolio/gallery/pro10-1.jpg"
+									data-sub-html="#01" project-num="10" onclick="displayProject(this); return false">
+
+									<a href="#" class="overlay">
+
+										<figure class="figure">
+											<img class="img-responsive" src="assets/images/portfolio/portfolio-10.jpg"
+												alt="" />
+										</figure>
+									</a>
+									<a href="https://www.behance.net/" class='details-link' title="details">
+										<i class="icon-UpRightArrow"></i>
+									</a>
+								</div> <!-- end item-wrap -->
+
 							</div>
 							<div class="brick folio-item">
-									<!-- Pro#10 -- Detail 02
+								<!-- Pro#10 -- Detail 02
 									==============================================================================================-->
-									<div class="item-wrap10" data-src="assets/images/portfolio/gallery/pro10-2.jpg"  data-sub-html="#02">
-									</div> <!-- end item-wrap -->
+								<div class="item-wrap10" data-src="assets/images/portfolio/gallery/pro10-2.jpg"
+									data-sub-html="#02">
+								</div> <!-- end item-wrap -->
 							</div>
 							<div class="brick folio-item">
-									<!-- Pro#10 -- Detail 03
+								<!-- Pro#10 -- Detail 03
 									==============================================================================================-->
-									<div class="item-wrap10" data-src="assets/images/portfolio/gallery/pro10-3.jpg"  data-sub-html="#03">
-									</div> <!-- end item-wrap -->
+								<div class="item-wrap10" data-src="assets/images/portfolio/gallery/pro10-3.jpg"
+									data-sub-html="#03">
+								</div> <!-- end item-wrap -->
 							</div>
-						</div> <!-- end folio-item -->   
-						
+						</div> <!-- end folio-item -->
+
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="10" onclick="displayProject(this)"> Handwork </a></h3>
+							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="10"
+									onclick="displayProject(this)"> Handwork </a></h3>
 							<div class="meta">Carpentry: Wine rack / Mortise-Tenon Connection</div>
-							
-						</div><!--//content-->    
-	
-					</div><!--//item-inner-->
-				</div><!--//item-->
-				
+
+						</div>
+						<!--//content-->
+
+					</div>
+					<!--//item-inner-->
+				</div>
+				<!--//item-->
+
 				<!-- Project #11 Youya
 				==============================================================================================-->
 				<div class="item first_divi col-md-3 col-xs-6 ">
 					<div class="item-inner">
 						<div id="folio-wrap11" class="bricks-wrapper">
-						
+
 							<div class="brick folio-item">
-							
-								<div class="item-wrap11" data-src="assets/images/portfolio/gallery/pro11-1.jpg"  data-sub-html="#01" project-num="11" onclick="displayProject(this); return false">
-	
-								<a href="#" class="overlay">
-									
-								<figure class="figure">
-									<img class="img-responsive" src="assets/images/portfolio/portfolio-11.jpg" alt="" />
-								</figure>
-								</a>
-								<a href="https://www.behance.net/" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-								</a>
-								</div> <!-- end item-wrap -->	 
-								
+
+								<div class="item-wrap11" data-src="assets/images/portfolio/gallery/pro11-1.jpg"
+									data-sub-html="#01" project-num="11" onclick="displayProject(this); return false">
+
+									<a href="#" class="overlay">
+
+										<figure class="figure">
+											<img class="img-responsive" src="assets/images/portfolio/portfolio-11.jpg"
+												alt="" />
+										</figure>
+									</a>
+									<a href="https://www.behance.net/" class='details-link' title="details">
+										<i class="icon-UpRightArrow"></i>
+									</a>
+								</div> <!-- end item-wrap -->
+
 							</div>
-	
-						</div> <!-- end folio-item -->   
-						
+
+						</div> <!-- end folio-item -->
+
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="11" onclick="displayProject(this)"> Youya </a></h3>
+							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="11"
+									onclick="displayProject(this)"> Youya </a></h3>
 							<div class="meta">Dental Healthcare Application</div>
-							
-						</div><!--//content-->    
-	
-					</div><!--//item-inner-->
-				</div><!--//item-->
-				
+
+						</div>
+						<!--//content-->
+
+					</div>
+					<!--//item-inner-->
+				</div>
+				<!--//item-->
+
 				<!-- Project #12 Dr.Pony
 				==============================================================================================-->
 				<div class="item first_divi col-md-3 col-xs-6 ">
 					<div class="item-inner">
 						<div id="folio-wrap12" class="bricks-wrapper">
-						
+
 							<div class="brick folio-item">
-							
-								<div class="item-wrap12" data-src="assets/images/portfolio/gallery/pro12-1.jpg"  data-sub-html="#01" project-num="12" onclick="displayProject(this); return false">
-	
-								<a href="#" class="overlay">
-									
-								<figure class="figure">
-									<img class="img-responsive" src="assets/images/portfolio/portfolio-12.jpg" alt="" />
-								</figure>
-								</a>
-								<a href="https://www.behance.net/" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-								</a>
-								</div> <!-- end item-wrap -->	 
-								
+
+								<div class="item-wrap12" data-src="assets/images/portfolio/gallery/pro12-1.jpg"
+									data-sub-html="#01" project-num="12" onclick="displayProject(this); return false">
+
+									<a href="#" class="overlay">
+
+										<figure class="figure">
+											<img class="img-responsive" src="assets/images/portfolio/portfolio-12.jpg"
+												alt="" />
+										</figure>
+									</a>
+									<a href="https://www.behance.net/" class='details-link' title="details">
+										<i class="icon-UpRightArrow"></i>
+									</a>
+								</div> <!-- end item-wrap -->
+
 							</div>
 							<div class="brick folio-item">
-									<!-- Pro#12 -- Detail 02
+								<!-- Pro#12 -- Detail 02
 									==============================================================================================-->
-									<div class="item-wrap12" data-src="assets/images/portfolio/gallery/pro12-2.jpg"  data-sub-html="#02">
-									</div> <!-- end item-wrap -->
+								<div class="item-wrap12" data-src="assets/images/portfolio/gallery/pro12-2.jpg"
+									data-sub-html="#02">
+								</div> <!-- end item-wrap -->
 							</div>
 							<div class="brick folio-item">
-									<!-- Pro#12 -- Detail 03
+								<!-- Pro#12 -- Detail 03
 									==============================================================================================-->
-									<div class="item-wrap12" data-src="assets/images/portfolio/gallery/pro12-3.jpg"  data-sub-html="#03">
-									</div> <!-- end item-wrap -->
+								<div class="item-wrap12" data-src="assets/images/portfolio/gallery/pro12-3.jpg"
+									data-sub-html="#03">
+								</div> <!-- end item-wrap -->
 							</div>
-						</div> <!-- end folio-item -->   
-						
+						</div> <!-- end folio-item -->
+
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="12" onclick="displayProject(this)"> Dr.Pony </a></h3>
+							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="12"
+									onclick="displayProject(this)"> Dr.Pony </a></h3>
 							<div class="meta">Ubiquitous Smart Solution for children healthcare</div>
-							
-						</div><!--//content-->    
-	
-					</div><!--//item-inner-->
-				</div><!--//item-->
-	
+
+						</div>
+						<!--//content-->
+
+					</div>
+					<!--//item-inner-->
+				</div>
+				<!--//item-->
+
 				<!-- Project #13 Booker
 				==============================================================================================-->
 				<div class="item first_divi col-md-3 col-xs-6 ">
 					<div class="item-inner">
 						<div id="folio-wrap13" class="bricks-wrapper">
-						
+
 							<div class="brick folio-item">
-							
-								<div class="item-wrap13" data-src="assets/images/portfolio/gallery/pro13-1.jpg"  data-sub-html="#01" project-num="13" onclick="displayProject(this); return false">
-	
-								<a href="#" class="overlay">
-								
-								<figure class="figure">
-									<img class="img-responsive" src="assets/images/portfolio/portfolio-13.jpg" alt="" />
-								</figure>
-								</a>
-								<a href="https://www.behance.net/" class='details-link' title="details">
-								<i class="icon-UpRightArrow"></i>
-								</a>
+
+								<div class="item-wrap13" data-src="assets/images/portfolio/gallery/pro13-1.jpg"
+									data-sub-html="#01" project-num="13" onclick="displayProject(this); return false">
+
+									<a href="#" class="overlay">
+
+										<figure class="figure">
+											<img class="img-responsive" src="assets/images/portfolio/portfolio-13.jpg"
+												alt="" />
+										</figure>
+									</a>
+									<a href="https://www.behance.net/" class='details-link' title="details">
+										<i class="icon-UpRightArrow"></i>
+									</a>
 								</div> <!-- end item-wrap -->
-								
+
 							</div>
 							<div class="brick folio-item">
-									<!-- Pro#13 -- Detail 02
+								<!-- Pro#13 -- Detail 02
 									==============================================================================================-->
-									<div class="item-wrap13" data-src="assets/images/portfolio/gallery/pro13-2.jpg"  data-sub-html="#02">
-									</div> <!-- end item-wrap -->
+								<div class="item-wrap13" data-src="assets/images/portfolio/gallery/pro13-2.jpg"
+									data-sub-html="#02">
+								</div> <!-- end item-wrap -->
 							</div>
 							<div class="brick folio-item">
-									<!-- Pro#13 -- Detail 03
+								<!-- Pro#13 -- Detail 03
 									==============================================================================================-->
-									<div class="item-wrap13" data-src="assets/images/portfolio/gallery/pro13-3.jpg"  data-sub-html="#03">
-									</div> <!-- end item-wrap -->
+								<div class="item-wrap13" data-src="assets/images/portfolio/gallery/pro13-3.jpg"
+									data-sub-html="#03">
+								</div> <!-- end item-wrap -->
 							</div>
-						</div> <!-- end folio-item -->   
-						
+						</div> <!-- end folio-item -->
+
 						<div class="content text-left">
-							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="13" onclick="displayProject(this)"> My Seat </a></h3>
+							<h3 class="sub-title"><a href="javascript:void();" data-waterfall="" project-num="13"
+									onclick="displayProject(this)"> My Seat </a></h3>
 							<div class="meta">Library Position Booking App</div>
-							
-						</div><!--//content-->    
-	
-					</div><!--//item-inner-->
-				</div><!--//item-->
-	
-			</div><!--//item-wrapper-->
-			
-	</section><!--//section-->
 
-	<section id="education-section" class="education-section section">
-		<h2 class="section-title" id="education_holder"></h2>
-		<div class="row">
-			<div class="item col-xs-12 col-sm-4">
-				<div class="item-inner">
-					<h3 class="degree">Industrial Design Engineering</h3>
-					<div class="education-body">
-						Shanghai Jiao Tong University, School of Design
-					</div><!--//education-body-->
-					<div class="time">2018 - 2021</div>
-					<div class="desc">
-						Design management; User experience; Design trend research
+						</div>
+						<!--//content-->
+
 					</div>
-				</div><!--//item-inner-->
-			</div><!--//item-->
-			<div class="item col-xs-12 col-sm-4">
-				<div class="item-inner">
-					<h3 class="degree">Product Design</h3>
-					<div class="education-body">
-						East China Normal University
-					</div><!--//education-body-->
-					<div class="time">2014 - 2018</div>
-					<div class="desc">
-						GPA: 3.7/4；   RANK:1/140
-					</div>
-				</div><!--//item-inner-->
-			</div><!--//item-->
-			<div class="item col-xs-12 col-sm-4">
-				<div class="item-inner">
-					<h3 class="degree">Minor: Public Relations</h3>
-					<div class="education-body">
-						East China Normal University
-					</div><!--//education-body-->
-					<div class="time">2015 - 2018</div>
-					<div class="desc">
-					</div>
-				</div><!--//item-inner-->
-			</div><!--//item-->
-			
-		</div><!--//row-->
-	</section><!--//section-->
-	
-	
-	<section id="skills-section" class="skills-section section text-center">
-		<h2 class="section-title" id="prof_skills_holder"></h2>
-		<div class="top-skills">
-			<h3 class="subtitle">Top Skills</h3>
-			<div class="row">
+					<!--//item-inner-->
+				</div>
+				<!--//item-->
 
-				<!-- ====== UX/UI Design ====== -->
-				<div class="item col-xs-12 col-sm-4">
-					<div class="item-inner">
-						<div class="chart-easy-pie text-center">
-							<div class="chart-theme-1 chart" data-percent="95"><span>95</span>%</div>
-						</div>
-						<h4 class="skill-name">UX &amp; UI Design</h4>
-						<div class="level">Expert, 4 years</div>
-						<div class="desc">
-							Sketch / Principle / Adobe XD
-						</div>
-					</div><!--//item-inner-->
-				</div><!--//item-->
-
-				<!-- ====== 3D Design ====== -->
-				<div class="item col-xs-12 col-sm-4">
-					<div class="item-inner">
-						<div class="chart-easy-pie text-center">
-							<div class="chart-theme-1 chart" data-percent="98"><span>98</span>%</div>
-						</div>
-						<h4 class="skill-name">3D Design</h4>
-						<div class="level">Expert, 6 years</div>
-						<div class="desc">
-						Rhinoceros / Keyshot / 3DS MAX 
-						</div>
-					</div><!--//item-inner-->
-				</div><!--//item-->
-
-				<!-- ====== 2D Design ====== -->
-				<div class="item col-xs-12 col-sm-4">
-					<div class="item-inner">
-						<div class="chart-easy-pie text-center">
-							<div class="chart-theme-1 chart" data-percent="90"><span>90</span>%</div>
-						</div>
-						<h4 class="skill-name">2D Design</h4>
-						<div class="level">Expert, 6 years</div>
-						<div class="desc">
-							Adobe Illustrator / Adobe Photoshop / CAD
-						</div>
-					</div><!--//item-inner-->
-				</div><!--//item-->
-				
-			</div><!--//row-->
-		</div><!--//top-skills-->
-		
-		<div class="other-skills">
-			<h3 class="subtitle">Other Skills</h3>
-			<div class="misc-skills">
-                <span class="skill-tag">Adobe Premiere</span>
-				<span class="skill-tag">Adobe After Effects</span>
-                <span class="skill-tag">Final Cut Pro</span>
-				<span class="skill-tag">Adobe Indesign</span>
-				<!-- <span class="skill-tag">SolidWorks</span> -->
-				<span class="skill-tag">English CET6</span>
 			</div>
-		</div><!--//other-skills-->
-		
-	</section><!--//skills-section-->
-	
-	<section id="testimonials-section" class="testimonials-section section">
-		<h2 class="section-title">Awards and Honors</h2>
-		
-		<div id="testimonials-carousel" class="testimonials-carousel carousel slide" data-interval="8000">
-			
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
-				<li data-target="#testimonials-carousel" data-slide-to="0" class="active"></li>
-				<li data-target="#testimonials-carousel" data-slide-to="1"></li>
-				<li data-target="#testimonials-carousel" data-slide-to="2"></li>
-                <li data-target="#testimonials-carousel" data-slide-to="3"></li>
-                <li data-target="#testimonials-carousel" data-slide-to="4"></li>
-			</ol>
-			
-			<!-- Wrapper for slides -->
-			<div class="carousel-inner">
-				<div class="item active">
-					<blockquote class="quote">      
-						<i class="fa fa-quote-left" ></i>          
+			<!--//item-wrapper-->
+
+		</section>
+		<!--//section-->
+
+		<section id="education-section" class="education-section section">
+			<h2 class="section-title" id="education_holder"></h2>
+			<div class="row">
+				<div class="item col-xs-12 col-sm-4">
+					<div class="item-inner">
+						<h3 class="degree">Industrial Design Engineering</h3>
+						<div class="education-body">
+							Shanghai Jiao Tong University, School of Design
+						</div>
+						<!--//education-body-->
+						<div class="time">2018 - 2021</div>
+						<div class="desc">
+							Design management; User experience; Design trend research
+						</div>
+					</div>
+					<!--//item-inner-->
+				</div>
+				<!--//item-->
+				<div class="item col-xs-12 col-sm-4">
+					<div class="item-inner">
+						<h3 class="degree">Product Design</h3>
+						<div class="education-body">
+							East China Normal University
+						</div>
+						<!--//education-body-->
+						<div class="time">2014 - 2018</div>
+						<div class="desc">
+							GPA: 3.7/4； RANK:1/140
+						</div>
+					</div>
+					<!--//item-inner-->
+				</div>
+				<!--//item-->
+				<div class="item col-xs-12 col-sm-4">
+					<div class="item-inner">
+						<h3 class="degree">Minor: Public Relations</h3>
+						<div class="education-body">
+							East China Normal University
+						</div>
+						<!--//education-body-->
+						<div class="time">2015 - 2018</div>
+						<div class="desc">
+						</div>
+					</div>
+					<!--//item-inner-->
+				</div>
+				<!--//item-->
+
+			</div>
+			<!--//row-->
+		</section>
+		<!--//section-->
+
+
+		<section id="skills-section" class="skills-section section text-center">
+			<h2 class="section-title" id="prof_skills_holder"></h2>
+			<div class="top-skills">
+				<h3 class="subtitle">Top Skills</h3>
+				<div class="row">
+
+					<!-- ====== UX/UI Design ====== -->
+					<div class="item col-xs-12 col-sm-4">
+						<div class="item-inner">
+							<div class="chart-easy-pie text-center">
+								<div class="chart-theme-1 chart" data-percent="95"><span>95</span>%</div>
+							</div>
+							<h4 class="skill-name">UX &amp; UI Design</h4>
+							<div class="level">Expert, 4 years</div>
+							<div class="desc">
+								Sketch / Principle / Adobe XD
+							</div>
+						</div>
+						<!--//item-inner-->
+					</div>
+					<!--//item-->
+
+					<!-- ====== 3D Design ====== -->
+					<div class="item col-xs-12 col-sm-4">
+						<div class="item-inner">
+							<div class="chart-easy-pie text-center">
+								<div class="chart-theme-1 chart" data-percent="98"><span>98</span>%</div>
+							</div>
+							<h4 class="skill-name">3D Design</h4>
+							<div class="level">Expert, 6 years</div>
+							<div class="desc">
+								Rhinoceros / Keyshot / 3DS MAX
+							</div>
+						</div>
+						<!--//item-inner-->
+					</div>
+					<!--//item-->
+
+					<!-- ====== 2D Design ====== -->
+					<div class="item col-xs-12 col-sm-4">
+						<div class="item-inner">
+							<div class="chart-easy-pie text-center">
+								<div class="chart-theme-1 chart" data-percent="90"><span>90</span>%</div>
+							</div>
+							<h4 class="skill-name">2D Design</h4>
+							<div class="level">Expert, 6 years</div>
+							<div class="desc">
+								Adobe Illustrator / Adobe Photoshop / CAD
+							</div>
+						</div>
+						<!--//item-inner-->
+					</div>
+					<!--//item-->
+
+				</div>
+				<!--//row-->
+			</div>
+			<!--//top-skills-->
+
+			<div class="other-skills">
+				<h3 class="subtitle">Other Skills</h3>
+				<div class="misc-skills">
+					<span class="skill-tag">Adobe Premiere</span>
+					<span class="skill-tag">Adobe After Effects</span>
+					<span class="skill-tag">Final Cut Pro</span>
+					<span class="skill-tag">Adobe Indesign</span>
+					<!-- <span class="skill-tag">SolidWorks</span> -->
+					<span class="skill-tag">English CET6</span>
+				</div>
+			</div>
+			<!--//other-skills-->
+
+		</section>
+		<!--//skills-section-->
+
+		<section id="testimonials-section" class="testimonials-section section">
+			<h2 class="section-title">Awards and Honors</h2>
+
+			<div id="testimonials-carousel" class="testimonials-carousel carousel slide" data-interval="8000">
+
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#testimonials-carousel" data-slide-to="0" class="active"></li>
+					<li data-target="#testimonials-carousel" data-slide-to="1"></li>
+					<li data-target="#testimonials-carousel" data-slide-to="2"></li>
+					<li data-target="#testimonials-carousel" data-slide-to="3"></li>
+					<li data-target="#testimonials-carousel" data-slide-to="4"></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+					<div class="item active">
+						<blockquote class="quote">
+							<i class="fa fa-quote-left"></i>
 							<p>2019 HCI International Published Paper (EI)</p>
 							<p id="paper">SHAUN - A Companion Robot for children based on Artificial Intelligence</p>
 							<p>First-Class Scholarship</p>
-					</blockquote>
-					<div class="source">
-						<div class="name">Shanghai Jiao Tong University</div>
-						<div class="position">2019</div>
-					</div><!--//source-->   
-				</div><!--//item-->
-				<div class="item">
-					<blockquote class="quote">
-						<p><i class="fa fa-quote-left"></i>
-						Outstanding Graduate of Shanghai                                            
-                        </p>
-						
-					</blockquote>
-					<div class="source">
-						<div class="name">Ministry of Education of the People's Republic of Shanghai</div>
-						<div class="position">2018</div>
-					</div><!--//source-->   
+						</blockquote>
+						<div class="source">
+							<div class="name">Shanghai Jiao Tong University</div>
+							<div class="position">2019</div>
+						</div>
+						<!--//source-->
+					</div>
+					<!--//item-->
+					<div class="item">
+						<blockquote class="quote">
+							<p><i class="fa fa-quote-left"></i>
+								Outstanding Graduate of Shanghai
+							</p>
 
-				</div><!--//item-->
-				<div class="item">
-					<blockquote class="quote">
-						<p><i class="fa fa-quote-left"></i>
-						East China Normal University Outstanding Student Leader</p>
-						<p><i class="fa fa-quote-left"></i>
-						Excellent Student First-class Scholarship                                           
-                        </p>
-					</blockquote>       
-					<div class="source">
-						<div class="name">East China Normal University</div>
-						<div class="position">2017</div>
-					</div><!--//source-->          
-				</div><!--//item-->
-                <div class="item">
-					<blockquote class="quote">
-						<p><i class="fa fa-quote-left"></i>
-						East China Normal University Excellent Student </p>  
-						<p><i class="fa fa-quote-left"></i>
-						National Scholarship</p>  
-					</blockquote>       
-					<div class="source">
-						<div class="name">East China Normal University</div>
-						<div class="position">2016</div>
-					</div><!--//source-->          
-				</div><!--//item-->
-                <div class="item">
-					<blockquote class="quote">
-						<p><i class="fa fa-quote-left"></i>
-						East China Normal University Excellent Student</p>
-                        <p><i class="fa fa-quote-left"></i>
-						Excellent Student Special Grade Scholarship</p>   
-					</blockquote>       
-					<div class="source">
-						<div class="name">East China Normal University </div>
-						<div class="position">2015</div>
-					</div><!--//source-->          
-				</div><!--//item-->
-				
-			</div><!--//carousel-inner-->
-		</div><!--//testimonials-carousel-->
-		
-	</section><!--//section-->
-	
-	<section id="contact-section" class="contact-section section">
-		<h2 class="section-title">Get in Touch</h2>
-		<div class="intro">
-			<div class="contact-left">
-				<div class="image-container"><img class="profile-image" src="assets/images/profile-image.png" alt=""></div>
-				<a class="btn" id="" href="./assets/resume/resume - Tianjia Shen - en.pdf" download> 
-					<i class="fa fa-download" aria-hidden="true"></i> Resume</a>
-				<a class="btn" href="./assets/portfolio/portfolio - Tianjia Shen.zip" download> 
-					<i class="fa fa-download" aria-hidden="true"></i> Portfolio</a>
+						</blockquote>
+						<div class="source">
+							<div class="name">Ministry of Education of the People's Republic of Shanghai</div>
+							<div class="position">2018</div>
+						</div>
+						<!--//source-->
+
+					</div>
+					<!--//item-->
+					<div class="item">
+						<blockquote class="quote">
+							<p><i class="fa fa-quote-left"></i>
+								East China Normal University Outstanding Student Leader</p>
+							<p><i class="fa fa-quote-left"></i>
+								Excellent Student First-class Scholarship
+							</p>
+						</blockquote>
+						<div class="source">
+							<div class="name">East China Normal University</div>
+							<div class="position">2017</div>
+						</div>
+						<!--//source-->
+					</div>
+					<!--//item-->
+					<div class="item">
+						<blockquote class="quote">
+							<p><i class="fa fa-quote-left"></i>
+								East China Normal University Excellent Student </p>
+							<p><i class="fa fa-quote-left"></i>
+								National Scholarship</p>
+						</blockquote>
+						<div class="source">
+							<div class="name">East China Normal University</div>
+							<div class="position">2016</div>
+						</div>
+						<!--//source-->
+					</div>
+					<!--//item-->
+					<div class="item">
+						<blockquote class="quote">
+							<p><i class="fa fa-quote-left"></i>
+								East China Normal University Excellent Student</p>
+							<p><i class="fa fa-quote-left"></i>
+								Excellent Student Special Grade Scholarship</p>
+						</blockquote>
+						<div class="source">
+							<div class="name">East China Normal University </div>
+							<div class="position">2015</div>
+						</div>
+						<!--//source-->
+					</div>
+					<!--//item-->
+
+				</div>
+				<!--//carousel-inner-->
 			</div>
-			<div class="dialog">
-				<p>I live in Shanghai. I'm looking for a job, one where I get a bit more job satisfaction.</p>
-                <p>Let's build something amazing together!</p>
-				<p><strong>I can help with the following:</strong></p>
-				<ul class="list-unstyled service-list">
-					<li><i class="fa fa-check" aria-hidden="true"></i> UX/UI Design</li>
-					<li><i class="fa fa-check" aria-hidden="true"></i> Industrial Design</li>
-					<li><i class="fa fa-check" aria-hidden="true"></i> User Study</li>
-					<li><i class="fa fa-check" aria-hidden="true"></i> UX Prototyping</li>
-					<li><i class="fa fa-check" aria-hidden="true"></i> Project Management </li>
-					<li><i class="fa fa-check" aria-hidden="true"></i> Design Management </li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i> Design Trend Research</li>
-				</ul>
-				<p>Drop me a line at <a href="mailto:1049904168@qq.com">1049904168@qq.com</a><!--  or call me at <a href="tel:13901795664">13901795664</a> --></p>
-				<ul class="social list-inline">
-					
-				</ul><!--//social-->
-			</div><!--//diaplog-->
-		</div><!--//intro-->
+			<!--//testimonials-carousel-->
 
-	</section><!--//section-->
-	
-</div><!--//wrapper-->
+		</section>
+		<!--//section-->
 
-<footer class="footer text-center">
-	
-</footer>
+		<section id="contact-section" class="contact-section section">
+			<h2 class="section-title">Get in Touch</h2>
+			<div class="intro">
+				<div class="contact-left">
+					<div class="image-container"><img class="profile-image" src="assets/images/profile-image.png"
+							alt=""></div>
+					<a class="btn" id="" href="./assets/resume/resume - Tianjia Shen - en.pdf" download>
+						<i class="fa fa-download" aria-hidden="true"></i> Resume</a>
+					<a class="btn" href="./assets/portfolio/portfolio - Tianjia Shen.zip" download>
+						<i class="fa fa-download" aria-hidden="true"></i> Portfolio</a>
+				</div>
+				<div class="dialog">
+					<p>I live in Shanghai. I'm looking for a job, one where I get a bit more job satisfaction.</p>
+					<p>Let's build something amazing together!</p>
+					<p><strong>I can help with the following:</strong></p>
+					<ul class="list-unstyled service-list">
+						<li><i class="fa fa-check" aria-hidden="true"></i> UX/UI Design</li>
+						<li><i class="fa fa-check" aria-hidden="true"></i> Industrial Design</li>
+						<li><i class="fa fa-check" aria-hidden="true"></i> User Study</li>
+						<li><i class="fa fa-check" aria-hidden="true"></i> UX Prototyping</li>
+						<li><i class="fa fa-check" aria-hidden="true"></i> Project Management </li>
+						<li><i class="fa fa-check" aria-hidden="true"></i> Design Management </li>
+						<li><i class="fa fa-check" aria-hidden="true"></i> Design Trend Research</li>
+					</ul>
+					<p>Drop me a line at <a href="mailto:1049904168@qq.com">1049904168@qq.com</a>
+						<!--  or call me at <a href="tel:13901795664">13901795664</a> -->
+					</p>
+					<ul class="social list-inline">
 
-<!-- Javascript -->  
-<script type="text/javascript" src="assets/plugins/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
-<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-<script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
-<script type="text/javascript" src="assets/plugins/easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
-<script type="text/javascript" src="assets/plugins/imagesloaded.pkgd.min.js"></script> 
-<script type="text/javascript" src="assets/plugins/isotope.pkgd.min.js"></script>  
+					</ul>
+					<!--//social-->
+				</div>
+				<!--//diaplog-->
+			</div>
+			<!--//intro-->
 
-<!-- custom js -->
-<script type="text/javascript" src="assets/js/main.js"></script>
-<script type="text/javascript" src="assets/js/namespace.js"></script>
+		</section>
+		<!--//section-->
 
-<!--Include LightGallery Related Stuff
+	</div>
+	<!--//wrapper-->
+
+	<footer class="footer text-center">
+
+	</footer>
+
+	<!-- Javascript -->
+	<script type="text/javascript" src="assets/plugins/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+	<script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/imagesloaded.pkgd.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/isotope.pkgd.min.js"></script>
+
+	<!-- custom js -->
+	<script type="text/javascript" src="assets/js/main.js"></script>
+	<script type="text/javascript" src="assets/js/namespace.js"></script>
+
+	<!--Include LightGallery Related Stuff
 ==================================================================-->
-<!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
-<script src="assets/js/demo/style-switcher.js"></script>     
-<script src="assets/js/plugins.js"></script>
-<script src="assets/js/pace.min.js"></script>
-<script src="assets/js/modernizr.js"></script>
-<script src="assets/js/main2.js"></script>
-<script src="../dist/js/lightgallery-all.min.js"></script>
-<script src="../lib/jquery.mousewheel.min.js"></script>
-    
-<link rel="stylesheet" href="dist/css/lightgallery.css">
-<!-- <script src="js/lightgallery.min.js"></script> -->
-<script src="assets/js/lg-thumbnail.min.js"></script>
-<script src="assets/js/lg-fullscreen.min.js"></script>
-<script src="assets/js/transition.js"></script>
-<!-- <script src="static/js/wow.js"></script> -->
-<!-- <script src="static/js/collapse.js"></script> -->
-<script src="assets/js/lg-share.js"></script>
-<script src="assets/js/lg-fullscreen.js"></script>
-<script src="assets/js/lg-zoom.js"></script>
-<script src="assets/js/lg-autoplay.js"></script>
-<script src="assets/js/lg-pager.js"></script>
-<script src="assets/js/lg-hash.js"></script>
+	<!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+	<script src="assets/js/demo/style-switcher.js"></script>
+	<script src="assets/js/plugins.js"></script>
+	<script src="assets/js/pace.min.js"></script>
+	<script src="assets/js/modernizr.js"></script>
+	<script src="assets/js/main2.js"></script>
+	<script src="../dist/js/lightgallery-all.min.js"></script>
+	<script src="../lib/jquery.mousewheel.min.js"></script>
 
-<!--2018/10/09 
+	<link rel="stylesheet" href="dist/css/lightgallery.css">
+	<!-- <script src="js/lightgallery.min.js"></script> -->
+	<script src="assets/js/lg-thumbnail.min.js"></script>
+	<script src="assets/js/lg-fullscreen.min.js"></script>
+	<script src="assets/js/transition.js"></script>
+	<!-- <script src="static/js/wow.js"></script> -->
+	<!-- <script src="static/js/collapse.js"></script> -->
+	<script src="assets/js/lg-share.js"></script>
+	<script src="assets/js/lg-fullscreen.js"></script>
+	<script src="assets/js/lg-zoom.js"></script>
+	<script src="assets/js/lg-autoplay.js"></script>
+	<script src="assets/js/lg-pager.js"></script>
+	<script src="assets/js/lg-hash.js"></script>
+
+	<!--2018/10/09 
 +===================================================================
 lightGallery的实现在plugins.js当中，可读性太差，无法重写，在这里写会冲突
 因此导致我只能具备一个lightGallery实例
 ====================================================================-->
-<!--2018/10/10 
+	<!--2018/10/10 
 +===================================================================
 lightGallery的声明和初始化在main2.js，可在初始化中定义multiple lightgallery，
 使其具备不同的galleryId
 ====================================================================-->
-<!--2018/10/10  Q==Solved
+	<!--2018/10/10  Q==Solved
 ====================================================================
 "portfolio-section"中的filter，为什么li里原来可以用class=type-active，
     而现在一旦用type-active，第一个就会失效，只能改用class=type
 type-active 中间没有短杠
 ====================================================================-->
-<!--2018/10/10 
+	<!--2018/10/10 
 ====================================================================
 在portfolio分类中增加了all
 ====================================================================-->
 </body>
+
 </html>
