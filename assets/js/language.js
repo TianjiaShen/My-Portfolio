@@ -8,7 +8,7 @@ let font_awesome = {
 setLanguage('en');
 
 function setLanguage(lang) {
-    var url = '/assets/language/' + lang + '.json';
+    var url = 'assets/language/' + lang + '.json';
     // swapDownloadFile(lang);
     getJsonData(url);
 }
@@ -30,7 +30,7 @@ async function getJsonData(url) {
     }
 }
 
-function swapDownloadFile(lang) {
-    let resume = document.getElementById("download-resume");
-    resume.setAttribute("href", "./assets/resume/resume - Tianjia Shen - " + lang + ".pdf");
-}
+// function swapDownloadFile(lang) {
+//     let resume = document.getElementById("download-resume");
+//     resume.setAttribute("href", "./assets/resume/resume - Tianjia Shen - " + lang + ".pdf");
+// }
