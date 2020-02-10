@@ -3,7 +3,7 @@ let font_awesome = {
     "download": '<i class="fa fa-download" aria-hidden="true"></i>',
     "email": '<i class="fa fa-paper-plane" aria-hidden="true"></i>',
     "language": '<i class="fas fa-language"></i>',
-    "check": '<i class="fa fa-check" aria-hidden="true"></i>'
+    "check": '<i class="fa fa-check" aria-hidden="true"></i>  '
 };
 setLanguage('en');
 
@@ -21,9 +21,10 @@ async function getJsonData(url) {
         let elem = document.getElementById(key);
         if (elem === null) continue;
         
-        elemFont = elem.getAttribute('data-font');
+        let elemFont = elem.getAttribute('data-font');
+        let middleStr = ((elemFont === "check") ? "  " : "");
         if (elemFont !== null) {
-            elem.innerHTML = font_awesome[elemFont] + data[key];
+            elem.innerHTML = font_awesome[elemFont] + middleStr + data[key];
         } else {
             elem.innerHTML = data[key];
         }

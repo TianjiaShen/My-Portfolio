@@ -43,20 +43,22 @@
 
 <body id="body">
 	<header class="header">
-		<div class="dropdown">
-			<a id="language" data-font="language" onclick="dropdownFnt()" class="dropbtn btn"></button>
-			<div id="myDropdown" class="dropdown-content">
-				<a href="#" id="alt_lang1" data-lang="en" onclick="setLanguage(this.getAttribute('data-lang'))">English</a>
-				<a href="#" id="alt_lang2" data-lang="zh" onclick="setLanguage(this.getAttribute('data-lang'))">中文</a>
-			</div>
-		</div>
+
 		<div class="top-bar container-fluid">
 			<div class="actions">
-				<a id="hire_me" data-font="email" class="btn hidden-xs" href="mailto:1049904168@qq.com"></a>
+				<div class="dropdown">
+					<a id="language" data-font="language" onclick="dropdownFnt()" class="dropbtn btn hidden-xs"></button>
+					<div id="myDropdown" class="dropdown-content">
+						<a href="#" id="alt_lang1" data-lang="en" onclick="setLanguage(this.getAttribute('data-lang'))">English</a>
+						<a href="#" id="alt_lang2" data-lang="zh" onclick="setLanguage(this.getAttribute('data-lang'))">中文</a>
+					</div>
+				</div>
+				
+				<a id="hire_me" data-font="email" class="btn hidden-xs" href="mailto:tianjia.shen@outlook.com"></a>
 				<!--Addin1 
 ===============================================================================================================================
 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  -->
-				<a id="download_resume" data-font="download" class="btn" href="./assets/resume/resume - Tianjia Shen - en.pdf" download></a>
+				<a id="download_resume" data-font="download" class="btn" href="./assets/resume/resume - Tianjia Shen.pdf" download></a>
 			</div>
 			<!--//actions-->
 		</div>
@@ -75,7 +77,7 @@
 		<div class="contact-info">
 			<div class="container text-center">
 				<ul class="list-inline">
-					<li class="email"><a href="mailto:1049904168@qq.com"><i class="fas fa-envelope"></i></a></li>
+					<li class="email"><a href="mailto:tianjia.shen@outlook.com"><i class="fas fa-envelope"></i></a></li>
 					<li class="linkedin"><a href="https://www.linkedin.com/in/tianjia-shen/" target="_blank"><i
 								class="fab fa-linkedin"></i></a></li>
 					<li class="bilibili"><a href="https://space.bilibili.com/23121831/" target="_blank"><img
@@ -1293,7 +1295,7 @@
 				<div class="contact-left">
 					<div class="image-container"><img class="profile-image" src="assets/images/profile-image.png"
 							alt=""></div>
-					<a class="btn" id="download1" data-font="download" href="./assets/resume/resume - Tianjia Shen - en.pdf" download></a>
+					<a class="btn" id="download1" data-font="download" href="./assets/resume/resume - Tianjia Shen.pdf" download></a>
 					<a class="btn" id="download2" data-font="download" href="./assets/portfolio/portfolio - Tianjia Shen.zip" download></a>
 				</div>
 				<div class="dialog">
@@ -1309,7 +1311,7 @@
 						<li id="help_field6" data-font="check"></li>
 						<li id="help_field7" data-font="check"></li>
 					</ul>
-					<p><p id="welcome_email"></p><a id="my_email" href="mailto:1049904168@qq.com"></a>
+					<p><p id="welcome_email"></p><a id="my_email" href="mailto:tianjia.shen@outlook.com"></a>
 						<!--  or call me at <a href="tel:13901795664">13901795664</a> -->
 					</p>
 					<ul class="social list-inline">

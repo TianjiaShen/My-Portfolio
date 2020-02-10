@@ -422,9 +422,10 @@ a.btn:hover {
 }
 .education-section .degree {
   font-size: 18px;
+  font-weight: bold;
   color: #00BCD4;
   margin-top: 0;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 .education-section .education-body {
   font-weight: 500;
@@ -609,6 +610,7 @@ a.btn:hover {
 }
 .portfolio-section .item-inner .content {
   padding: 30px;
+  padding-top: 20px;
   padding-bottom: 75px;
   height: 120px;
   position: relative;
@@ -618,6 +620,7 @@ a.btn:hover {
 }
 .portfolio-section .item-inner .content .sub-title {
   font-size: 16px;
+  font-weight: bold;
   margin-top: 0;
   margin-bottom: 5px;
 }
@@ -740,6 +743,7 @@ a.btn:hover {
   }
   .section-title {
     font-size: 20px;
+    font-weight: bold;
   }
   .timeline {
     margin-left: 0;
@@ -1006,3 +1010,4 @@ a.btn:hover {
 .overlay {
   z-index: 100;
 }
+
