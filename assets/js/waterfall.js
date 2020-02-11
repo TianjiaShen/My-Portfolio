@@ -125,7 +125,7 @@ function displayProject(entity) {
         //     img.innerText = "fail";
         //     window.iterEnd = true;
         // };
-        tempSrc = "assets/images/portfolio/gallery/pro" + projectNum + "-" + i + ".jpg";
+        tempSrc = "assets/images/portfolio/gallery/pro" + projectNum + "-" + i + ".webp";
         
         // if (ImageNotExist(tempSrc)) break;
         img.src = tempSrc;
