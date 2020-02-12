@@ -5,7 +5,7 @@ let font_awesome = {
     "language": '<i class="fas fa-language"></i>',
     "check": '<i class="fa fa-check" aria-hidden="true"></i>  '
 };
-setLanguage('en');
+// setLanguage('en'); migrated this command to waterfall.js, so that the content can be correctly added after the page contents are all loaded
 
 function setLanguage(lang) {
     var url = 'assets/language/' + lang + '.json';

@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
     span.onclick = function () {
         closeModal();
     }
+
+    setLanguage('en');
     // global assignment
     // scrollWindow = document.getElementById("modal-body");
 
