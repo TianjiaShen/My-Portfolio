@@ -396,6 +396,9 @@ a.btn:hover {
   padding-right: 5px;
   font-size: 20px;
 }
+.timeline #company4 {
+  margin-bottom: 24px;
+}
 .timeline .location .fa {
   margin-right: 5px;
 }
