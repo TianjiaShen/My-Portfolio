@@ -1,7 +1,7 @@
 // let scrollWindow;
 
 // must register these elements after DOM is ready
-document.addEventListener('DOMContentLoaded', function (event) {
+document.addEventListener("DOMContentLoaded", function(event) {
     //the event occurred
     // openModalButtons = document.querySelectorAll('[data-modal-target]');
     // closeModalButtons = document.querySelectorAll('[data-close-button]');
@@ -13,17 +13,17 @@ document.addEventListener('DOMContentLoaded', function (event) {
     // Get the button that opens the modal
     var btn = document.getElementById("myBtn");
 
-    var brickList = document.querySelectorAll('[data-waterfall]');
+    var brickList = document.querySelectorAll("[data-waterfall]");
     console.log(brickList);
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
 
     // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
+    span.onclick = function() {
         closeModal();
-    }
+    };
 
-    setLanguage('en');
+    setLanguage("en");
     // global assignment
     // scrollWindow = document.getElementById("modal-body");
 
@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
     //         closeModal();
     //     }
     // }
-
 
     // for (var i = 0; i < brickList.length; i++) {
     //     obj = brickList[i];
@@ -67,18 +66,18 @@ document.addEventListener('DOMContentLoaded', function (event) {
     //         closeModal(modal);
     //     })
     // })
-})
+});
 
 // let prevLocation;
 
 function openModal() {
     var modal = document.getElementById("myModal");
-    
+
     var mBody = document.getElementById("body");
     if (modal == null) return;
     modal.style.display = "block";
-    modal.classList.add('active');
-    
+    modal.classList.add("active");
+
     // console.log(window.scrollY);
     mBody.style.overflow = "hidden";
 }
@@ -93,21 +92,21 @@ function closeModal() {
         scrollWindow.removeChild(scrollWindow.firstChild);
     }
     modal.style.display = "none";
-    modal.classList.remove('active');
+    modal.classList.remove("active");
 
     // window.scrollY = prevLocation;
     mBody.style.overflow = "scroll";
 }
-//         idx = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10, 11, 12, 13];
-let projectMap = [0, 7, 7, 2, 8, 5, 2, 3, 1, 2, 3, 41, 23, 30];
+//         idx = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10, 11, 12, 13, 14];
+let projectMap = [0, 7, 7, 2, 8, 5, 2, 3, 1, 2, 3, 41, 23, 30, 17];
 
 function displayProject(entity) {
     // acquire project num from entity
-    var projectNum = entity.getAttribute('project-num');
+    var projectNum = entity.getAttribute("project-num");
 
-    // show modal 
+    // show modal
     openModal();
-    
+
     // dynamically add images to modal-body
 
     // get object modal-body
@@ -127,18 +126,23 @@ function displayProject(entity) {
         //     img.innerText = "fail";
         //     window.iterEnd = true;
         // };
-        tempSrc = "assets/images/portfolio/gallery/pro" + projectNum + "-" + i + ".webp";
-        
+        tempSrc =
+            "assets/images/portfolio/gallery/pro" +
+            projectNum +
+            "-" +
+            i +
+            ".webp";
+
         // if (ImageNotExist(tempSrc)) break;
         img.src = tempSrc;
 
         img.id = "picture" + i;
         scrollWindowWidth = scrollWindow.clientWidth * 0.9;
         img.width = scrollWindowWidth;
-        img.style.textAlign = 'center';
-        img.style.display = 'block';
-        img.style.marginLeft = 'auto';
-        img.style.marginRight = 'auto';
+        img.style.textAlign = "center";
+        img.style.display = "block";
+        img.style.marginLeft = "auto";
+        img.style.marginRight = "auto";
         scrollWindow.appendChild(img);
     }
 }
